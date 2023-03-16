@@ -31,9 +31,9 @@ def logger_setup(name):
 
 
 df_cities_countries = pd.read_csv(CITIES_COUNTRIES_CSV, names=['id_city', 'city', 'country'], index_col='id_city')
-df_iata_codes = pd.read_csv(IATA_CODES_CSV, names=['code', 'name', 'city', 'country_code', 'country', 'lat', 'lon'], 
+""" df_iata_codes = pd.read_csv(IATA_CODES_CSV, names=['code', 'name', 'city', 'country_code', 'country', 'lat', 'lon'], 
                                            index_col='code')
-
+ """
 def get_bboxes(city_country):
     geolocator = Nominatim(user_agent='terraqwerty')
     
@@ -57,8 +57,12 @@ def get_bboxes(city_country):
   
 
 def get_airport_codes():
+    logger = logger_setup('preprocessing.py')
     try:
         if not IATA_CODES_CSV.is_file(): raise FileNotFoundError
+        
+        df_iata_codes = pd.read_csv(IATA_CODES_CSV, names=['code', 'name', 'city', 'country_code', 'country', 'lat', 'lon'], 
+                                           index_col='code')
         
         if AIRPORT_CODES_CSV.is_file():
             df_airport_codes = pd.read_csv(AIRPORT_CODES_CSV, names=['code', 'id_city'], index_col='code', dtype={'id_city':'Int32'})
@@ -99,6 +103,7 @@ def get_airport_codes():
         df_airport_codes.to_csv(AIRPORT_CODES_CSV, header=False)
         
     except FileNotFoundError as err:
+        logger.critical(f'FileNotFoundError, {err.errno}')
         print(err)          
                 
                 
