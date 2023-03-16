@@ -1,15 +1,38 @@
+import logging
 import pandas as pd
 from geopy.geocoders import Nominatim
-from pathlib import Path
-import pycountry as pyc
 
-from config import CITIES_COUNTRIES_CSV, AIRPORT_CODES_CSV, CITIES_CSV, IATA_CODES_CSV, BBOXES_CSV
+
+from config import CITIES_COUNTRIES_CSV, AIRPORT_CODES_CSV, CITIES_CSV, IATA_CODES_CSV, BBOXES_CSV,\
+                    LOG_CRITICAL, LOG_CRITICAL_FORMAT
+
+
+# logging parameters set up
+# create logger with 'preprocessing.py'
+def logger_setup(name):
+    logger = logging.getLogger(name)
+    logger.setLevel(logging.CRITICAL)
+    # create file handler which logs even debug messages
+    fh = logging.FileHandler(LOG_CRITICAL)
+    fh.setLevel(logging.CRITICAL)
+    # create console handler with a higher log level
+    #ch = logging.StreamHandler()
+    #ch.setLevel(logging.ERROR)
+    # create formatter and add it to the handlers
+    formatter = logging.Formatter(LOG_CRITICAL_FORMAT)
+    fh.setFormatter(formatter)
+    #ch.setFormatter(formatter)
+    # add the handlers to the logger
+    logger.addHandler(fh)
+    #logger.addHandler(ch)
+    ########
+
+    return logger
 
 
 df_cities_countries = pd.read_csv(CITIES_COUNTRIES_CSV, names=['id_city', 'city', 'country'], index_col='id_city')
 df_iata_codes = pd.read_csv(IATA_CODES_CSV, names=['code', 'name', 'city', 'country_code', 'country', 'lat', 'lon'], 
-                                            index_col='code')
-
+                                           index_col='code')
 
 def get_bboxes(city_country):
     geolocator = Nominatim(user_agent='terraqwerty')
