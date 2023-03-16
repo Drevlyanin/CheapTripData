@@ -77,3 +77,8 @@ TRANSPORT_TYPES_ID = {'fly': 1, 'bus': 2, 'train': 3, 'share': 8, 'ferry': 10}
 # set minimal terms for euro zone
 EURO_ZONE = range(100, 371)
 EURO_ZONE_LOWEST_PRICE, EURO_ZONE_DURATION_LIMIT = 5, 60
+
+# logging set up 
+LOGS_DIR = Path('../logs')
+LOG_CRITICAL = Path(LOGS_DIR/'critical.log')
+LOG_CRITICAL_FORMAT = '%(asctime)s - %(levelname)s - %(filename)s - %(funcName)s - %(message)s'
