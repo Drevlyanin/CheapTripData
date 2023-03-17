@@ -6,13 +6,6 @@ library(forcats)
 #-------------------------------------------------------------------------------
 bus_valid <- read_excel("/Users/miss_viktoriia/Documents/CheapTrip/buses_valid_trips.xlsx")
 bus_invalid <- read_excel("/Users/miss_viktoriia/Documents/CheapTrip/buses_invalid_trips.xlsx")
-bus_min_price <- bus_valid %>%
-  group_by(from_id, to_id) %>%
-  summarise(price_min_EUR = min(price_min_EUR)) %>%
-  ungroup()
-bus_valid_min <- inner_join(bus_min_price, bus_valid,
-                            by=c("from_id", "to_id", "price_min_EUR")) 
-
 bus <- rbind(bus_valid, bus_invalid)
 countries <- read_excel("/Users/miss_viktoriia/Documents/CheapTrip/Full_list_with_countries.xlsx", 
                         range = "A1:H775", 
