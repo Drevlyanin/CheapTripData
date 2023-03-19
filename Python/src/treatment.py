@@ -2,7 +2,7 @@ import pandas as pd
 from config import RAW_CSV, VALIDATION_CSV, TRIPLES_CSV, OUTPUT_COLUMNS
 
 
-def treat_data():
+def treat():
     
     print('\nData treatment...', end='...')
     
@@ -51,4 +51,4 @@ def treat_data():
     
 if __name__ == '__main__':
     
-    treat_data()
+    treat()

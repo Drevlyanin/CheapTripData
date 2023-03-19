@@ -8,8 +8,9 @@ from datetime import datetime
 
 import compress_json
 
-from config import OUTPUT_JSON_DIR, LOGS_DIR, BASE_URL, OUTPUT_CSV_DIR
+from config import OUTPUT_JSON_DIR, LOGS_DIR, BASE_URL, OUTPUT_CSV_DIR, CITIES_COUNTRIES_CSV
 from generators import gen_city_country_pairs, gen_injection
+from functions import input_file_ok
 
 
 logging.basicConfig(filename=LOGS_DIR/'scraping.log', filemode='w', format='%(name)s - %(levelname)s - %(message)s')
@@ -62,21 +63,23 @@ def scrap_routine(cities_countries_pairs, injection=''):
         logging.error(f'{datetime.today()} an exception occurred', exc_info=True)
 
     
-def scrap_json():
+def scrap():
     
-    print('Starting scraping process...')
+    if input_file_ok([CITIES_COUNTRIES_CSV]):
     
-    OUTPUT_JSON_DIR.mkdir(parents=True, exist_ok=True)
-    OUTPUT_CSV_DIR.mkdir(parents=True, exist_ok=True)
-    
-    # threads running 
-    with concurrent.futures.ThreadPoolExecutor() as executor:
-        executor.map(scrap_routine, gen_city_country_pairs())
+        print('Starting scraping process...')
         
-    print('Scraping process finished successfully!\n') 
+        OUTPUT_JSON_DIR.mkdir(parents=True, exist_ok=True)
+        OUTPUT_CSV_DIR.mkdir(parents=True, exist_ok=True)
+        
+        # threads running 
+        with concurrent.futures.ThreadPoolExecutor() as executor:
+            executor.map(scrap_routine, gen_city_country_pairs())
+            
+        print('Scraping process finished successfully!\n') 
          
          
 if __name__ == '__main__':
    
-    scrap_json()
+    scrap()
   

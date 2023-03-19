@@ -1,18 +1,15 @@
-from preprocessing import preprocessing
-from scraping import scrap_json
-from extraction import extract_data
-from treatment import treat_data
+from scraping import scrap
+from extraction import extract
+from treatment import treat
 
 
 def main():
     
-    preprocessing()
+    scrap()
     
-    scrap_json()
+    extract()
     
-    extract_data()
-    
-    treat_data()
+    treat()
 
 
 if __name__ == '__main__':

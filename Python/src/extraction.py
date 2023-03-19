@@ -13,6 +13,8 @@ from exchange import update_exchange_rates
 from generators import gen_jsons
 from filters import id_not_found, same_ids, mismatch_euro_zone_terms, currency_mismatch,\
                     bad_price_value, is_trans_nicolaescu, bus_price_below_estimate
+from preextraction import preextract
+
 
 
 # logging config
@@ -288,8 +290,15 @@ def extract_data(source_dir=OUTPUT_JSON_DIR):
         csv.writer(f).writerow(unknown_currencies)
     
     print('successfully!\n')
+   
+
+def extract():
+
+    preextract()
     
+    extract_data()   
+ 
     
 if __name__ == '__main__':
     
-    extract_data()
+    extract()

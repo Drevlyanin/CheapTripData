@@ -1,63 +1,15 @@
-import logging
 import pandas as pd
-from geopy.geocoders import Nominatim
 
 
-from config import CITIES_COUNTRIES_CSV, AIRPORT_CODES_CSV, CITIES_CSV, IATA_CODES_CSV, BBOXES_CSV,\
-                    LOG_CRITICAL, LOG_CRITICAL_FORMAT
-
-
-# logging parameters set up
-# create logger with 'preprocessing.py'
-def logger_setup(name):
-    logger = logging.getLogger(name)
-    logger.setLevel(logging.CRITICAL)
-    # create file handler which logs even debug messages
-    fh = logging.FileHandler(LOG_CRITICAL)
-    fh.setLevel(logging.CRITICAL)
-    # create console handler with a higher log level
-    #ch = logging.StreamHandler()
-    #ch.setLevel(logging.ERROR)
-    # create formatter and add it to the handlers
-    formatter = logging.Formatter(LOG_CRITICAL_FORMAT)
-    fh.setFormatter(formatter)
-    #ch.setFormatter(formatter)
-    # add the handlers to the logger
-    logger.addHandler(fh)
-    #logger.addHandler(ch)
-    ########
-
-    return logger
+from config import CITIES_COUNTRIES_CSV, AIRPORT_CODES_CSV, CITIES_CSV, IATA_CODES_CSV, BBOXES_CSV
+from functions import logger_setup, get_bboxes, input_file_ok
 
 
 df_cities_countries = pd.read_csv(CITIES_COUNTRIES_CSV, names=['id_city', 'city', 'country'], index_col='id_city')
-""" df_iata_codes = pd.read_csv(IATA_CODES_CSV, names=['code', 'name', 'city', 'country_code', 'country', 'lat', 'lon'], 
-                                           index_col='code')
- """
-def get_bboxes(city_country):
-    geolocator = Nominatim(user_agent='terraqwerty')
-    
-    try:
-                
-        location = geolocator.geocode(', '.join(city_country))
-                
-        bbox = list(map(lambda x: round(float(x), 4), list(filter(lambda x: x[0] == 'boundingbox', location.raw.items()))[0][1]))
-        lat_min, lat_max, lon_min, lon_max = bbox
-        
-        lat = round(float(list(filter(lambda x: x[0] == 'lat', location.raw.items()))[0][1]), 4)
-        lon = round(float(list(filter(lambda x: x[0] == 'lon', location.raw.items()))[0][1]), 4)
-        
-        if (lat_min <= lat <= lat_max) and (lon_min <= lon <= lon_max):
-            return bbox, [lat, lon] 
-        
-        return None
-        
-    except AttributeError as err:
-        print(city_country, err)
   
 
 def get_airport_codes():
-    logger = logger_setup('preprocessing.py')
+    logger = logger_setup()
     try:
         if not IATA_CODES_CSV.is_file(): raise FileNotFoundError
         
@@ -103,7 +55,7 @@ def get_airport_codes():
         df_airport_codes.to_csv(AIRPORT_CODES_CSV, header=False)
         
     except FileNotFoundError as err:
-        logger.critical(f'FileNotFoundError, {err.errno}')
+        logger.critical('FileNotFoundError')
         print(err)          
                 
                 
@@ -158,11 +110,11 @@ def get_bounding_boxes():
         print(err)    
 
 
-def preprocessing():
-    
-    get_airport_codes()
-    get_bounding_boxes()
+def preextract():
+    if input_file_ok([IATA_CODES_CSV, CITIES_COUNTRIES_CSV]):
+        get_airport_codes()
+        get_bounding_boxes()
 
 
 if __name__ == '__main__':
-    preprocessing()
+    preextract()
