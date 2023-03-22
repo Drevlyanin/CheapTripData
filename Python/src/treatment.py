@@ -1,10 +1,11 @@
 import pandas as pd
 from config import RAW_CSV, VALIDATION_CSV, TRIPLES_CSV, OUTPUT_COLUMNS
+from csv_checker import csv_ok
 
 
-def treat():
+def treat_data():
     
-    print('\nData treatment...', end='...')
+    print('Data treatment...', end='...')
     
     # Making validation dataset from raw csv
     df_raw= pd.read_csv(RAW_CSV, index_col=0, dtype= {'from_id': 'Int32', 'to_id': 'Int32', 'transport_id': 'Int32', 'price_min_EUR': 'Int32', 
@@ -47,6 +48,12 @@ def treat():
     df_triples.to_csv(TRIPLES_CSV)
     
     print('successfully!\n')
+    
+    
+def treat():
+
+    if csv_ok(RAW_CSV):
+        treat_data()
     
     
 if __name__ == '__main__':

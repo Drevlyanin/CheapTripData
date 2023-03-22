@@ -1,1 +1,1 @@
-root - CRITICAL - There is a missing value in 'column_1' in file: ../files/csv/cities_countries.csv!
+root - CRITICAL - There is a missing value in column 'country' in file: ../files/csv/cities_countries.csv !

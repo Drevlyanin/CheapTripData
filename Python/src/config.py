@@ -1,4 +1,3 @@
-import polars as pl
 from pathlib import Path
 
 
@@ -37,6 +36,7 @@ TRIPLES_CSV = Path(OUTPUT_CSV_DIR/'all_direct_routes_triples.csv')
 ROUTES_TO_FIX_CSV = Path(ROUTES_TO_FIX_DIR/'routes_to_fix.csv')
 FIXED_IDS_CSV = Path(OUTPUT_CSV_DIR/'fixed_ids.csv')
 VALID_ROUTES_CSV = Path(OUTPUT_CSV_DIR/'all_direct_valid_routes.csv')
+MISSING_PAIRS = Path(OUTPUT_CSV_DIR/'missed_pairs.csv')
 
 
 #NUMBER_OF_CITIES = df_bb.shape[0]

@@ -6,18 +6,16 @@ import polars as pl
 
 from config import OUTPUT_JSON_DIR, CITIES_COUNTRIES_CSV
 
-from functions import logger_setup
-
 
 def gen_city_country_pairs(input_csv=CITIES_COUNTRIES_CSV) -> tuple:
-    logger = logger_setup()
+   
     try:
-        input_csv = Path(input_csv)
+        #input_csv = Path(input_csv)
         
-        if not input_csv.is_file(): raise FileNotFoundError(input_csv)
+        #if not input_csv.is_file(): raise FileNotFoundError(input_csv)
 
         # read input csv in DataFrame
-        df = pl.read_csv(input_csv, has_header=False, new_columns=['id_city', 'city', 'country'])
+        df = pl.read_csv(input_csv)
         
         for from_id_city, to_id_city in permutations(df['id_city'], 2): # 
             
@@ -28,7 +26,7 @@ def gen_city_country_pairs(input_csv=CITIES_COUNTRIES_CSV) -> tuple:
             yield from_city_id, to_city_id, from_city, from_country, to_city, to_country
     
     except FileNotFoundError as err:
-        logger.critical(err.filename)
+       
         print(f"Input file '{err.filename}' cannot be found")
     
     except Exception as err:

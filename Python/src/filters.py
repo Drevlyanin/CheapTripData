@@ -1,11 +1,6 @@
-import polars as pl
-
 from config import NOT_FOUND, BAD_VALUES
 from config import EURO_ZONE, EURO_ZONE_DURATION_LIMIT, EURO_ZONE_LOWEST_PRICE
-from config import ROMANIAN_CITIES, TRANS_NICOLAESCU, CITIES_COUNTRIES_CSV
-
-
-df_cities_countries = pl.read_csv(CITIES_COUNTRIES_CSV, has_header=False, new_columns=['id_city', 'city', 'country'])
+from config import ROMANIAN_CITIES, TRANS_NICOLAESCU
 
 
 def id_not_found(from_id: int, to_id: int) -> bool:

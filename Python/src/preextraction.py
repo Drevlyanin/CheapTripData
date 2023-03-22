@@ -2,22 +2,19 @@ import pandas as pd
 
 
 from config import CITIES_COUNTRIES_CSV, AIRPORT_CODES_CSV, CITIES_CSV, IATA_CODES_CSV, BBOXES_CSV
-from functions import logger_setup, get_bboxes, input_file_ok
+from functions import get_bboxes
+from csv_checker import csv_ok
 
-
-df_cities_countries = pd.read_csv(CITIES_COUNTRIES_CSV, names=['id_city', 'city', 'country'], index_col='id_city')
-  
 
 def get_airport_codes():
-    logger = logger_setup()
+    
     try:
-        if not IATA_CODES_CSV.is_file(): raise FileNotFoundError
         
-        df_iata_codes = pd.read_csv(IATA_CODES_CSV, names=['code', 'name', 'city', 'country_code', 'country', 'lat', 'lon'], 
-                                           index_col='code')
+        df_cities_countries = pd.read_csv(CITIES_COUNTRIES_CSV, header=0, index_col=0)
+        df_iata_codes = pd.read_csv(IATA_CODES_CSV, header=0, index_col=0)
         
         if AIRPORT_CODES_CSV.is_file():
-            df_airport_codes = pd.read_csv(AIRPORT_CODES_CSV, names=['code', 'id_city'], index_col='code', dtype={'id_city':'Int32'})
+            df_airport_codes = pd.read_csv(AIRPORT_CODES_CSV, header=0, dtype={'id_city':'Int32'}, index_col=0)
             diff_ids = df_cities_countries.index.difference(df_airport_codes['id_city'].unique())
         else:
             df_airport_codes = pd.DataFrame()
@@ -50,32 +47,31 @@ def get_airport_codes():
               f'have no airport(s) {len(no_airports_cities)}: {no_airports_cities}\n')    
         
         df_airport_codes.sort_values(by='id_city', inplace=True)
-        df_airport_codes.to_csv(AIRPORT_CODES_CSV, header=False)
-        df_airport_codes = pd.read_csv(AIRPORT_CODES_CSV, names=['code', 'id_city'], index_col='code', dtype={'id_city':'Int32'})
-        df_airport_codes.to_csv(AIRPORT_CODES_CSV, header=False)
+        df_airport_codes.to_csv(AIRPORT_CODES_CSV)
+        df_airport_codes = pd.read_csv(AIRPORT_CODES_CSV, header=0, dtype={'id_city':'Int32'}, index_col=0)
+        df_airport_codes.to_csv(AIRPORT_CODES_CSV)
         
     except FileNotFoundError as err:
-        logger.critical('FileNotFoundError')
         print(err)          
                 
                 
 def get_bounding_boxes():
     
     try:
-        if not CITIES_COUNTRIES_CSV.is_file(): raise FileNotFoundError
+        df_cities_countries = pd.read_csv(CITIES_COUNTRIES_CSV, header=0, index_col=0)
         
         if BBOXES_CSV.is_file():
-            df_bboxes = pd.read_csv(BBOXES_CSV, names=['id_city', 'lat_min', 'lat_max', 'lon_min', 'lon_max'], index_col='id_city')
+            df_bboxes = pd.read_csv(BBOXES_CSV, header=0, index_col=0)
             unboxed_ids = set(df_cities_countries.index.values).difference(df_bboxes.index.values)
             if len(unboxed_ids) == 0: 
-                print('\nGo on: all bounding boxes are already exist!\n')
+                print('Go on: all bounding boxes are already exist!\n')
                 return
         else:
             df_bboxes = pd.DataFrame()
             unboxed_ids = df_cities_countries.index.values
             
         if CITIES_CSV.is_file():
-            df_cities = pd.read_csv(CITIES_CSV, names=['id_city', 'city', 'lat', 'lon'], index_col='id_city')
+            df_cities = pd.read_csv(CITIES_CSV, header=0, index_col=0)
         else:
             df_cities = pd.DataFrame()
         
@@ -99,8 +95,8 @@ def get_bounding_boxes():
                 
         df_bboxes.sort_index(inplace=True)
         df_cities.sort_index(inplace=True)
-        df_bboxes.to_csv(BBOXES_CSV, header=False)
-        df_cities.to_csv(CITIES_CSV, header=False)
+        df_bboxes.to_csv(BBOXES_CSV)
+        df_cities.to_csv(CITIES_CSV)
         
         
     except FileNotFoundError as err:
@@ -111,10 +107,13 @@ def get_bounding_boxes():
 
 
 def preextract():
-    if input_file_ok([IATA_CODES_CSV, CITIES_COUNTRIES_CSV]):
+    if csv_ok(IATA_CODES_CSV, check_null=False) and csv_ok(CITIES_COUNTRIES_CSV):
+        print('\nPreextraction process started...')
         get_airport_codes()
         get_bounding_boxes()
-
+        print('Preextraction completed successfully!')
+        return True
+    return False
 
 if __name__ == '__main__':
     preextract()

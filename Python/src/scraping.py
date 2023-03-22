@@ -5,25 +5,26 @@ from bs4 import BeautifulSoup
 import json
 from datetime import datetime
 
-
 import compress_json
 
-from config import OUTPUT_JSON_DIR, LOGS_DIR, BASE_URL, OUTPUT_CSV_DIR, CITIES_COUNTRIES_CSV
+from config import OUTPUT_JSON_DIR, LOGS_DIR, BASE_URL, OUTPUT_CSV_DIR, CITIES_COUNTRIES_CSV, MISSING_PAIRS
 from generators import gen_city_country_pairs, gen_injection
-from functions import input_file_ok
+from csv_checker import csv_ok
 
 
-logging.basicConfig(filename=LOGS_DIR/'scraping.log', filemode='w', format='%(name)s - %(levelname)s - %(message)s')
+logging.basicConfig(filename=LOGS_DIR/'scraping.log', filemode='w', 
+                    format='%(asctime)s - %(levelname)s - %(message)s')
 
 session = requests.Session()
 inject = gen_injection() # injection generator
+
 
 # writes missed cities pairs
 def missed_pairs(missed_pairs):
     
     from_city_id, to_city_id, from_city, from_country, to_city, to_country = missed_pairs
     
-    with open(OUTPUT_CSV_DIR/'missed_pairs.csv', mode='a') as f:    
+    with open(MISSING_PAIRS, mode='a') as f:    
         f.writelines(f'{from_city_id},{to_city_id},{from_city},{from_country},{to_city},{to_country}\n')
         
 
@@ -45,7 +46,7 @@ def scrap_routine(cities_countries_pairs, injection=''):
         
         soup = BeautifulSoup(r.text, 'html.parser')
         
-        pathes_info = soup.find('meta', id="deeplinkTrip") # this tag contists all info about pathes between the cities specified in way
+        pathes_info = soup.find('meta', id="deeplinkTrip") # this tag contists info about all pathes
               
         parsed = json.loads(pathes_info["content"])[2][1]
         
@@ -55,19 +56,19 @@ def scrap_routine(cities_countries_pairs, injection=''):
         compress_json.dump(parsed, target_file)
         
     except TypeError:
-        logging.error(f'{datetime.today()} On {tmp_url} exception occurred', exc_info=True)
+        logging.error(f'On {tmp_url} exception occurred: ', exc_info=True)
         scrap_routine(cities_countries_pairs, injection=next(inject))
     
-    except:
+    except Exception:
         missed_pairs(cities_countries_pairs)
-        logging.error(f'{datetime.today()} an exception occurred', exc_info=True)
+        logging.error(f'An exception occurred: ', exc_info=True)
 
     
 def scrap():
     
-    if input_file_ok([CITIES_COUNTRIES_CSV]):
+    if csv_ok(CITIES_COUNTRIES_CSV):
     
-        print('Starting scraping process...')
+        print('Scraping process started...')
         
         OUTPUT_JSON_DIR.mkdir(parents=True, exist_ok=True)
         OUTPUT_CSV_DIR.mkdir(parents=True, exist_ok=True)
@@ -76,7 +77,7 @@ def scrap():
         with concurrent.futures.ThreadPoolExecutor() as executor:
             executor.map(scrap_routine, gen_city_country_pairs())
             
-        print('Scraping process finished successfully!\n') 
+        print('\nScraping completed successfully!') 
          
          
 if __name__ == '__main__':

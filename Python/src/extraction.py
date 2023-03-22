@@ -6,7 +6,7 @@ import json
 import haversine as hs
 
 from config import LOGS_DIR, OUTPUT_CSV_DIR, OUTPUT_JSON_DIR, INNER_JSON_DIR, BBOXES_CSV,\
-                   TRANSPORT_TYPES, TRANSPORT_TYPES_ID, OUTPUT_COLUMNS, RAW_CSV, CITIES_COUNTRIES_CSV, NOT_FOUND
+                   TRANSPORT_TYPES, TRANSPORT_TYPES_ID, OUTPUT_COLUMNS, RAW_CSV, CITIES_COUNTRIES_CSV, NOT_FOUND, IATA_CODES_CSV
                    
 from functions import get_id_from_bb, get_id_from_acode, get_exchange_rates, get_inner_json, get_id_by_station_name, get_id_by_station_acode
 from exchange import update_exchange_rates
@@ -14,7 +14,7 @@ from generators import gen_jsons
 from filters import id_not_found, same_ids, mismatch_euro_zone_terms, currency_mismatch,\
                     bad_price_value, is_trans_nicolaescu, bus_price_below_estimate
 from preextraction import preextract
-
+from csv_checker import csv_ok
 
 
 # logging config
@@ -31,10 +31,11 @@ unknown_currencies = set()
 unique_routes = set()
 
 # counter for path_id
-#df_bb = pd.read_csv(BBOXES_CSV, names=['id_city', 'lat_1', 'lat_2', 'lon_1', 'lon_2'], index_col='id_city')
-df_cities_countries = pd.read_csv(CITIES_COUNTRIES_CSV, names=['id_city', 'city', 'country'], index_col='id_city')
+df_bb = pd.read_csv(BBOXES_CSV, header=0, index_col=0)
+df_cities_countries = pd.read_csv(CITIES_COUNTRIES_CSV, header=0, index_col=0)
 
-counter = {k: k * 10000 for k in df_cities_countries.index.values}
+counter = {k: k * 10000 for k in df_bb.index.values}
+    
     
 def extract_routine(input_data: tuple, euro_rates: dict) -> list():
     
@@ -264,10 +265,12 @@ def extract_routine(input_data: tuple, euro_rates: dict) -> list():
 
 def extract_data(source_dir=OUTPUT_JSON_DIR):
     
-    print('\nData extraction...', end='...')
+    print('\nData extraction started...')
     
     # get last currency exchange rates for EUR and update date
     ago_days, euro_rates = get_exchange_rates()
+    
+    if ago_days == NOT_FOUND and euro_rates == NOT_FOUND: return
           
     # updates currency exchange rates    
     if ago_days > 1 and update_exchange_rates(): _, euro_rates = get_exchange_rates()
@@ -289,14 +292,12 @@ def extract_data(source_dir=OUTPUT_JSON_DIR):
     with open(OUTPUT_CSV_DIR/'unknown_currencies.csv', mode='w') as f:
         csv.writer(f).writerow(unknown_currencies)
     
-    print('successfully!\n')
+    print('Data extraction completed successfully!\n')
    
 
 def extract():
-
-    preextract()
-    
-    extract_data()   
+    if preextract():
+        extract_data()   
  
     
 if __name__ == '__main__':
