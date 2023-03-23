@@ -1,9 +1,8 @@
-The whole process of data obtaining consists of the following steps:
-    1) PREPROCESSING of input 'cities_counties.csv' file to get the corresponding bounding boxes and airports codes (preprocessing.py)
+The whole process of data mining can be run via 'pipeline.py' and consists of the following steps:
     1) SCRAPING jsons from the site (scraping.py)
-    2) EXTRACTION of direct routes from the scraped jsons (extraction.py)
+    2) EXTRACTION of direct routes from the scraped jsons (extraction.py includes preextraction process)
     3) TREATMENT of obtained data to create the datasets for validation etc (treatment.py)
-    5) FIXING the prices for specific routes listed in corresponding file (fixing.py)
+    4) FIXING the prices for specific routes listed in corresponding file (fixing.py)
 
 Only two files stored in directory 'files/csv' are needed to start up:
     - cities_countries.csv (contains cities of your interest)
