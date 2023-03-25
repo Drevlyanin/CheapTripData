@@ -8,7 +8,9 @@ import haversine as hs
 from config import LOGS_DIR, OUTPUT_CSV_DIR, OUTPUT_JSON_DIR, INNER_JSON_DIR, BBOXES_CSV,\
                    TRANSPORT_TYPES, TRANSPORT_TYPES_ID, OUTPUT_COLUMNS, RAW_CSV, CITIES_COUNTRIES_CSV, NOT_FOUND, IATA_CODES_CSV
                    
-from functions import get_id_from_bb, get_id_from_acode, get_exchange_rates, get_inner_json, get_id_by_station_name, get_id_by_station_acode
+from functions import get_id_from_bb, get_id_from_acode, get_exchange_rates,\
+                        get_inner_json, get_id_by_station_name, get_id_by_station_acode,\
+                            get_city_name
 from exchange import update_exchange_rates
 from generators import gen_jsons
 from filters import id_not_found, same_ids, mismatch_euro_zone_terms, currency_mismatch,\
@@ -87,16 +89,20 @@ def extract_routine(input_data: tuple, euro_rates: dict) -> list():
                 path_id = counter[from_id]
                 
                 # creates and writes to json file the parameters of certain route  
-                """ q = get_inner_json(inner_path_id, route_id, pathes)
-                inner_json = {'path_id': path_id,
-                              'from': { 'id': from_id,
+                q = get_inner_json(inner_path_id, route_id, pathes)
+                from_city = get_city_name(from_id)
+                to_city = get_city_name(to_id)
+                inner_json = {'path_id': int(path_id),
+                              'from': { 'id': int(from_id),
+                                        'city': from_city,
                                         'air_code': q['air_0'],
                                         'station': q['station_0'],
                                         'country': q['country_0'],
                                         'region': q['city_0'],
                                         'coords': {'lat': q['lat_0'], 'lon': q['lon_0']},
                                         },
-                              'to': {   'id': to_id,
+                              'to': {   'id': int(to_id),
+                                        'city': to_city,
                                         'air_code': q['air_1'],
                                         'station': q['station_1'],
                                         'country': q['country_1'],
@@ -119,11 +125,12 @@ def extract_routine(input_data: tuple, euro_rates: dict) -> list():
                               'transfers': {'num': q['num_transfers'],
                                             'info': q['transfers_info']                                                        
                                             }
+                              
                               }
-                                
+                print(inner_json, '\n')                
                 INNER_JSON_DIR.mkdir(parents=True, exist_ok=True)
-                with open(f'{INNER_JSON_DIR}/{str(path_id)}.json', mode='w') as file:
-                    json.dump(inner_json, file, indent=4) """
+                with open(f'{INNER_JSON_DIR}/{path_id}.json', mode='w') as file:
+                    json.dump(inner_json, file, indent=4, skipkeys=False)
                 
                 # collects all avaliable data
                 raw_data.append({'path_id': path_id,
@@ -201,15 +208,21 @@ def extract_routine(input_data: tuple, euro_rates: dict) -> list():
                     path_id = counter[from_id]
                     
                     # creates and writes the parameters of certain route to json file 
-                    """  q = get_inner_json(inner_path_id, route_id, pathes)
-                    inner_json = {'path_id': path_id,
-                                    'from': {   'id': from_id,
+            
+                    q = get_inner_json(inner_path_id, route_id, pathes)
+                    
+                    from_city = get_city_name(from_id)
+                    to_city = get_city_name(to_id)
+                    inner_json = {'path_id': int(path_id),
+                                    'from': {   'id': int(from_id),
+                                                'city': from_city,
                                                 'station': q['station_0'],
                                                 'country': q['country_0'],
                                                 'region': q['city_0'],
                                                 'coords': {'lat': q['lat_0'], 'lon': q['lon_0']},
                                             },
-                                    'to': {     'id': to_id,
+                                    'to': {     'id': int(to_id),
+                                                'city': to_city,
                                                 'station': q['station_1'],
                                                 'country': q['country_1'],
                                                 'region': q['city_1'],
@@ -232,10 +245,10 @@ def extract_routine(input_data: tuple, euro_rates: dict) -> list():
                                     'frequency_tpw': frequency_tpw
         
                                 }
-                
+                    print(inner_json,'\n')
                     INNER_JSON_DIR.mkdir(parents=True, exist_ok=True)
-                    with open(f'{INNER_JSON_DIR}/{str(path_id)}.json', mode='w') as file:
-                        json.dump(inner_json, file, indent=4) """
+                    with open(f'{INNER_JSON_DIR}/{path_id}.json', mode='w') as file:
+                        json.dump(inner_json, file, indent=4, skipkeys=False)
                     
                     # collects all avaliable data
                     raw_data.append({'path_id': path_id,

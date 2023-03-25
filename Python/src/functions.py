@@ -14,7 +14,11 @@ df_bb = pl.read_csv(BBOXES_CSV)
 df_airports = pl.read_csv(AIRPORT_CODES_CSV)
 df_cities_countries = pl.read_csv(CITIES_COUNTRIES_CSV)
    
-
+   
+def get_city_name(id):
+    return df_cities_countries.filter(pl.col('id_city') == id)['city'][0]
+    
+    
 def get_bboxes(city_country):
     geolocator = Nominatim(user_agent='terraqwerty')
     
@@ -177,5 +181,5 @@ if __name__ == '__main__':
     
     #input_file_ok(CITIES_COUNTRIES_CSV)
     #print(df_init())
-    
+    print(get_city_name(156))
     pass
