@@ -12,7 +12,7 @@ from functions import get_id_from_bb, get_id_from_acode, get_exchange_rates, get
 from exchange import update_exchange_rates
 from generators import gen_jsons
 from filters import id_not_found, same_ids, mismatch_euro_zone_terms, currency_mismatch,\
-                    bad_price_value, is_trans_nicolaescu, bus_price_below_estimate
+                    bad_price_value, is_trans_nicolaescu, price_to_predict
 from preextraction import preextract
 from csv_checker import csv_ok
 
@@ -185,10 +185,10 @@ def extract_routine(input_data: tuple, euro_rates: dict) -> list():
                     if mismatch_euro_zone_terms(from_id, to_id, price_min_EUR, duration_min): continue
                     
                     # checks bus ticket price vs estimated one
-                    if ttype == 'bus': price_min_EUR = bus_price_below_estimate(fromm=from_id, 
-                                                                                to=to_id,
-                                                                                price=price_min_EUR, 
-                                                                                duration=duration_min)
+                    if ttype == 'bus': price_min_EUR = price_to_predict(fromm=from_id, 
+                                                                        to=to_id,
+                                                                        price=price_min_EUR, 
+                                                                        duration=duration_min)
                     
                     # to avoid full duplicating routes
                     if (from_id, to_id, transport_id, price_min_EUR) in unique_routes: continue
