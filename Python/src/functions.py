@@ -1,9 +1,11 @@
-from config import NOT_FOUND, CURRENCY_JSON, CURRENCY_HRK, BBOXES_CSV, AIRPORT_CODES_CSV, CITIES_COUNTRIES_CSV
-from datetime import datetime, date
+from config import NOT_FOUND, BBOXES_CSV, AIRPORT_CODES_CSV, CITIES_COUNTRIES_CSV
+from config import EURO_ZONE, EURO_ZONE_LOWEST_PRICE, EURO_ZONE_DURATION_LIMIT, TRANSPORT_TYPES_ID
+
 import polars as pl
 import re
 from geopy.geocoders import Nominatim
-import json
+import math
+import csv
 
 from logger import logger_setup
 
@@ -88,26 +90,59 @@ def get_id_from_acode(code: str) -> int:
         return NOT_FOUND  
 
 
-def get_exchange_rates() -> tuple:
-    
-    try:
-        with open(CURRENCY_JSON, mode='r') as f:
-            currencies = json.load(f)
-            
-        with open(CURRENCY_HRK, mode='r') as f_2:
-            hrk = json.load(f_2)
-        
-        last_update_date = currencies['meta']['last_updated_at']
-        ago_days = date.today() - datetime.strptime(last_update_date, '%Y-%m-%dT%H:%M:%SZ').date()
-        
-        currencies['data']['HRK'] = hrk['data']['HRK']
-        exchange_rates = currencies['data']
+# compare actual price to predict one
 
-        return (ago_days.days, exchange_rates)
+def price_to_predict(from_id: int, to_id: int, price: int, duration: int, ttype: str, path_id: int) -> int:
+    if (from_id in EURO_ZONE and to_id in EURO_ZONE):
+        #K_1, K_2, Q = 0.5385133730326261, 0.10985332568233755, 0.3
+        #predicted_price = 10**(K_1)*duration**(K_2)
+        K_1, K_2, Q = -2.2022, 0.8832, {'bus': 0.12, 'share': 0.25}
+        predict = math.exp(K_1 + K_2 * math.log(duration))
+        low_limit = math.ceil((1 - Q[ttype]) * predict)
+        
+        if price < low_limit:            
             
-    except FileNotFoundError as err:
-        logger.critical(f'File not found: {err.filename}')
-        return NOT_FOUND, NOT_FOUND
+            from_city = df_cities_countries.filter(pl.col('id_city') == from_id)['city'][0]
+            to_city = df_cities_countries.filter(pl.col('id_city') == to_id)['city'][0]
+            
+            with open('../output/csv_output/lower_predict.csv', 'a') as csvfile:
+                # Create a writer object
+                writer = csv.writer(csvfile)
+                
+                # Write the header row if the file is empty
+                if csvfile.tell() == 0:
+                    writer.writerow(('path_id','from_id','to_id','from','to','transport','duration','price','low_limit','predict'))
+                
+                # Write the record to the file
+                writer.writerow((path_id,from_id,to_id,from_city,to_city,ttype,duration,price,low_limit,round(predict, 1)))
+            
+            price = low_limit # price changing                   
+            
+    return price
+
+
+# check the minimal euro zone conditions
+def price_to_eu_terms(from_id: int, to_id: int, price: int, duration: int, ttype: str, path_id) -> int:
+    if (from_id in EURO_ZONE and to_id in EURO_ZONE):
+        if price < EURO_ZONE_LOWEST_PRICE and duration > EURO_ZONE_DURATION_LIMIT:
+
+            from_city = df_cities_countries.filter(pl.col('id_city') == from_id)['city'][0]
+            to_city = df_cities_countries.filter(pl.col('id_city') == to_id)['city'][0]
+            
+            with open('../output/csv_output/lower_5-60.csv', 'a') as csvfile:
+                # Create a writer object
+                writer = csv.writer(csvfile)
+                
+                # Write the header row if the file is empty
+                if csvfile.tell() == 0:
+                    writer.writerow(('path_id','from_id','to_id','from','to','transport','duration','price','eu_lowest_price'))
+                
+                # Write the record to the file
+                writer.writerow((path_id,from_id,to_id,from_city,to_city,ttype,duration,price,EURO_ZONE_LOWEST_PRICE))
+                    
+            price = EURO_ZONE_LOWEST_PRICE
+        
+    return price
 
 
 # inner json
@@ -115,7 +150,7 @@ def get_inner_json(pth, rt, route_dic):
     try:
         """ if route_dic[pth][8][rt][0] in ['walk', 'car', 'hotel']:
             return 'bad type of transport' """
-        if route_dic[pth][8][rt][0] in ['flight', 'plane', 'fly']:
+        if route_dic[pth][8][rt][0] in ['flight', 'fly']:
             return {"path_id": None,
                     "transport":   route_dic[pth][8][rt][0],
                     "air_0":       route_dic[pth][8][rt][2][0],
@@ -181,5 +216,8 @@ if __name__ == '__main__':
     
     #input_file_ok(CITIES_COUNTRIES_CSV)
     #print(df_init())
-    print(get_city_name(156))
+    #print(get_city_name(156))
+    print(price_to_predict(225, 252, 2, 180, 'share'))
+    print(price_to_predict(225, 252, 2, 180, 'bus'))
+    print(price_to_eu_terms(150, 171, 2, 120, 'fly'))
     pass

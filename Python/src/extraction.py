@@ -8,15 +8,13 @@ import haversine as hs
 from config import LOGS_DIR, OUTPUT_CSV_DIR, OUTPUT_JSON_DIR, INNER_JSON_DIR, BBOXES_CSV,\
                    TRANSPORT_TYPES, TRANSPORT_TYPES_ID, OUTPUT_COLUMNS, RAW_CSV, CITIES_COUNTRIES_CSV, NOT_FOUND, IATA_CODES_CSV
                    
-from functions import get_id_from_bb, get_id_from_acode, get_exchange_rates,\
-                        get_inner_json, get_id_by_station_name, get_id_by_station_acode,\
-                            get_city_name
-from exchange import update_exchange_rates
+from functions import get_id_from_bb, get_id_from_acode, get_inner_json, get_id_by_station_name, get_id_by_station_acode,\
+                        get_city_name, price_to_predict, price_to_eu_terms
+from exchange import update_exchange_rates, get_exchange_rates
 from generators import gen_jsons
-from filters import id_not_found, same_ids, mismatch_euro_zone_terms, currency_mismatch,\
-                    bad_price_value, is_trans_nicolaescu, price_to_predict
+from filters import id_not_found, same_ids, currency_mismatch, bad_price_value, is_trans_nicolaescu
 from preextraction import preextract
-from csv_checker import csv_ok
+
 
 
 # logging config
@@ -52,8 +50,14 @@ def extract_routine(input_data: tuple, euro_rates: dict) -> list():
                                  
             if route[0] in TRANSPORT_TYPES['fly']: # for 'flight', 'plane', 'fly'
                 
+                ttype = 'fly'
+                
+                #gets cities ids
                 from_id = get_id_from_acode(route[2][0]) # gets city's id from the airport code
+                if from_id == NOT_FOUND: from_id = get_id_from_bb(route[2][3:5]) # gets city`s id by airport coordinates`
+                
                 to_id = get_id_from_acode(route[3][0])
+                if to_id == NOT_FOUND: to_id = get_id_from_bb(route[3][3:5])
                 
                 if id_not_found(from_id, to_id): continue # at least one of ids was not found
                 
@@ -73,9 +77,9 @@ def extract_routine(input_data: tuple, euro_rates: dict) -> list():
                 duration_min = round(route[4] / 60) # sec to min 
                 
                 # checks mismatching to min price and duration terms for euro zone
-                if mismatch_euro_zone_terms(from_id, to_id, price_min_EUR, duration_min): continue
+                #if mismatch_euro_zone_terms(from_id, to_id, price_min_EUR, duration_min): continue
                 
-                transport_id = TRANSPORT_TYPES_ID['fly']
+                transport_id = TRANSPORT_TYPES_ID[ttype]
                 
                 # to avoid duplicating routes
                 if (from_id, to_id, transport_id, price_min_EUR) in unique_routes: continue
@@ -87,6 +91,8 @@ def extract_routine(input_data: tuple, euro_rates: dict) -> list():
                 
                 counter[from_id] += 1
                 path_id = counter[from_id]
+                
+                price_min_EUR = price_to_eu_terms(from_id, to_id, price_min_EUR, duration_min, ttype, path_id)
                 
                 # creates and writes to json file the parameters of certain route  
                 q = get_inner_json(inner_path_id, route_id, pathes)
@@ -127,7 +133,7 @@ def extract_routine(input_data: tuple, euro_rates: dict) -> list():
                                             }
                               
                               }
-                print(inner_json, '\n')                
+                               
                 INNER_JSON_DIR.mkdir(parents=True, exist_ok=True)
                 with open(f'{INNER_JSON_DIR}/{path_id}.json', mode='w') as file:
                     json.dump(inner_json, file, indent=4, skipkeys=False)
@@ -189,14 +195,8 @@ def extract_routine(input_data: tuple, euro_rates: dict) -> list():
                     
                     duration_min = round(route[3] / 60) # sec to min
                     
-                    if mismatch_euro_zone_terms(from_id, to_id, price_min_EUR, duration_min): continue
-                    
-                    # checks bus ticket price vs estimated one
-                    if ttype == 'bus': price_min_EUR = price_to_predict(fromm=from_id, 
-                                                                        to=to_id,
-                                                                        price=price_min_EUR, 
-                                                                        duration=duration_min)
-                    
+                    #if mismatch_euro_zone_terms(from_id, to_id, price_min_EUR, duration_min): continue
+                        
                     # to avoid full duplicating routes
                     if (from_id, to_id, transport_id, price_min_EUR) in unique_routes: continue
                     unique_routes.add((from_id, to_id, transport_id, price_min_EUR))
@@ -207,12 +207,18 @@ def extract_routine(input_data: tuple, euro_rates: dict) -> list():
                     counter[from_id] += 1
                     path_id = counter[from_id]
                     
-                    # creates and writes the parameters of certain route to json file 
-            
-                    q = get_inner_json(inner_path_id, route_id, pathes)
+                    # compares price vs predicted one or vs eu_terms 5-60
+                    if ttype in ('bus', 'share'): 
+                        price_min_EUR = price_to_predict(from_id, to_id, price_min_EUR, duration_min, ttype, path_id)
+                    else:
+                        price_min_EUR = price_to_eu_terms(from_id, to_id, price_min_EUR, duration_min, ttype, path_id)
                     
+                    # creates and writes the parameters of certain route to json file 
+                    q = get_inner_json(inner_path_id, route_id, pathes)
+    
                     from_city = get_city_name(from_id)
                     to_city = get_city_name(to_id)
+                    
                     inner_json = {'path_id': int(path_id),
                                     'from': {   'id': int(from_id),
                                                 'city': from_city,
@@ -245,7 +251,7 @@ def extract_routine(input_data: tuple, euro_rates: dict) -> list():
                                     'frequency_tpw': frequency_tpw
         
                                 }
-                    print(inner_json,'\n')
+                    
                     INNER_JSON_DIR.mkdir(parents=True, exist_ok=True)
                     with open(f'{INNER_JSON_DIR}/{path_id}.json', mode='w') as file:
                         json.dump(inner_json, file, indent=4, skipkeys=False)

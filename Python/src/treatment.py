@@ -24,7 +24,7 @@ def treat_data():
     # Removing duplicates by triples ('from_id', 'to_id', 'transport_id')
     df_triples = df_triples.drop_duplicates(['from_id', 'to_id', 'transport_id']).sort_values(by='path_id')
     
-    # adding of lacking backward routes for direct flights or share
+    # adding absent backward routes for direct flights or share
     df_specific = df_triples.query('(transport_id == 1 and num_transfers == 0) or transport_id == 8')
     for index in df_specific.index:
         from_id, to_id = df_specific.loc[index, ['from_id', 'to_id']]

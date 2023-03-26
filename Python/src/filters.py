@@ -43,26 +43,6 @@ def is_trans_nicolaescu(transporter: str, from_id: int, to_id: int) -> bool:
     return False
 
 
-# compare actual price to predict one
-#unreliable_buses= set()
-def price_to_predict(fromm: int, to: int, price: int, duration: int) -> int:
-    if (fromm in EURO_ZONE and to in EURO_ZONE):
-        #K_1, K_2, Q = 0.5385133730326261, 0.10985332568233755, 0.3
-        #predicted_price = 10**(K_1)*duration**(K_2)
-        K_1, K_2, Q = -2.2022, 0.8832, 0.45
-        predict = math.exp(K_1 + K_2 * math.log(duration))
-        low_limit = round((1 - Q) * predict)
-        
-        if price <= low_limit: # and (fromm, to, price, duration) not in unreliable_buses:
-            
-            price = round(predict)
-            
-            """ from_city = df_cities_countries.filter(pl.col('id_city') == fromm)['city'][0]
-            to_city = df_cities_countries.filter(pl.col('id_city') == to)['city'][0]
-            
-            with open('../output/csv_output/unreliable_buses.csv', 'a') as file:
-                file.write(f'{from_city},{to_city},{duration},{price},{low_limit_price}\n')
-                                
-            unreliable_buses.add((fromm, to, price, duration)) """
-        
-    return price
+if __name__ == '__main__':
+    #print(math.ceil(2.14), type(math.ceil(2.14)))
+    pass
