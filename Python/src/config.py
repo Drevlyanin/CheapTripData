@@ -22,9 +22,9 @@ CITIES_CSV = Path(INPUT_CSV_DIR/'cities.csv')
 
 
 # set up outputs folders
-OUTPUT_JSON_DIR = Path('../output/json_output')
-OUTPUT_CSV_DIR = Path('../output/csv_output')
-INNER_JSON_DIR = Path('../output/inner_json_output')
+OUTPUT_JSON_DIR = Path('../output/jsons')
+OUTPUT_CSV_DIR = Path('../output/csv')
+INNER_JSON_DIR = Path('../output/routes_info')
 HOTELS_DIR = Path('../files/hotels')
 ROUTES_TO_FIX_DIR = Path('../files/routes_to_fix')
 
