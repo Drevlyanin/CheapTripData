@@ -4,6 +4,7 @@ from datetime import datetime
 import csv
 import json
 import haversine as hs
+from pathlib import Path
 
 from config import LOGS_DIR, OUTPUT_CSV_DIR, OUTPUT_JSON_DIR, INNER_JSON_DIR, BBOXES_CSV,\
                    TRANSPORT_TYPES, TRANSPORT_TYPES_ID, OUTPUT_COLUMNS, RAW_CSV, CITIES_COUNTRIES_CSV, NOT_FOUND, IATA_CODES_CSV
@@ -282,7 +283,7 @@ def extract_routine(input_data: tuple, euro_rates: dict) -> list():
     return raw_data
 
 
-def extract_data(source_dir=OUTPUT_JSON_DIR):
+def extract_data(jsons_dir=OUTPUT_JSON_DIR):
     
     print('\nData extraction started...')
     
@@ -301,7 +302,7 @@ def extract_data(source_dir=OUTPUT_JSON_DIR):
         csv_writer.writeheader()
     
         # main extraction loop: get data and output in csv
-        for item in gen_jsons(source_dir=source_dir):
+        for item in gen_jsons(jsons_dir):
             data = extract_routine(item, euro_rates)
             csv_writer.writerows(data)
         
@@ -314,11 +315,12 @@ def extract_data(source_dir=OUTPUT_JSON_DIR):
     print('Data extraction completed successfully!\n')
    
 
-def extract():
+def extract(*, source: Path | str = OUTPUT_JSON_DIR):
     if preextract():
-        extract_data()   
+        extract_data(source)   
  
     
 if __name__ == '__main__':
     
-    extract()
+    extract(source='../output_5run/jsons')
+    

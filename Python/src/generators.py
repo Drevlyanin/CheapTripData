@@ -37,9 +37,9 @@ def gen_city_country_pairs(input_csv=CITIES_COUNTRIES_CSV) -> tuple:
 def gen_jsons(source_dir=OUTPUT_JSON_DIR) -> tuple:
     # iterate over files in
     files = Path(source_dir).glob('*.json.gz')
+    
     for file in files:
-        
-        from_id, to_id = file.name.split('-')[:2]
+        from_id, to_id = map(int, file.name.split('-')[:2])
         
         yield from_id, to_id, compress_json.load(str(file))
         
@@ -52,8 +52,9 @@ def gen_injection():
         
 
 if __name__ == '__main__':
-    x = gen_city_country_pairs()
+    x = gen_jsons(source_dir='../output_5run/jsons')
     print(next(x))
+    
     pass
 
 

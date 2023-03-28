@@ -1,5 +1,6 @@
 from config import NOT_FOUND, BBOXES_CSV, AIRPORT_CODES_CSV, CITIES_COUNTRIES_CSV
 from config import EURO_ZONE, EURO_ZONE_LOWEST_PRICE, EURO_ZONE_DURATION_LIMIT, TRANSPORT_TYPES_ID
+from config import OUTPUT_CSV_DIR
 
 import polars as pl
 import re
@@ -105,7 +106,7 @@ def price_to_predict(from_id: int, to_id: int, price: int, duration: int, ttype:
             from_city = df_cities_countries.filter(pl.col('id_city') == from_id)['city'][0]
             to_city = df_cities_countries.filter(pl.col('id_city') == to_id)['city'][0]
             
-            with open('../output/csv_output/lower_predict.csv', 'a') as csvfile:
+            with open(OUTPUT_CSV_DIR/'lower_predict.csv', 'a') as csvfile:
                 # Create a writer object
                 writer = csv.writer(csvfile)
                 
@@ -129,7 +130,7 @@ def price_to_eu_terms(from_id: int, to_id: int, price: int, duration: int, ttype
             from_city = df_cities_countries.filter(pl.col('id_city') == from_id)['city'][0]
             to_city = df_cities_countries.filter(pl.col('id_city') == to_id)['city'][0]
             
-            with open('../output/csv_output/lower_5-60.csv', 'a') as csvfile:
+            with open(OUTPUT_CSV_DIR/'lower_5-60.csv', 'a') as csvfile:
                 # Create a writer object
                 writer = csv.writer(csvfile)
                 
@@ -217,7 +218,5 @@ if __name__ == '__main__':
     #input_file_ok(CITIES_COUNTRIES_CSV)
     #print(df_init())
     #print(get_city_name(156))
-    print(price_to_predict(225, 252, 2, 180, 'share'))
-    print(price_to_predict(225, 252, 2, 180, 'bus'))
-    print(price_to_eu_terms(150, 171, 2, 120, 'fly'))
+    
     pass
