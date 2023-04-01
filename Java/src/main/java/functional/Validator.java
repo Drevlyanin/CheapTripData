@@ -11,6 +11,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 public class Validator {
 
@@ -30,7 +31,7 @@ public class Validator {
             list.add(feature);
         }
 
-        List<CounterFeature> list_end = list.stream().sorted().filter(cf -> cf.getCount() > 70).toList();
+        List<CounterFeature> list_end = list.stream().sorted().filter(cf -> cf.getCount() > 70).collect(Collectors.toList());
         for (int i = 0; i < list_end.size(); i++) {
             CounterFeature feature = list_end.get(i);
             int feature_id = feature.getId();

@@ -6,7 +6,7 @@ import functional.classes.Route;
 import functional.classes.TransportationType;
 import functional.classes.TravelData;
 import maker.CSVMaker;
-import maker.JSONMaker;
+import maker.NewJSONMaker;
 import maker.SQLMaker;
 import maker.classes.TTMaker;
 import parser.ParserForCounter;
@@ -20,7 +20,6 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
-import java.io.PrintStream;
 import java.util.ArrayList;
 
 
@@ -92,7 +91,7 @@ public class CounterMenu {
         locationsPanel.setLayout(new GridLayout(1,2,0,10));
 
         travelDataPanel = new JPanel();
-        travelDataLabel = new JLabel("CSV file with travel_data");
+        travelDataLabel = new JLabel("CSV file with direct_routes");
         travelDataLabel.setFont(font);
         travelDataPathField = new JTextField();
         travelDataPanel.add(travelDataLabel);
@@ -229,7 +228,13 @@ public class CounterMenu {
                                 CSVMaker.routesToFile(CSVMaker.routesToCSV(routes), csvFolderPath, "routes");
                             }
                             if (loadTypes.isJsonLoad() && !jsonFolderPath.equals("")) {
-                                JSONMaker.jsonToFile(JSONMaker.routesJson(routes),jsonFolderPath,"routes");
+                                NewJSONMaker.jsonToFile(NewJSONMaker.routesJson(routes),jsonFolderPath,
+                                        "routes");
+                                try {
+                                    NewJSONMaker.routesJsonPartly(routes,locations,jsonFolderPath,"routes");
+                                } catch (IOException ex) {
+                                    throw new RuntimeException(ex);
+                                }
                             }
                             if (loadTypes.isSqlLoad() && !jsonFolderPath.equals("")) {
                                 SQLMaker.routesSQL(SQLMaker.routesToString(routes,"routes"),"routes",sqlFolderPath);
@@ -243,7 +248,13 @@ public class CounterMenu {
                                 CSVMaker.routesToFile(CSVMaker.routesToCSV(fixed_routes), csvFolderPath, "fixed_routes");
                             }
                             if (loadTypes.isJsonLoad() && !jsonFolderPath.equals("")) {
-                                JSONMaker.jsonToFile(JSONMaker.routesJson(fixed_routes),jsonFolderPath,"fixed_routes");
+                                NewJSONMaker.jsonToFile(NewJSONMaker.routesJson(fixed_routes),jsonFolderPath,
+                                        "fixed_routes");
+                                try {
+                                    NewJSONMaker.routesJsonPartly(fixed_routes,locations,jsonFolderPath,"fixed_routes");
+                                } catch (IOException ex) {
+                                    throw new RuntimeException(ex);
+                                }
                             }
                             if (loadTypes.isSqlLoad() && !jsonFolderPath.equals("")) {
                                 SQLMaker.routesSQL(SQLMaker.routesToString(fixed_routes,"fixed_routes"),"fixed_routes",sqlFolderPath);
@@ -257,7 +268,13 @@ public class CounterMenu {
                                 CSVMaker.routesToFile(CSVMaker.routesToCSV(flying_routes), csvFolderPath, "flying_routes");
                             }
                             if (loadTypes.isJsonLoad() && !jsonFolderPath.equals("")) {
-                                JSONMaker.jsonToFile(JSONMaker.routesJson(flying_routes),jsonFolderPath,"flying_routes");
+                                NewJSONMaker.jsonToFile(NewJSONMaker.routesJson(flying_routes),jsonFolderPath,
+                                        "flying_routes");
+                                try {
+                                    NewJSONMaker.routesJsonPartly(flying_routes,locations,jsonFolderPath,"flying_routes");
+                                } catch (IOException ex) {
+                                    throw new RuntimeException(ex);
+                                }
                             }
                             if (loadTypes.isSqlLoad() && !jsonFolderPath.equals("")) {
                                 SQLMaker.routesSQL(SQLMaker.routesToString(flying_routes,"flying_routes"),"flying_routes",sqlFolderPath);
@@ -267,14 +284,15 @@ public class CounterMenu {
                         if (loadTypes.isCsvLoad() && !csvFolderPath.equals("")) {
                             CSVMaker.stringToFile(CSVMaker.locationsToCSV(locations),csvFolderPath,"locations");
                             CSVMaker.stringToFile(CSVMaker.transportationTypesToCSV(types),csvFolderPath,
-                                    "transportation_types");
-                            CSVMaker.stringToFile(CSVMaker.travelDataToCSV(travelData),csvFolderPath,"travel_data");
+                                    "transport");
+                            CSVMaker.stringToFile(CSVMaker.travelDataToCSV(travelData),csvFolderPath,"direct_routes");
                         }
                         if (loadTypes.isJsonLoad() && !jsonFolderPath.equals("")) {
-                            JSONMaker.jsonToFile(JSONMaker.locationsJson(locations),jsonFolderPath,"locations");
-                            JSONMaker.jsonToFile(JSONMaker.transportationTypeJson(types),jsonFolderPath,
-                                    "transportation_types");
-                            JSONMaker.jsonToFile(JSONMaker.travelDataJson(travelData),jsonFolderPath,"travel_data");
+                            NewJSONMaker.jsonToFile(NewJSONMaker.locationsJson(locations),jsonFolderPath,"locations");
+                            NewJSONMaker.jsonToFile(NewJSONMaker.transportationTypeJson(types),jsonFolderPath,
+                                    "transport");
+                            NewJSONMaker.jsonToFile(NewJSONMaker.travelDataJson(travelData),jsonFolderPath,
+                                    "direct_routes");
                         }
                         if (loadTypes.isSqlLoad() && !sqlFolderPath.equals("")) {
                             SQLMaker.locationsSQL(SQLMaker.locationsToString(locations),sqlFolderPath);
