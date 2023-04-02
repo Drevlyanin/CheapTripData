@@ -1,0 +1,221 @@
+{
+    "description": "How to get to Milan, Discover the cheapest way to get to Milan and find budget-friendly accommodations, cheap eats, free attractions, walking tours, and public transportation options to explore the city without breaking the bank. Tips to budget travellers in Milan without sacrificing the fun. Start planning your exciting journey with us at a cost-effective advantage for your budget.",
+    "keywords": "budget travel, Milan, cheapest way, low-cost accommodations, cheap eats, free attractions, walking tours, public transportation, affordable trip",
+    "title": "Budget Travel Tips: Cheapest Way to Get to Milan and Discover it",
+    "content": {
+                "way":{
+                        "title": "Cheapest way to Milan", 
+                        "description": "Planning a trip to Milan on a budget can be a challenge, but finding the cheapest way to get there is a great place to start. Whether you're flying, taking a bus or driving, there are ways to save on transportation costs. Check out our site to finding the cheapest way to get to Milan: https://cheaptrip.guru/en-US/#/search/myPath/logo cheaptrip.guru"
+                        },
+            
+                "accomodation":{
+                                "title": "Budget-Friendly Accommodations",
+                                "description": "While Milan is known for its expensive hotels, there are plenty of budget-friendly accommodations available. Hostels, Airbnb rentals, and budget hotels can be found throughout the city.Check out our list:",
+                                "list": [
+                                            {
+                                                "name": "Ostello Bello Grande",
+                                                "link": "https://www.google.com/maps/place/Ostello+Bello+Grande/@45.4897022,9.2003207,17z/data=!3m1!4b1!4m5!3m4!1s0x4786bcce12d543a7:0x25bdf7c67ee21452!8m2!3d45.4897022!4d9.2025094",
+                                                "description": " - lively hostel is located near Milan's Central Station and offers a range of accommodations from dorms to private rooms. The hostel has a rooftop terrace, a communal kitchen, and a bar that serves free breakfast and hosts happy hour events. Located at Via Roberto Lepetit, 33, 20124 Milano MI, Italy."
+                                            },
+                                            {
+                                                "name": "Ostello Bello",
+                                                "link": "https://www.google.com/maps/place/Ostello+Bello/@45.4635742,9.1857536,17z/data=!3m1!4b1!4m5!3m4!1s0x4786bd6d742025c1:0xa7ebe8e6ad9f6e61!8m2!3d45.4635742!4d9.1879423",
+                                                "description": " - another branch of the popular Ostello Bello hostel, this one is located in the heart of Milan and offers cozy dorms and private rooms. The hostel has a communal kitchen, a terrace, and hosts regular events like movie nights and pizza parties. Located at Via Medici, 4, 20123 Milano MI, Italy."
+                                            },
+                                            {
+                                                "name": "MEININGER Milano Lambrate",
+                                                "link": "https://www.google.com/maps/place/MEININGER+Milano+Lambrate/@45.4799315,9.2351435,17z/data=!3m1!4b1!4m5!3m4!1s0x4786b680ebbb01df:0xd64af46b977db9c9!8m2!3d45.4799315!4d9.237332",
+                                                "description": " - this modern hostel is located in the Lambrate district of Milan and offers a variety of room options including private rooms and dorms. The hostel has a game room, a communal kitchen, and a bar. Located at Via Privata Giovanni Calvino, 11, 20139 Milano MI, Italy."
+                                            },
+                                            {
+                                                "name": "Couchsurfing",
+                                                "link": "https://www.couchsurfing.com/",
+                                                "description": " - is a popular platform for travelers looking for free accommodation while exploring new cities, and Milan is no exception. Visit the website to create a profile and search for hosts in Milan."
+                                            }
+                                        ]   
+                                },
+                "eat":{
+                        "title": "Cheap Eats",
+                        "description": "You don't have to spend a lot of money to eat well in Milan. From dollar slice pizza to food trucks and street vendors, there are plenty of cheap eats to satisfy any craving. Check out our list of the top locations for the best cheap eats in Milan:",
+                        "list": [
+                                    {
+                                        "name": "Luini Panzerotti",
+                                        "link": "https://www.google.com/maps/place/Luini+Panzerotti/@45.4646684,9.1917152,17z/data=!3m1!4b1!4m5!3m4!1s0x4786bd6c8a3b4c39:0xd0640b2998ad6e77!8m2!3d45.4646684!4d9.1939039",
+                                        "description": " - famous for its delicious and budget-friendly panzerotti, a popular Milanese street food."
+                                    },
+                                    {
+                                        "name": "Pizzeria Spontini",
+                                        "link": "https://www.google.com/maps/place/Pizzeria+Spontini/@45.4620741,9.1744752,17z/data=!3m1!4b1!4m5!3m4!1s0x4786b82a32b80d09:0x76057f34801dd3f9!8m2!3d45.4620741!4d9.1766639",
+                                        "description": " - a historic pizzeria chain in Milan known for its high-quality pizzas at reasonable prices."
+                                    },
+                                    {
+                                        "name": "Il Panzerotto del Vicolo",
+                                        "link": "https://www.google.com/maps/place/Il+Panzerotto+del+Vicolo/@45.462651,9.186016,17z/data=!3m1!4b1!4m5!3m4!1s0x4786bd8d77b0f77b:0x9d5b6a5a5e232b69!8m2!3d45.462651!4d9.188204",
+                                        "description": " - a small establishment in the heart of Milan that serves tasty and affordable panzerotti."
+                                    },
+                                    {
+                                        "name": "Trattoria Masuelli San Marco",
+                                        "link": "https://www.google.com/maps/place/Trattoria+Masuelli+San+Marco/@45.4721556,9.2011319,17z/data=!3m1!4b1!4m5!3m4!1s0x4786b9dd9d06ff1d:0x80db6a65aeb0f3e3!8m2!3d45.4721556!4d9.2033206",
+                                        "description": " - a traditional Milanese trattoria that serves classic dishes at reasonable prices."
+                                    },
+                                    {
+                                        "name": "Taglio",
+                                        "link": "https://www.google.com/maps/place/Taglio/@45.464466,9.190947,17z/data=!3m1!4b1!4m5!3m4!1s0x4786bd6c7de652e9:0xb7f88c33b8e84fd3!8m2!3d45.464466!4d9.1931357",
+                                        "description": "- a popular pizza place that offers a wide range of delicious and affordable pizza slices."
+                                    },
+                                    {
+                                        "name": "Salumeria del Monte Nero",
+                                        "link": "https://www.google.com/maps/place/Salumeria+del+Monte+Nero/@45.4780006,9.1735663,17z/data=!3m1!4b1!4m5!3m4!1s0x4786bcd6a42a6387:0xa9e135f96213a25d!8m2!3d45.4780006!4d9.175755",
+                                        "description": " - a deli shop in Milan that offers a wide variety of fresh and tasty Italian products, including cold cuts, cheese, wine, and more. Perfect for budget travelers who want to have a picnic or prepare their own meals. Located at Via Monte Nero, 55, 20135 Milano MI, Italy."
+                                    },
+                                    {
+                                        "name": "Peck",
+                                        "link": "https://www.google.com/maps/place/Peck/@45.4667251,9.1943953,17z/data=!3m1!4b1!4m5!3m4!1s0x4786bd6d62d9ee2d:0x2a2a8a5b87d1b5a1!8m2!3d45.4667251!4d9.196584",
+                                        "description": " - a gourmet grocery store in Milan that offers a wide selection of high-quality food products, including cheese, wine, truffles, caviar, and more. Prices are a bit higher than average, but it's worth it for the quality. Located at Via Spadari, 9, 20123 Milano MI, Italy."
+                                    },
+                                    {
+                                        "name": "El Criollo Milano",
+                                        "link": "https://www.google.com/maps/place/El+Criollo+Milano/@45.4780667,9.2037586,17z/data=!3m1!4b1!4m5!3m4!1s0x4786bce65e1c7c87:0x5680a9a5a63b0e17!8m2!3d45.4780667!4d9.205947",
+                                        "description": " - a Latin American grocery store in Milan that offers a variety of imported products, including coffee, spices, and snacks. They also have a small cafe area where you can try traditional Latin American dishes at reasonable prices. Located at Via Privata Giovanni Ventura, 3, 20134 Milano MI, Italy."
+                                    },
+                                    {
+                                        "name": "Esselunga",
+                                        "link": "https://www.google.com/maps/place/Esselunga/@45.4835996,9.2039424,17z/data=!3m1!4b1!4m5!3m4!1s0x4786bcce1e2a659f:0xb56f9639cfb6708d!8m2!3d45.4835996!4d9.2061311",
+                                        "description": " - is a popular supermarket chain in Italy that offers a wide variety of food products at affordable prices. They have several locations in Milan, including one near the Central Station. Here, you can find fresh produce, meats, dairy products, and more at discounted prices."
+                                    },
+                                    {
+                                        "name": "Lidl",
+                                        "link": "https://www.google.com/maps/place/Lidl/@45.4496523,9.1789127,17z/data=!3m1!4b1!4m5!3m4!1s0x4786bcb51c7de539:0xe1f2d88f29478c24!8m2!3d45.4496523!4d9.1811014",
+                                        "description": " - is another popular discount supermarket chain in Italy. They offer a range of food products, including fresh produce, meat, dairy, and bakery items, at affordable prices. There are several Lidl locations throughout Milan, making it a convenient option for budget travelers."
+                                    },
+                                    {
+                                        "name": "Eurospin",
+                                        "link": "https://www.google.com/maps/place/Eurospin/@45.4470775,9.1465025,17z/data=!3m1!4b1!4m5!3m4!1s0x4786bceebca32419:0x70f9a0b2b3f3c0e3!8m2!3d45.4470775!4d9.148691",
+                                        "description": " - is a discount supermarket chain that offers a range of food products, including fresh produce, meats, and dairy, at affordable prices. They have several locations throughout Milan, including one near the Bocconi University. Eurospin is a great option for budget travelers who want to save money on food."
+                                    },
+                                    {
+                                        "name": "Carrefour Market",
+                                        "link": "https://www.google.com/maps/place/Carrefour+Market/@45.4636611,9.1883338,17z/data=!3m1!4b1!4m5!3m4!1s0x4786bd6d9ba0f7b1:0x72a7a69a2c522698!8m2!3d45.4636611!4d9.1905225",
+                                        "description": " - is a supermarket chain that offers a range of food products, including fresh produce, meat, dairy, and bakery items, at affordable prices. They have several locations throughout Milan, including one near the Duomo Cathedral. Carrefour Market is a convenient option for budget travelers looking for affordable food options in the city."
+                                    },
+                                    {
+                                        "name": "PAM Local",
+                                        "link": "https://www.google.com/maps/place/PAM+Local/@45.4754686,9.2029267,15z/data=!4m5!3m4!1s0x0:0x17b7aafa801c2e35!8m2!3d45.4754686!4d9.2029267",
+                                        "description": " - is a discount supermarket chain that offers a range of food products, including fresh produce, meats, dairy, and bakery items, at affordable prices. They have several locations throughout Milan, including one near the Porta Venezia Gardens. PAM Local is a convenient option for budget travelers looking to save money on food while exploring the city."
+                                    },
+                                    {
+                                        "name": "Conad",
+                                        "link": "https://www.google.com/maps/place/Conad/@45.4813007,9.1597806,15z/data=!4m5!3m4!1s0x0:0xc3d3d3e77bf39b0a!8m2!3d45.4813007!4d9.1597806",
+                                        "description": " - is a popular supermarket chain in Italy that offers a range of food products at affordable prices. They have several locations throughout Milan, including one near the Sempione Park. Here, you can find fresh produce, meats, dairy products, and more at discounted prices."
+                                    }
+                                ]
+                        },
+                "attractions":{
+                                "title": "Free and Low-Cost Attractions",
+                                "description": "Milan, Italy is filled with free and low-cost attractions that won't break the bank. From the iconic Duomo di Milano to the Galleria Vittorio Emanuele II, there are plenty of sights to see without spending a dime. Here are some of the top locations:",
+                                "free": [               
+                                            {
+                                                "name": "",
+                                                "link": "",
+                                                "description": ""
+                                            },
+                                            {
+                                                "name": "",
+                                                "link": "",
+                                                "description": ""
+                                            },
+                                            {
+                                                "name": "",
+                                                "link": "",
+                                                "description": ""
+                                            },
+                                            {
+                                                "name": "",
+                                                "link": "",
+                                                "description": ""
+                                            },
+                                            {
+                                                "name": "",
+                                                "link": "",
+                                                "description": ""
+                                            },
+                                            {
+                                                "name": "",
+                                                "link": "",
+                                                "description": ""
+                                            },
+                                            {
+                                                "name": "",
+                                                "link": "",
+                                                "description": ""
+                                            },
+                                            {
+                                                "name": "",
+                                                "link": "",
+                                                "description": ""
+                                            }
+                                        ],
+                                    
+                                "low-cost": {
+                                                "item": "Low-Cost Attractions",
+                                                "description": "",
+                                                "list":[
+                                                            {
+                                                                "name": "",
+                                                                "link": "",
+                                                                "description": ""
+                                                            },
+                                                            {
+                                                                "name": "",
+                                                                "link": "",
+                                                                "description": ""
+                                                            },
+                                                            {
+                                                                "name": "",
+                                                                "link": "",
+                                                                "description": ""
+                                                            },
+                                                            {
+                                                                "name": "",
+                                                                "link": "",
+                                                                "description": ""
+                                                            },
+                                                            {
+                                                                "name": "",
+                                                                "link": "",
+                                                                "description": ""
+                                                            },
+                                                            {
+                                                                "name": "",
+                                                                "link": "",
+                                                                "description": ""
+                                                            },
+                                                            {
+                                                                "name": "",
+                                                                "link": "",
+                                                                "description": ""
+                                                            },
+                                                            {
+                                                                "name": "",
+                                                                "link": "",
+                                                                "description": ""
+                                                            }
+
+                                                ]
+                                            }
+
+                                },
+                "tours":{
+                            "item": "Free Walking Tours",
+                            "description": "",
+                            "list":[]
+                        },
+
+                "transportation":{
+                                    "title": "Public Transportation",
+                                    "description": "",
+                                    "list":[]
+                                    }
+
+                }
+}
