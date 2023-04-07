@@ -3,7 +3,6 @@ package maker.classes;
 import functional.classes.TransportationType;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class TTMaker {
 

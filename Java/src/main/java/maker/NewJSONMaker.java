@@ -33,6 +33,7 @@ public class NewJSONMaker {
             object.addProperty("name", location.getName());
             object.addProperty("latitude", location.getLatitude());
             object.addProperty("longitude", location.getLongitude());
+            object.addProperty("country_name", location.getCountry_name());
             general.add(String.valueOf(id),object);
         }
         return general;
