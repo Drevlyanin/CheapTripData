@@ -11,6 +11,12 @@ from config import TRIPLES_CSV, FIXED_IDS_CSV, VALID_ROUTES_CSV, LOGS_DIR, ROUTE
 logging.basicConfig(filename=LOGS_DIR/'fixing.log', filemode='w', format='%(name)s - %(levelname)s - %(message)s')
 
 
+def fixing_price():
+    files = Path(ROUTES_TO_FIX_DIR).glob('*.csv')
+    for file in files:
+        fix_price(file)
+
+
 def fix_price(input_csv):
     
     input_csv = Path(input_csv)
@@ -128,7 +134,7 @@ def fix_price(input_csv):
 
 if __name__ == '__main__':
     
-    if len(sys.argv) > 1 and sys.argv[1] == '-b':
+    if len(sys.argv) >= 1 or sys.argv[1] == '-b':
         files = Path(ROUTES_TO_FIX_DIR).glob('*.csv')
         for file in files:
             fix_price(file)

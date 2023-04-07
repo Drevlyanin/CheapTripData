@@ -1,0 +1,14 @@
+Please generate a html landing page for the [city] that is optimized for budget travellers. 
+Include the following sections:
+    -Info about the [city]: to the right is a description, to the left is a picture;
+    -The cheapest way to get to the [city], with this link: "https://cheaptrip.guru/en-US/#/search/myPath/logo" 
+    -Free and cheapest ways to sleep in [city], with links to the corresponding locations at google maps
+    -Cheap options for dining out in [city] with links to locations at google maps
+    -Free, cheapest and most popular attractions in [city]
+    -Information about the cheapest way to get around [city].
+    -Info about hiking tours in [city].
+    -Information about the most popular hiking routes from [city] to other popular destinations and cities.
+Please make the landing page colourful, modern, and adaptive to different screen sizes, 
+with pictures showcasing the beauty of [city]. 
+Use SEO-friendly language and include relevant keywords for budget travellers.
+Thank you!
