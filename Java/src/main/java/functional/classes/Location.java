@@ -8,6 +8,16 @@ public class Location {
     private double longitude;
     private String name_ru;
 
+    private String country_name;
+
+    public Location(int id, String name, double latitude, double longitude,String country_name) {
+        this.id = id;
+        this.name = name;
+        this.latitude = latitude;
+        this.longitude = longitude;
+        this.country_name = country_name;
+    }
+
     public Location(int id, String name, int country_id, double latitude, double longitude, String name_ru) {
         this.id = id;
         this.name = name;
@@ -22,6 +32,9 @@ public class Location {
         this.name = name;
         this.latitude = latitude;
         this.longitude = longitude;
+    }
+
+    public Location() {
     }
 
     public int getId() {
@@ -72,12 +85,22 @@ public class Location {
         this.name_ru = name_ru;
     }
 
+    public String getCountry_name() {
+        return country_name;
+    }
+
+    public void setCountry_name(String country_name) {
+        this.country_name = country_name;
+    }
+
+    @Override
     public String toString() {
-        return "id=" + id +
+        return "Location{" +
+                "id=" + id +
                 ", name='" + name + '\'' +
-                ", country_id=" + country_id +
                 ", latitude=" + latitude +
                 ", longitude=" + longitude +
-                ", name_ru='" + name_ru;
+                ", country_name='" + country_name + '\'' +
+                '}';
     }
 }

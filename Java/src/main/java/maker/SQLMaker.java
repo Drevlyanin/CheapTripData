@@ -18,13 +18,14 @@ public class SQLMaker {
     public static PrintStream stream = new PrintStream(console);
 
     public static String locationsToString(List<Location> locations) {
-        String result = "INSERT INTO locations (id, name, latitude, longitude) VALUES ";
+        String result = "INSERT INTO locations (id, name, latitude, longitude,country_name) VALUES ";
         for (int i = 0; i < locations.size(); i++) {
             Location location = locations.get(i);
             result = result + "(" + location.getId() + ",'" +
                     location.getName() + "'," +
                     location.getLatitude() + "," +
-                    location.getLongitude() + ")";
+                    location.getLongitude() + "," +
+                    location.getCountry_name() + ")";
             if (i < locations.size() - 1) {
                 result = result + ",\n";
             } else {
@@ -42,6 +43,7 @@ public class SQLMaker {
                 "   name                VARCHAR(40)         NOT NULL," + "\n" +
                 "   latitude            DECIMAL(12, 2)      NOT NULL," + "\n" +
                 "   longitude           DECIMAL(12, 2)      NOT NULL," + "\n" +
+                "   country_name        VARCHAR(40)         NOT NULL," + "\n" +
                 "PRIMARY KEY (id)" + "\n" +
                 ") ENGINE = InnoDB" + "\n" +
                 "DEFAULT CHARSET = utf8;" + "\n" +
