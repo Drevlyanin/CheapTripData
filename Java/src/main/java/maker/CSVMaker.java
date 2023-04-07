@@ -42,7 +42,8 @@ public class CSVMaker {
             builder.append("(").append(location.getId()).append(",")
                     .append(location.getName()).append(",")
                     .append(location.getLatitude()).append(",")
-                    .append(location.getLongitude()).append(")");
+                    .append(location.getLongitude()).append(",")
+                    .append(location.getCountry_name()).append(")");
             if (i == list.size() - 1) {
                 builder.append(";");
             } else {
