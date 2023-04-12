@@ -1,0 +1,16 @@
+root - ERROR - In file: 'all_fly_from_Bugreport_26-03-2023.csv'
+	matches not found: from_id = 121, to_id = 214, transport_id = 1
+root - ERROR - In file: 'all_fly_from_Bugreport_26-03-2023.csv'
+	matches not found: from_id = 130, to_id = 156, transport_id = 1
+root - ERROR - In file: 'all_fly_from_Bugreport_26-03-2023.csv'
+	matches not found: from_id = 136, to_id = 147, transport_id = 1
+root - ERROR - In file: 'all_fly_from_Bugreport_26-03-2023.csv'
+	matches not found: from_id = 147, to_id = 136, transport_id = 1
+root - ERROR - In file: 'all_fly_from_Bugreport_26-03-2023.csv'
+	matches not found: from_id = 205, to_id = 156, transport_id = 1
+root - ERROR - In file: 'all_fly_from_Bugreport_26-03-2023.csv'
+	matches not found: from_id = 212, to_id = 171, transport_id = 1
+root - ERROR - In file: 'all_fly_from_Bugreport_26-03-2023.csv'
+	matches not found: from_id = 214, to_id = 121, transport_id = 1
+root - ERROR - In file: 'all_fly_from_Bugreport_26-03-2023.csv'
+	matches not found: from_id = 364, to_id = 10, transport_id = 1
