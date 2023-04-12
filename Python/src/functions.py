@@ -1,14 +1,16 @@
 from config import NOT_FOUND, BBOXES_CSV, AIRPORT_CODES_CSV, CITIES_COUNTRIES_CSV
 from config import EURO_ZONE, EURO_ZONE_LOWEST_PRICE, EURO_ZONE_DURATION_LIMIT, TRANSPORT_TYPES_ID
-from config import OUTPUT_CSV_DIR
+from config import OUTPUT_CSV_DIR, PROMPTS_TXT
 
 import polars as pl
 import re
 from geopy.geocoders import Nominatim
 import math
 import csv
+from urllib.parse import urlparse, urlencode
 
 from logger import logger_setup
+import openai, os
 
 logger = logger_setup()
 
@@ -20,6 +22,39 @@ df_cities_countries = pl.read_csv(CITIES_COUNTRIES_CSV)
    
 def get_city_name(id):
     return df_cities_countries.filter(pl.col('id_city') == id)['city'][0]
+    
+    
+def get_city_id(name):
+    try:
+        return df_cities_countries.filter(pl.col('city') == name)['id_city'][0]
+    except:
+        return NOT_FOUND
+
+
+def get_modify_url(url: str, params: dict):
+    
+    url = url.replace('#/search', 'search')
+    
+    # Parse the URL into its component parts
+    parsed_url = urlparse(url)
+    #print(parsed_url)
+
+    # Get the query string parameters as a dictionary
+    query_params = dict([qp.split('=') for qp in parsed_url.query.split('&')])
+    #print(query_params)
+
+    # Replace the values of any parameters specified in the params dictionary
+    for key, value in params.items():
+        if key in query_params:
+            query_params[key] = value
+
+    # Encode the modified query parameters and rebuild the URL
+    new_query_string = urlencode(query_params)
+    new_url = parsed_url._replace(query=new_query_string).geturl()
+
+    new_url = new_url.replace('search', '#/search')
+    
+    return new_url
     
     
 def get_bboxes(city_country):
@@ -207,6 +242,28 @@ def get_inner_json(pth, rt, route_dic):
         return "Error:", err 
     
     
+def get_prompt_GPT():
+    with open(PROMPTS_TXT, 'r') as file:
+        prompts = file.readlines()
+    return prompts
+    
+    
+def get_response_GPT(prompt):
+    openai.organization = 'org-2enZa8BZcwVTWlVOMiFLwb6r'
+    openai.api_key = os.getenv('OPENAI_API_KEY_CT')
+    
+    response = openai.ChatCompletion.create(model="gpt-3.5-turbo",
+                                            messages=[
+                                                        #{"role": "system", "content": f"Act as an {role}"},
+                                                        {"role": "user", "content": prompt}
+                                                    ],
+                                            temperature=0
+                                            )   
+    
+    return response['choices'][0]['message']['content']
+     
+    
+    
 if __name__ == '__main__':
     
     #print(get_id_pair('10-Tel-Aviv-20-Clermont-Ferrand'))
@@ -218,5 +275,10 @@ if __name__ == '__main__':
     #input_file_ok(CITIES_COUNTRIES_CSV)
     #print(df_init())
     #print(get_city_name(156))
+    
+    # ct_link = 'https://cheaptrip.guru/en-US/#/search/myPath?from=Milan&fromID=252&to=Prague&toID=297'
+    # params = {"from": "Berlin", "fromID": 123, "to": "Doha", "toID": 252}
+    # #print(ct_link)
+    # print(get_modify_url(ct_link, params))
     
     pass

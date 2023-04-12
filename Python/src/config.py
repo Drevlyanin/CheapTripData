@@ -93,3 +93,6 @@ EURO_ZONE_LOWEST_PRICE, EURO_ZONE_DURATION_LIMIT = 5, 60
 LOGS_DIR = Path('../logs')
 LOG_CRITICAL = Path(LOGS_DIR/'critical_errors.log')
 LOG_CRITICAL_FORMAT = '%(asctime)s - %(levelname)s - %(message)s'
+
+#prompts set up
+PROMPTS_TXT = Path('../files/seo/prompts.txt')
