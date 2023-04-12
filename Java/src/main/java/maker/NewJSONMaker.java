@@ -17,6 +17,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class NewJSONMaker {
@@ -53,6 +54,35 @@ public class NewJSONMaker {
             general.add(String.valueOf(id),object);
         }
         return general;
+    }
+
+    public static void directRoutesJsonPartly(List<TravelData> data, List<Location> locations,
+                                              String path) throws IOException {
+        folderForPartlyMaker(path,"direct_routes");
+        Collections.sort(data) ;
+        for (int i = 0; i < locations.size(); i++) {
+            Location location = locations.get(i);
+            JsonObject general = new JsonObject();
+            List<TravelData> list = new ArrayList<>();
+            for (int j = 0; j < data.size(); j++) {
+                TravelData direct = data.get(j);
+                if (direct.getFrom() == location.getId()) {
+                    list.add(direct);
+                }
+            }
+            if (!list.isEmpty()) {
+                for (int j = 0; j < list.size(); j++) {
+                    TravelData travelData = list.get(j);
+                    JsonObject object = new JsonObject();
+                    int to = travelData.getTo();
+                    object.addProperty("transport", travelData.getTransportation_type());
+                    object.addProperty("price", (int) travelData.getEuro_price());
+                    object.addProperty("duration", travelData.getTime_in_minutes());
+                    general.add(String.valueOf(to), object);
+                }
+                jsonToFile(general, path + "/partly/direct_routes", String.valueOf(location.getId()));
+            }
+        }
     }
 
     public static JsonObject transportationTypeJson(List<TransportationType> types) {
@@ -124,7 +154,7 @@ public class NewJSONMaker {
             System.out.println(object.toString());
             file.write(object.toString());
             file.flush();
-            //stringMaker(filename + ".json created");
+            stringMaker(filename + ".json created");
         } catch (IOException e) {
             e.printStackTrace();
         }

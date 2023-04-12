@@ -44,24 +44,25 @@ public class ParserForCounter {
         int k = input.length;
         ArrayList<Location> locations = new ArrayList<>();
         for (int i = 0; i < k; i++) {
-            String[] arr = input[i].split(",");
-            int id = Integer.parseInt(arr[0]);
-            String name = arr[1];
-            double latitude = Float.parseFloat(arr[2]);
-            double longitude = Float.parseFloat(arr[3]);
-            String country_name = null;
-            for (int j = 0; j < oldLocation.size(); j++) {
-                Location location = oldLocation.get(j);
-                if (id == location.getId() && name.equals(location.getName())) {
-                    country_name = location.getCountry_name();
-                } else if (id == location.getId()) {
-                    country_name = location.getCountry_name();
+            if (!input[i].startsWith("id_city")) {
+                String[] arr = input[i].split(",");
+                int id = Integer.parseInt(arr[0]);
+                String name = arr[1];
+                double latitude = Float.parseFloat(arr[2]);
+                double longitude = Float.parseFloat(arr[3]);
+                String country_name = null;
+                for (int j = 0; j < oldLocation.size(); j++) {
+                    Location location = oldLocation.get(j);
+                    if (id == location.getId() && name.equals(location.getName())) {
+                        country_name = location.getCountry_name();
+                    } else if (id == location.getId()) {
+                        country_name = location.getCountry_name();
+                    }
                 }
+                Location result = new Location(id,name,latitude,longitude,country_name);
+                locations.add(result);
             }
-            Location result = new Location(id,name,latitude,longitude,country_name);
-            locations.add(result);
         }
-
         stringMaker("Locations successfully parsed");
         return locations;
     }
@@ -70,18 +71,20 @@ public class ParserForCounter {
         int k = input.length;
         ArrayList<TravelData> datas = new ArrayList<>();
         for (int i = 0; i < k; i++) {
-            String[] arr = input[i].split(",");
-            TravelData data = new TravelData(
-                    Integer.parseInt(arr[0]),
-                    Integer.parseInt(arr[1]),
-                    Integer.parseInt(arr[2]),
-                    Integer.parseInt(arr[3]),
-                    Float.parseFloat(arr[4]),
-                    Integer.parseInt(arr[5])
-            );
-            datas.add(data);
+            if (!input[i].startsWith("path_id")) {
+                String[] arr = input[i].split(",");
+                TravelData data = new TravelData(
+                        Integer.parseInt(arr[0]),
+                        Integer.parseInt(arr[1]),
+                        Integer.parseInt(arr[2]),
+                        Integer.parseInt(arr[3]),
+                        Float.parseFloat(arr[4]),
+                        Integer.parseInt(arr[5])
+                );
+                datas.add(data);
+            }
         }
-        stringMaker("Travel data successfully parsed");
+        stringMaker("Direct routes successfully parsed");
         return datas;
     }
 
