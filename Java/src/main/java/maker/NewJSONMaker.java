@@ -154,7 +154,7 @@ public class NewJSONMaker {
             System.out.println(object.toString());
             file.write(object.toString());
             file.flush();
-            stringMaker(filename + ".json created");
+            //stringMaker(filename + ".json created");
         } catch (IOException e) {
             e.printStackTrace();
         }
