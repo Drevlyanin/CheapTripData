@@ -4,7 +4,7 @@ import compress_json
 import string
 import polars as pl
 
-from config import OUTPUT_JSON_DIR, CITIES_COUNTRIES_CSV
+from config import OUTPUT_JSON_DIR, CITIES_COUNTRIES_CSV, PROMPTS_TXT
 
 
 def gen_city_country_pairs(input_csv=CITIES_COUNTRIES_CSV) -> tuple:
@@ -48,12 +48,17 @@ def gen_jsons(source_dir=OUTPUT_JSON_DIR) -> tuple:
 def gen_injection():
     letters = string.ascii_lowercase * 3
     for item in permutations(letters, 3):
-        yield '-' + ''.join(item)
+        yield '-' + ''.join(item)      
         
 
 if __name__ == '__main__':
     x = gen_jsons(source_dir='../output_5run/jsons')
+    
     print(next(x))
+    print(next(x))
+    print(next(x))
+    print(next(x))
+    
     
     pass
 

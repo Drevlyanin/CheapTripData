@@ -1,145 +1,137 @@
 import pandas as pd
-import openai
-import os
 import json
 from time import perf_counter
 from pathlib import Path
 from pexels import get_pexel_image
+from contextlib import contextmanager
+
+from functions import get_city_id, get_modify_url, get_response_GPT, get_prompts_GPT
+from config import NOT_FOUND, CITIES_COUNTRIES_CSV, EURO_ZONE
 
 
-def get_seo_text():
+@contextmanager
+def nested_dict(dicts: tuple(), keys: tuple) -> dict:
+    nd, nd2 = dicts
+    for key in keys:
+        nd = nd.setdefault(key, {})
+        nd2 = nd2.setdefault(key, {})
+    yield nd, nd2
+
+
+def get_seo_text(*, city='Kuressaare'):
     
-    openai.organization = "org-2enZa8BZcwVTWlVOMiFLwb6r"
-    openai.api_key = os.getenv('OPENAI_API_KEY_CT')
+    city_id = get_city_id(city)
+    ct_link = 'https://cheaptrip.guru/en-US/#/search/myPath?from=Milan&fromID=252&to=Barcelona&toID=128'
     
-    city = 'Berlin'
+    prompts = {k: v.replace('[city]', city) for k, v in get_prompts_GPT().items()}
     
-    with open('../output/cities_info/seo_template_Milan_origin.json', 'r') as json_file:
-        city_info = json.load(json_file)
-        
-    for key, value in filter(lambda item: item[0] != 'content', city_info.items()):
-        city_info[key] = value.replace('Milan', city)
-        
-    # work with the content item 'way'
-    city_info['content']['way']['title'] = city_info['content']['way']['title'].replace('Milan', city)
-    city_info['content']['way']['description'] = city_info['content']['way']['description'].replace('Milan', city)
-            
-    # work with the content item 'city'    
-    city_info['content']['city']['title'] = city_info['content']['city']['title'].replace('Milan', city)
-    city_info['content']['city']['images'] = get_pexel_image(city)
+    with open('../output/cities_info/seo_example.json', 'r') as json_file:
+        example_info = json.load(json_file)
     
-    # ask ai to generate a city description        
-    response = openai.ChatCompletion.create(
-        model="gpt-3.5-turbo",
-        messages=[
-                    #{"role": "system", "content": "Act as an advanced seo expert."},
-                    {"role": "user", "content": f"""Write a seo-frendly description of the city of {city} 
-                        like in this example: {city_info['content']['city']['description']}.
-                        Your target audience is budget travellers."""}
-                ],
-        #temperature=0.0
-                                            )   
-    city_info['content']['city']['description'] = response['choices'][0]['message']['content']
+    # forms main dict structure
+    city_info = dict.fromkeys(('description', 'keywords', 'title', 'content'))
+    city_info['content'] = {key: {} for key in ('way', 'city', 'accomodations', 'eats', 
+                                                'attractions', 'tours', 'transportations', 'routes')}
+    
+    # work with 'description', 'keywords', 'title'
+    for key in filter(lambda x: x != 'content', city_info.keys()):
+        city_info[key] = example_info[key].replace('Milan', city)
+    
+    # work with the 'content' 'way' item 
+    with nested_dict((city_info, example_info), ('content', 'way')) as (c, e):
+        for key in ('title', 'description'):
+            c[key] = e[key].replace('Milan', city)
+        c['link'] ="https://cheaptrip.guru/en-US/#/search/myPath/logo"
+       
+    # work with the 'content' 'city' item 
+    with nested_dict((city_info, example_info), ('content', 'city')) as (c, e):
+        c['title'] = e['title'].replace('Milan', city)
+        prompt = prompts['city_descr'].replace('[description]', e['description'])
+        c['description'] = get_response_GPT(prompt)
+        c['images'] = get_pexel_image(city)   
         
     # work with the content items: 'accomodation', 'eats', 'attractions'
-    for key in ['accomodation', 'eats', 'attractions']:
-        response = openai.ChatCompletion.create(
-            model="gpt-3.5-turbo",
-            messages=[
-                        #{"role": "system", "content": f"Act as an expert level {city} guide with 10+ years of experience."},
-                        {"role": "user", "content": f"""Write a short description of {city_info['content'][key]['title']} 
-                                                        options in the city of {city} for budget travellers, like in this example: 
-                                                        {city_info['content'][key]['description']}"""
-                        }
-                    ],
-            #temperature=0.0
-                                                )
-        city_info['content'][key]['description'] = response['choices'][0]['message']['content']
+    for key in ('accomodations', 'eats', 'attractions'):
+        with nested_dict((city_info, example_info), ('content', key)) as (c, e):
+            prompt = prompts['aea_descr'].replace('[title]', e['title'])
+            prompt = prompt.replace('[description]', e['description'])
+            c['description'] = get_response_GPT(prompt)
         
-        response = openai.ChatCompletion.create(
-            model="gpt-3.5-turbo",
-            messages=[
-                        #{"role": "system", "content": f"Act as an expert level {city} guide with 10+ years of experience."},
-                        {"role": "user", "content": f"""Find {city_info['content'][key]['title']} options 
-                                                        in the city of {city} with descriptions and location links, 
-                                                        like in this example: {city_info['content'][key]['items'][0]}. 
-                                                    """
-                        }
-                    ],
-            #temperature=0.0
-                                                )
-        city_info['content'][key]['items'] = response['choices'][0]['message']['content']
+            prompt = prompts['aea_opts'].replace('[title]', e['title'])
+            names = get_response_GPT(prompt)
+
+            names = names.split('\n')
+            if len(names) == 1: names = names[0].split(',')
+            names = [name.strip(' .') for name in names]
+            
+            c['options'] = []
+            for name in names:
+                prompt = prompts['aea_opt_descr'].replace('[name]', name)
+                prompt = prompt.replace('[title]', e['title'])
+                prompt = prompt.replace('[description]', e['options'][0]['description'])
+                description = get_response_GPT(prompt)
+                
+                prompt = prompts['aea_opt_loc'].replace('[name]', name)
+                prompt = prompt.replace('[title]', e['title'])
+                prompt = prompt.replace('[location]', e['options'][0]['location'])
+                location = get_response_GPT(prompt)
+                
+                c['options'].append({'name':name,'description':description,'location':location})
     
     # work with the content items: 'tours' and 'transportation':
-    for key in ['tours', 'transportation']:
-        response = openai.ChatCompletion.create(
-            model="gpt-3.5-turbo",
-            messages=[
-                        #{"role": "system", "content": f"Act as an expert level {city} guide with 10+ years of experience."},
-                        {"role": "user", "content": f"""Write a short description of {city_info['content'][key]['title']} 
-                                                        options in the city of {city} for budget travellers, like in this example: 
-                                                        {city_info['content'][key]['description']}"""
-                        }
-                    ],
-            #temperature=0.0
-                                                )
-        city_info['content'][key]['description'] = response['choices'][0]['message']['content']
-    
-        response = openai.ChatCompletion.create(
-            model="gpt-3.5-turbo",
-            messages=[
-                        #{"role": "system", "content": f"Act as an expert level {city} guide with 10+ years of experience."},
-                        {"role": "user", "content": f"""Provide a list of relevant links for this description 
-                                                    {city_info['content'][key]['description']} of the
-                                                    {city_info['content'][key]['title']} options in the city of {city}"""
-                        }
-                    ],
-            #temperature=0.0
-                                                )
-        city_info['content'][key]['link'] = response['choices'][0]['message']['content']
+    for key in ('tours', 'transportations'):
+        with nested_dict((city_info, example_info), ('content', key)) as (c, e):
+            prompt = prompts['tt_descr'].replace('[title]', e['title'])
+            prompt = prompt.replace('[description]', e['description'])
+            description = get_response_GPT(prompt)
+            
+            prompt = prompts['tt_links'].replace('[title]', e['title'])
+            prompt = prompt.replace('[description]', description)
+            links = get_response_GPT(prompt)
+            
+            c['description'] = description
+            c['links'] = [link.strip('- ') for link in links.split('\n')]
         
     # work with the content item 'routes':
-    city_info['content']['routes']['title'] = city_info['content']['routes']['title'].replace('Milan', city)
-    city_info['content']['routes']['description'] = city_info['content']['routes']['description'].replace('Milan', city)
+    with nested_dict((city_info, example_info), ('content', 'routes')) as (c, e):
+        c['title'] = e['title'].replace('Milan', city)
+        
+        prompt = prompts['ro_descr'].replace('[title]', c['title'])
+        c['description'] = get_response_GPT(prompt)
+        
+        routes = get_response_GPT(prompts['ro_ro'])
+        routes = routes.split('\n')
+        if len(routes) == 1: routes = routes[0].split(',')
+        routes = [route.strip(' .') for route in routes]
+        
+        c['pathes'] = []
+        for route in routes:
+            
+            route_id = get_city_id(route)
+            
+            if route_id == NOT_FOUND: continue
+            
+            prompt = prompts['ro_ro_descr'].replace('[route]', route)
+            prompt = prompt.replace('[description]', e['pathes'][1]['description'])
+            description = get_response_GPT(prompt)
+            
+            params = {"from": city, "fromID": city_id, "to": route, "toID": route_id}
+            ct_link = get_modify_url(ct_link, params)
+        
+            c['pathes'].append({'route':route, 'description':description, 'link':ct_link})
     
-    response = openai.ChatCompletion.create(
-            model="gpt-3.5-turbo",
-            messages=[
-                        #{"role": "system", "content": f"Act as an expert level {city} guide with 10+ years of experience."},
-                        {"role": "user", "content": f"""Provide me with a list of 10 most popular routes from {city} 
-                                                        to other attractive cities in Europe with short seo-frendly route descriptions
-                                                        relevant to budget travellers, like in this example: 
-                                                        ['route':'{city} to Lisbon', 
-                                                        'description': {city_info['content']['routes']['items'][3]['description']}]."""
-                        }
-                    ],
-            #temperature=0.0
-                                            )
-    routes = response['choices'][0]['message']['content']
-    
-    city_info['content']['routes']['items'] = routes
-      
+    # write result in json  
     with open(f'../output/cities_info/{city}.json', 'w') as file:
         json.dump(city_info, file, indent=4)   
           
-    
-    #print(response['choices'][0]['finish_reason'])
-    """ response = openai.Completion.create(model="text-davinci-003",
-                                        prompt=prompt,
-                                        temperature=0,
-                                        max_tokens=2500) """
-              
-    """ response_img = openai.Image.create(
-                                        #prompt=response['choices'][0]['message']['content'],
-                                        prompt="Brandenburg Gate in black and white colors",
-                                        n=5,
-                                        size="1024x1024"
-                                        
-                                        ) """
-    
-    #print(response['choices'][0]['text'])
-      
-    
+
+def get_seo():
+    df_cities_countries = pd.read_csv(CITIES_COUNTRIES_CSV, header=0, index_col=0)
+    for i, city in enumerate(df_cities_countries.loc[df_cities_countries.index.isin(EURO_ZONE)]['city'].values, start=1):
+        print(f'Processing: {i}. {city}', end='...')
+        get_seo_text(city)
+        print('successfully!')
+
     
 if __name__ == '__main__':
     start = perf_counter()

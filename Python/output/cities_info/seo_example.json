@@ -20,24 +20,24 @@
                             "description": "Milan, the fashion capital of Italy, is a bustling city that offers a wealth of cultural and historical attractions for budget travelers. The city is known for its magnificent Duomo, one of the largest Gothic cathedrals in the world, which dominates the city center. A stroll through the Galleria Vittorio Emanuele II, a stunning 19th-century shopping arcade, is a must-do, as is a visit to the iconic Sforza Castle, home to several museums and art collections. The Pinacoteca di Brera, located in the historic Brera district, is a top destination for art lovers, with an impressive collection of Italian Renaissance art. Parco Sempione, a large park in the heart of Milan, is a great place to relax and enjoy a picnic. For budget foodies, a trip to the Navigli district is a must-do, with its lively bars, cafes, and restaurants. And, of course, no visit to Milan is complete without indulging in some gelato, preferably from one of the city's best gelaterias such as Gelateria della Musica or Gelateria Marghera. With its stunning architecture, rich history, and vibrant culture, Milan is a city not to be missed by travelers."
                 },
             
-                "accomodation":{
+                "accomodations":{
                                 "title": "Budget-Friendly Accommodations",
                                 "description": "While Milan is known for its expensive hotels, there are plenty of budget-friendly accommodations available. Hostels, Airbnb rentals, and budget hotels can be found throughout the city.Check out our list:",
-                                "items": [
+                                "options": [
                                             {
                                                 "name": "Ostello Bello Grande",
-                                                "location": "https://www.google.com/maps/place/Ostello+Bello+Grande/@45.4897022,9.2003207,17z/data=!3m1!4b1!4m5!3m4!1s0x4786bcce12d543a7:0x25bdf7c67ee21452!8m2!3d45.4897022!4d9.2025094",
-                                                "description": " - lively hostel is located near Milan's Central Station and offers a range of accommodations from dorms to private rooms. The hostel has a rooftop terrace, a communal kitchen, and a bar that serves free breakfast and hosts happy hour events. Located at Via Roberto Lepetit, 33, 20124 Milano MI, Italy."
+                                                "location": "https://www.google.com/maps/place/Ostello+Bello+Grande/@45.4842075,9.2032399,17z/data=!3m1!4b1!4m9!3m8!1s0x4786c6c4c48e219d:0x38d9561c34254b90!5m2!4m1!1i2!8m2!3d45.4842075!4d9.2054286!16s%2Fg%2F11bc6y6vl4",
+                                                "description": "This lively hostel is located near Milan's Central Station and offers a range of accommodations from dorms to private rooms. The hostel has a rooftop terrace, a communal kitchen, and a bar that serves free breakfast and hosts happy hour events. Located at Via Roberto Lepetit, 33, 20124 Milano MI, Italy"
                                             },
                                             {
                                                 "name": "Ostello Bello",
                                                 "location": "https://www.google.com/maps/place/Ostello+Bello/@45.4635742,9.1857536,17z/data=!3m1!4b1!4m5!3m4!1s0x4786bd6d742025c1:0xa7ebe8e6ad9f6e61!8m2!3d45.4635742!4d9.1879423",
-                                                "description": " - another branch of the popular Ostello Bello hostel, this one is located in the heart of Milan and offers cozy dorms and private rooms. The hostel has a communal kitchen, a terrace, and hosts regular events like movie nights and pizza parties. Located at Via Medici, 4, 20123 Milano MI, Italy."
+                                                "description": "Another branch of the popular Ostello Bello hostel, this one is located in the heart of Milan and offers cozy dorms and private rooms. The hostel has a communal kitchen, a terrace, and hosts regular events like movie nights and pizza parties. Located at Via Medici, 4, 20123 Milano MI, Italy."
                                             },
                                             {
                                                 "name": "MEININGER Milano Lambrate",
                                                 "location": "https://www.google.com/maps/place/MEININGER+Milano+Lambrate/@45.4799315,9.2351435,17z/data=!3m1!4b1!4m5!3m4!1s0x4786b680ebbb01df:0xd64af46b977db9c9!8m2!3d45.4799315!4d9.237332",
-                                                "description": " - this modern hostel is located in the Lambrate district of Milan and offers a variety of room options including private rooms and dorms. The hostel has a game room, a communal kitchen, and a bar. Located at Via Privata Giovanni Calvino, 11, 20139 Milano MI, Italy."
+                                                "description": "This modern hostel is located in the Lambrate district of Milan and offers a variety of room options including private rooms and dorms. The hostel has a game room, a communal kitchen, and a bar. Located at Via Privata Giovanni Calvino, 11, 20139 Milano MI, Italy."
                                             },
                                             {
                                                 "name": "Couchsurfing",
@@ -49,45 +49,45 @@
                 "eats":{
                         "title": "Cheap Eats",
                         "description": "You don't have to spend a lot of money to eat well in Milan. From dollar slice pizza to food trucks and street vendors, there are plenty of cheap eats to satisfy any craving. Check out our list of the top locations for the best cheap eats in Milan:",
-                        "items": [
+                        "options": [
                                     {
                                         "name": "Luini Panzerotti",
-                                        "location": "https://www.google.com/maps/place/Luini+Panzerotti/@45.4646684,9.1917152,17z/data=!3m1!4b1!4m5!3m4!1s0x4786bd6c8a3b4c39:0xd0640b2998ad6e77!8m2!3d45.4646684!4d9.1939039",
-                                        "description": " - famous for its delicious and budget-friendly panzerotti, a popular Milanese street food."
+                                        "location": "https://www.google.com/maps/place/Panzerotti+Luini.+%D0%9F%D0%B8%D1%80%D0%BE%D0%B6%D0%BA%D0%BE%D0%B2%D0%B0%D1%8F/@45.4658286,9.1893691,17z/data=!3m1!4b1!4m6!3m5!1s0x4786c6ae420941a1:0x7679be1e2c775e23!8m2!3d45.4658286!4d9.1915578!16s%2Fg%2F11b6d4gx_d",
+                                        "description": "Famous for its delicious and budget-friendly panzerotti, a popular Milanese street food"
                                     },
                                     {
                                         "name": "Pizzeria Spontini",
-                                        "location": "https://www.google.com/maps/place/Pizzeria+Spontini/@45.4620741,9.1744752,17z/data=!3m1!4b1!4m5!3m4!1s0x4786b82a32b80d09:0x76057f34801dd3f9!8m2!3d45.4620741!4d9.1766639",
-                                        "description": " - a historic pizzeria chain in Milan known for its high-quality pizzas at reasonable prices."
+                                        "location": "https://www.google.com/maps/place/Spontini/@45.4620737,9.1679091,15z/data=!3m1!5s0x4786c6aeac8b7617:0x8232244ccd859435!4m10!1m2!2m1!1sPizzeria+Spontini!3m6!1s0x4786c6ac04667f85:0x5d1529568b5c5f7f!8m2!3d45.4632465!4d9.1886567!15sChFQaXp6ZXJpYSBTcG9udGluaSIDiAEBWhMiEXBpenplcmlhIHNwb250aW5pkgENcGl6emF0YWtlYXdheeABAA!16s%2Fg%2F11bwyxb4bg",
+                                        "description": "A historic pizzeria chain in Milan known for its high-quality pizzas at reasonable prices."
                                     },
                                     {
                                         "name": "Il Panzerotto del Vicolo",
-                                        "location": "https://www.google.com/maps/place/Il+Panzerotto+del+Vicolo/@45.462651,9.186016,17z/data=!3m1!4b1!4m5!3m4!1s0x4786bd8d77b0f77b:0x9d5b6a5a5e232b69!8m2!3d45.462651!4d9.188204",
+                                        "location": "https://www.google.com/maps/place/Il+Panzerotto+-+Made+In+Puglia/@45.4669196,9.1772981,14z/data=!4m10!1m2!2m1!1sIl+Panzerotto+del+Vicolo!3m6!1s0x4786c6e9cc3a71e9:0x8934db82283aa359!8m2!3d45.4819444!4d9.2133333!15sChhJbCBQYW56ZXJvdHRvIGRlbCBWaWNvbG9aGiIYaWwgcGFuemVyb3R0byBkZWwgdmljb2xvkgEUZmFzdF9mb29kX3Jlc3RhdXJhbnSaASNDaFpEU1VoTk1HOW5TMFZKUTBGblNVUm9hVkI2U0dOUkVBReABAA!16s%2Fg%2F12hkljpww",
                                         "description": " - a small establishment in the heart of Milan that serves tasty and affordable panzerotti."
                                     },
                                     {
                                         "name": "Trattoria Masuelli San Marco",
-                                        "location": "https://www.google.com/maps/place/Trattoria+Masuelli+San+Marco/@45.4721556,9.2011319,17z/data=!3m1!4b1!4m5!3m4!1s0x4786b9dd9d06ff1d:0x80db6a65aeb0f3e3!8m2!3d45.4721556!4d9.2033206",
+                                        "location": "https://www.google.com/maps/place/Trattoria+Masuelli+San+Marco/@45.4563913,9.2150021,17z/data=!3m1!4b1!4m6!3m5!1s0x4786c682bbeffefb:0x4eec33748b6d2c9a!8m2!3d45.4563913!4d9.2171908!16s%2Fg%2F1vy7fg4n",
                                         "description": " - a traditional Milanese trattoria that serves classic dishes at reasonable prices."
                                     },
                                     {
                                         "name": "Taglio",
-                                        "location": "https://www.google.com/maps/place/Taglio/@45.464466,9.190947,17z/data=!3m1!4b1!4m5!3m4!1s0x4786bd6c7de652e9:0xb7f88c33b8e84fd3!8m2!3d45.464466!4d9.1931357",
+                                        "location": "https://www.google.com/maps/place/Otto+-+Pizza+Al+Taglio/@45.4493778,9.1442736,14z/data=!4m10!1m2!2m1!1sTaglio!3m6!1s0x4786c5071d647665:0xa8b91e415830ae8f!8m2!3d45.4493778!4d9.1792925!15sCgZUYWdsaW9aCCIGdGFnbGlvkgEQcGl6emFfcmVzdGF1cmFudOABAA!16s%2Fg%2F11p59gb7w2",
                                         "description": "- a popular pizza place that offers a wide range of delicious and affordable pizza slices."
                                     },
                                     {
                                         "name": "Salumeria del Monte Nero",
-                                        "location": "https://www.google.com/maps/place/Salumeria+del+Monte+Nero/@45.4780006,9.1735663,17z/data=!3m1!4b1!4m5!3m4!1s0x4786bcd6a42a6387:0xa9e135f96213a25d!8m2!3d45.4780006!4d9.175755",
+                                        "location": "https://www.google.com/maps/place/Carni%26Co/@45.4577225,4.7227478,7z/data=!4m10!1m2!2m1!1sSalumeria+del+Monte+Nero!3m6!1s0x4786c7278cbadf5f:0xb780f23f5c30a9e8!8m2!3d45.4576338!4d9.205403!15sChhTYWx1bWVyaWEgZGVsIE1vbnRlIE5lcm9aGiIYc2FsdW1lcmlhIGRlbCBtb250ZSBuZXJvkgELc3RlYWtfaG91c2WaASRDaGREU1VoTk1HOW5TMFZKUTBGblNVTm9NWEZ0V0hsQlJSQULgAQA!16s%2Fg%2F11rgx39f8m",
                                         "description": " - a deli shop in Milan that offers a wide variety of fresh and tasty Italian products, including cold cuts, cheese, wine, and more. Perfect for budget travelers who want to have a picnic or prepare their own meals. Located at Via Monte Nero, 55, 20135 Milano MI, Italy."
                                     },
                                     {
                                         "name": "Peck",
-                                        "location": "https://www.google.com/maps/place/Peck/@45.4667251,9.1943953,17z/data=!3m1!4b1!4m5!3m4!1s0x4786bd6d62d9ee2d:0x2a2a8a5b87d1b5a1!8m2!3d45.4667251!4d9.196584",
+                                        "location": "https://www.google.com/maps/place/%D0%9F%D0%B5%D0%BA/@45.4708884,9.1627565,14z/data=!3m1!5s0x4786c6ac7adad975:0xb1e6a601fee58e25!4m10!1m2!2m1!1sPeck!3m6!1s0x4786c6ac700a504d:0xe365c0d592e6ce32!8m2!3d45.4635131!4d9.1869525!15sCgRQZWNrWgYiBHBlY2uSAQRkZWxp4AEA!16s%2Fg%2F122s990d",
                                         "description": " - a gourmet grocery store in Milan that offers a wide selection of high-quality food products, including cheese, wine, truffles, caviar, and more. Prices are a bit higher than average, but it's worth it for the quality. Located at Via Spadari, 9, 20123 Milano MI, Italy."
                                     },
                                     {
                                         "name": "El Criollo Milano",
-                                        "location": "https://www.google.com/maps/place/El+Criollo+Milano/@45.4780667,9.2037586,17z/data=!3m1!4b1!4m5!3m4!1s0x4786bce65e1c7c87:0x5680a9a5a63b0e17!8m2!3d45.4780667!4d9.205947",
+                                        "location": "https://www.google.com/maps/place/Caminetti+del+Sempione/@45.4815208,9.1320751,14z/data=!3m1!5s0x4786c13e36b67271:0x3776ebb23d7a7b31!4m9!1m2!2m1!1sEl+Criollo+Milano!3m5!1s0x4786c13e36eb923b:0x751c409e762cfe55!8m2!3d45.4815208!4d9.167094!16s%2Fg%2F1tg9rkn3",
                                         "description": " - a Latin American grocery store in Milan that offers a variety of imported products, including coffee, spices, and snacks. They also have a small cafe area where you can try traditional Latin American dishes at reasonable prices. Located at Via Privata Giovanni Ventura, 3, 20134 Milano MI, Italy."
                                     },
                                     {
@@ -125,11 +125,11 @@
                 "attractions":{
                                 "title": "Free and Low-Cost Attractions",
                                 "description": "Milan, Italy is filled with free and low-cost attractions that won't break the bank. From the iconic Duomo di Milano to the Galleria Vittorio Emanuele II, there are plenty of sights to see without spending a dime. Here are some of the top locations:",
-                                "items": [               
+                                "options": [               
                                             {
                                                 "name": "Duomo di Milano",
-                                                "location": "https://www.google.com/maps/place/Duomo+di+Milano/@45.4641221,9.1917542,17z/data=!3m1!4b1!4m5!3m4!1s0x4786d0440d0cf611:0x4a9d1f8b09d63c2b!8m2!3d45.4641221!4d9.1939432",
-                                                "description": "This iconic cathedral is a must-see for any visitor to Milan. Admire the stunning Gothic architecture, including the intricate details on the exterior and the colorful stained glass windows inside. The cathedral is free to enter, although there may be a line to get in."
+                                                "location": "https://www.google.com/maps/place/%D0%9C%D0%B8%D0%BB%D0%B0%D0%BD%D1%81%D0%BA%D0%B8%D0%B9+%D1%81%D0%BE%D0%B1%D0%BE%D1%80/@45.4637663,9.1884105,17z/data=!4m10!1m2!2m1!1sDuomo+di+Milano!3m6!1s0x4786c6aec34636a1:0xab7f4e27101a2e13!8m2!3d45.4640976!4d9.1919265!15sCg9EdW9tbyBkaSBNaWxhbm9aESIPZHVvbW8gZGkgbWlsYW5vkgEPY2F0aG9saWNfY2h1cmNo4AEA!16zL20vMDFnZ3M4",
+                                                "description": "This iconic cathedral is a must-see for any visitor to Milan. Admire the stunning Gothic architecture, including the intricate details on the exterior and the colorful stained glass windows inside. The cathedral is free to enter, although there may be a line to get in"
                                             },
                                             {
                                                 "name": "Sforza Castle",
@@ -199,68 +199,68 @@
                             "description": "Join a free walking tour to explore the sights and sounds of Milan, Italy on foot. You'll learn about the history and culture of the city, and get insider tips on the best places to visit and eat."
                         },
 
-                "transportation":{
+                "transportations":{
                                     "title": "Public Transportation",
                                     "link": ["https://www.atm.it/en/Pages/default.aspx", "https://www.trenitalia.com/tcom-en"],
                                     "description": "Taxis and Ubers can quickly eat away at your travel budget in Milan. Instead, opt for the city's public transportation system, which includes subways, buses, and trams. For more information on navigating the city's public transportation system, check out this links:"   
                                 },
-                "routes":{
-                            "title": "Most popular routes from Milan to:",
-                            "description": "Here are 10 popular routes from Milan to other attractive cities in Europe that are both affordable and offer a great travel experience:",
-                            "items": [
-                                        {
-                                            "route": "Milan to Barcelona",
-                                            "link": "https://cheaptrip.guru/en-US/#/search/myPath?from=Milan&fromID=252&to=Barcelona&toID=128",
-                                            "description": "This is a popular route for budget travelers, with flights available from several low-cost airlines. It's a great way to combine two vibrant cities known for their culture, architecture, and cuisine."    
-                                        },
-                                        {
-                                            "route": "Milan to Berlin",
-                                            "link": "https://cheaptrip.guru/en-US/#/search/myPath?from=Milan&fromID=252&to=Berlin&toID=124",
-                                            "description": "Berlin is known for its lively nightlife, art scene, and history, making it a great destination for budget travelers. Flights can be found at reasonable prices, especially during the off-season."
-                                        },
-                                        {
-                                            "route": "Milan to Budapest",
-                                            "link": "https://cheaptrip.guru/en-US/#/search/myPath?from=Milan&fromID=252&to=Budapest&toID=123",
-                                            "description": "Budapest is one of Europe's most beautiful cities, with a rich history and stunning architecture. It's also an affordable destination for budget travelers, with cheap flights and reasonable prices on accommodation and food."
-                                        },
-                                        {
-                                            "route": "Milan to Lisbon",
-                                            "link": "https://cheaptrip.guru/en-US/#/search/myPath?from=Milan&fromID=252&to=Lisbon&toID=235",
-                                            "description": "Lisbon is a vibrant city known for its culture, architecture, and beaches. It's also one of Europe's most affordable destinations, with plenty of budget-friendly options for accommodation and dining."   
-                                        },
-                                        {
-                                            "route": "Milan to Prague",
-                                            "link": "https://cheaptrip.guru/en-US/#/search/myPath?from=Milan&fromID=252&to=Prague&toID=297",
-                                            "description": "Prague is a popular destination for budget travelers, known for its historic architecture, charming streets, and affordable prices. Flights from Milan to Prague can be found at reasonable prices, especially during the off-season."   
-                                        },
-                                        {
-                                            "route": "Milan to Krakow",
-                                            "link": "https://cheaptrip.guru/en-US/#/search/myPath?from=Milan&fromID=252&to=Krakow&toID=214",
-                                            "description": "Krakow is a beautiful city with a rich history, charming streets, and affordable prices. It's a popular destination for budget travelers, with flights from Milan available at reasonable prices."   
-                                        },
-                                        {
-                                            "route": "Milan to Copenhagen",
-                                            "link": "https://cheaptrip.guru/en-US/#/search/myPath?from=Milan&fromID=252&to=Copenhagen&toID=147",
-                                            "description": "Copenhagen is a vibrant city with a rich history, beautiful architecture, and a lively culture. It's also an affordable destination for budget travelers, with cheap flights and reasonable prices on accommodation and food."   
-                                        },
-                                        {
-                                            "route": "Milan to Warsaw",
-                                            "link": "https://cheaptrip.guru/en-US/#/search/myPath?from=Milan&fromID=252&to=Warsaw&toID=364",
-                                            "description": "Warsaw is an affordable and historic city, with plenty of attractions for budget travelers. Flights from Milan to Warsaw can be found at reasonable prices, especially during the off-season."   
-                                        },
-                                        {
-                                            "route": "Milan to Athens",
-                                            "link": "https://cheaptrip.guru/en-US/#/search/myPath?from=Milan&fromID=252&to=Athens&toID=104",
-                                            "description": "Athens is a historic city with a rich culture and beautiful architecture. It's also an affordable destination for budget travelers, with cheap flights and reasonable prices on accommodation and food."   
-                                        },
-                                        {
-                                            "route": "Milan to Dublin",
-                                            "link": "https://cheaptrip.guru/en-US/#/search/myPath?from=Milan&fromID=252&to=Dublin&toID=162",
-                                            "description": "Dublin is a lively and friendly city known for its culture, history, and nightlife. It's also an affordable destination for budget travelers, with plenty of budget-friendly options for accommodation and dining."   
-                                        }
+                
+    "routes":{
+                "title": "Most popular routes from Milan to:",
+                "description": "Here are 10 popular routes from Milan to other attractive cities in Europe that are both affordable and offer a great travel experience:",
+                "pathes": [
+                            {
+                                "route": "Barcelona",
+                                "link": "https://cheaptrip.guru/en-US/#/search/myPath?from=Milan&fromID=252&to=Barcelona&toID=128",
+                                "description": "This is a popular route for budget travelers, with flights available from several low-cost airlines. It's a great way to combine two vibrant cities known for their culture, architecture, and cuisine."    
+                            },
+                            {
+                                "route": "Berlin",
+                                "link": "https://cheaptrip.guru/en-US/#/search/myPath?from=Milan&fromID=252&to=Berlin&toID=124",
+                                "description": "Berlin is known for its lively nightlife, art scene, and history, making it a great destination for budget travelers. Flights can be found at reasonable prices, especially during the off-season."
+                            },
+                            {
+                                "route": "Budapest",
+                                "link": "https://cheaptrip.guru/en-US/#/search/myPath?from=Milan&fromID=252&to=Budapest&toID=123",
+                                "description": "Budapest is one of Europe's most beautiful cities, with a rich history and stunning architecture. It's also an affordable destination for budget travelers, with cheap flights and reasonable prices on accommodation and food."
+                            },
+                            {
+                                "route": "Lisbon",
+                                "link": "https://cheaptrip.guru/en-US/#/search/myPath?from=Milan&fromID=252&to=Lisbon&toID=235",
+                                "description": "Lisbon is a vibrant city known for its culture, architecture, and beaches. It's also one of Europe's most affordable destinations, with plenty of budget-friendly options for accommodation and dining."   
+                            },
+                            {
+                                "route": "Prague",
+                                "link": "https://cheaptrip.guru/en-US/#/search/myPath?from=Milan&fromID=252&to=Prague&toID=297",
+                                "description": "Prague is a popular destination for budget travelers, known for its historic architecture, charming streets, and affordable prices. Flights from Milan to Prague can be found at reasonable prices, especially during the off-season."   
+                            },
+                            {
+                                "route": "Krakow",
+                                "link": "https://cheaptrip.guru/en-US/#/search/myPath?from=Milan&fromID=252&to=Krakow&toID=214",
+                                "description": "Krakow is a beautiful city with a rich history, charming streets, and affordable prices. It's a popular destination for budget travelers, with flights from Milan available at reasonable prices."   
+                            },
+                            {
+                                "route": "Copenhagen",
+                                "link": "https://cheaptrip.guru/en-US/#/search/myPath?from=Milan&fromID=252&to=Copenhagen&toID=147",
+                                "description": "Copenhagen is a vibrant city with a rich history, beautiful architecture, and a lively culture. It's also an affordable destination for budget travelers, with cheap flights and reasonable prices on accommodation and food."   
+                            },
+                            {
+                                "route": "Warsaw",
+                                "link": "https://cheaptrip.guru/en-US/#/search/myPath?from=Milan&fromID=252&to=Warsaw&toID=364",
+                                "description": "Warsaw is an affordable and historic city, with plenty of attractions for budget travelers. Flights from Milan to Warsaw can be found at reasonable prices, especially during the off-season."   
+                            },
+                            {
+                                "route": "Athens",
+                                "link": "https://cheaptrip.guru/en-US/#/search/myPath?from=Milan&fromID=252&to=Athens&toID=104",
+                                "description": "Athens is a historic city with a rich culture and beautiful architecture. It's also an affordable destination for budget travelers, with cheap flights and reasonable prices on accommodation and food."   
+                            },
+                            {
+                                "route": "Dublin",
+                                "link": "https://cheaptrip.guru/en-US/#/search/myPath?from=Milan&fromID=252&to=Dublin&toID=162",
+                                "description": "Dublin is a lively and friendly city known for its culture, history, and nightlife. It's also an affordable destination for budget travelers, with plenty of budget-friendly options for accommodation and dining."   
+                            }
 
-                                    ]
-                        }
-
-                }
+                        ]
+            }
+    }
 }

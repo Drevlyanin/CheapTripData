@@ -1,0 +1,53 @@
+{
+    "description": "",
+    "keywords": "",
+    "title": "",
+    "content": {
+                "way":{
+                        "title": "",
+                        "link": "https://cheaptrip.guru/en-US/#/search/myPath/logo",  
+                        "description": "" 
+                    },
+                "city": {
+                            "title": "",
+                            "images": [],
+                            "description": ""
+                        },
+                "accomodations":{
+                                "count": 5,
+                                "title": "Budget-Friendly Accommodations",
+                                "description": "",
+                                "options": []   
+                                },
+                "eats":{
+                        "count": 5,
+                        "title": "Cheap Eats",
+                        "description": "",
+                        "options": []
+                        },
+                "attractions":{
+                                "count": 10,
+                                "title": "Free and Low-Cost Attractions",
+                                "description": "",
+                                "options": []       
+                                },
+                "tours":{
+                            "title": "Free Walking Tours",
+                            "description": "",
+                            "links": []
+                        },
+
+                "transportations":{
+                                    "title": "Public Transportation",
+                                    "description": "",
+                                    "links": []  
+                                },
+                
+                "routes":{
+                            "count": 10,
+                            "title": "Most popular routes from city of ",
+                            "description": "",
+                            "pathes": []
+                        }
+    }
+}
