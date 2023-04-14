@@ -14,13 +14,13 @@
                             "description": ""
                         },
                 "accomodations":{
-                                "count": 10,
+                                "count": 5,
                                 "title": "Budget-Friendly Accommodations",
                                 "description": "",
                                 "options": []   
                                 },
                 "eats":{
-                        "count": 10,
+                        "count": 5,
                         "title": "Cheap Eats",
                         "description": "",
                         "options": []

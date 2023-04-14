@@ -5,258 +5,244 @@
     "content": {
         "way": {
             "title": "Cheapest way to Berlin",
-            "link": "https://cheaptrip.guru/en-US/#/search/myPath/logo",
-            "description": "Planning a trip to Berlin on a budget can be a challenge, but finding the cheapest way to get there is a great place to start. Whether you're flying, taking a bus or driving, there are ways to save on transportation costs. Check out our site to finding the cheapest way to get to Berlin: https://cheaptrip.guru/en-US/#/search/myPath/logo cheaptrip.guru"
+            "description": "Planning a trip to Berlin on a budget can be a challenge, but finding the cheapest way to get there is a great place to start. Whether you're flying, taking a bus or driving, there are ways to save on transportation costs. Check out our site to finding the cheapest way to get to Berlin: https://cheaptrip.guru/en-US/#/search/myPath/logo cheaptrip.guru",
+            "link": "https://cheaptrip.guru/en-US/#/search/myPath/logo"
         },
         "city": {
             "title": "Discovering Berlin on a Budget: Top Attractions and Insider Tips for Budget Travelers",
+            "description": "Berlin, Germany's capital, is a dynamic city that caters to budget travellers seeking history, culture, and entertainment. The city is popular for its fascinating landmarks, such as the iconic Brandenburg Gate and the breath-taking Berlin Wall, which vividly symbolize the city's turbulent past. Visitors can also explore world-class museums and art galleries, such as the Pergamon Museum and the Berlinische Gallery, which boast extensive collections of historical and contemporary artworks. Berlin's vibrant nightlife also makes it a hotspot for budget travelers, with highlights such as the legendary techno club Berghain, as well as eclectic bars and cafes in the vibrant neighborhood of Kreuzberg. When it comes to food, Berlin has a diverse culinary scene, with affordable street food such as the famous Currywurst, as well as hip modern restaurants and ethnic eateries. With its unique blend of history, art, music, and cuisine, Berlin is a must-visit destination for budget travelers.",
             "images": [
-                "https://images.pexels.com/photos/1128408/pexels-photo-1128408.jpeg?auto=compress&cs=tinysrgb&h=350",
-                "https://images.pexels.com/photos/109630/pexels-photo-109630.jpeg?auto=compress&cs=tinysrgb&h=350",
-                "https://images.pexels.com/photos/2570063/pexels-photo-2570063.jpeg?auto=compress&cs=tinysrgb&h=350",
-                "https://images.pexels.com/photos/234315/pexels-photo-234315.jpeg?auto=compress&cs=tinysrgb&h=350",
-                "https://images.pexels.com/photos/1057840/pexels-photo-1057840.jpeg?auto=compress&cs=tinysrgb&h=350"
-            ],
-            "description": "Berlin, the vibrant capital of Germany, offers a plethora of cultural and historical attractions for budget travelers to explore. The city is known for its iconic landmarks such as the Brandenburg Gate and the Berlin Wall, which reflect its tumultuous history. A stroll through the lively neighborhoods of Kreuzberg, Neuk\u00f6lln, and Prenzlauer Berg is a must-do, as is a visit to the stunning Museum Island, home to several world-famous museums. The East Side Gallery, an open-air art gallery featuring murals and graffiti, is a top destination for art lovers. Tiergarten, a sprawling park in the heart of Berlin, offers a peaceful escape from the bustling city. For budget foodies, sampling the local street food and beer at the city's countless food markets and breweries is a must-do. And, of course, no trip to Berlin is complete without indulging in some authentic German cuisine, such as currywurst and schnitzel. With its unique charm, rich history, and affordable attractions, Berlin is a city that should be on every budget traveler's itinerary."
+                "https://images.pexels.com/photos/1128408/pexels-photo-1128408.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+                "https://images.pexels.com/photos/109630/pexels-photo-109630.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+                "https://images.pexels.com/photos/2570063/pexels-photo-2570063.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+                "https://images.pexels.com/photos/234315/pexels-photo-234315.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+                "https://images.pexels.com/photos/1057840/pexels-photo-1057840.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+            ]
         },
-        "accomodation": {
-            "title": "Budget-Friendly Accommodations",
-            "description": "If you're looking for budget-friendly accommodations in Berlin, there are plenty of options to choose from. Hostels like the Circus Hostel or Meininger offer affordable dormitory-style rooms, while Airbnb rentals can provide a more private and comfortable stay for a fraction of the price of a hotel. If you prefer the amenities of a hotel, there are plenty of budget options, such as the Ibis Budget or the A&O Hotel chain. Many of these places are located in the vibrant neighborhoods of Kreuzberg and Neuk\u00f6lln, where you can experience the local culture and nightlife. With so many affordable options available, you can easily stretch your travel budget when visiting Berlin.",
-            "items": [
+        "accomodations": {
+            "description": "Visiting Berlin on a budget? Don't worry - there are plenty of affordable accommodations to choose from! Whether you're looking for a comfortable hostel, a private Airbnb rental, or a budget-friendly hotel, Berlin has plenty of options to fit your wallet. Check out our list of budget-friendly accommodations to get started on your money-saving journey in this vibrant city.",
+            "options": [
+                {
+                    "name": "Generator Hostel Berlin Mitte",
+                    "description": "Looking for an affordable option for your trip to Berlin? Look no further than Generator Hostel Berlin Mitte! This vibrant hostel offers a variety of budget-friendly accommodations ranging from shared dormitories to private rooms. With its convenient location in the heart of Berlin's trendy Mitte district, you'll have easy access to all the best attractions the city has to offer. The hostel also features a rooftop terrace, communal kitchen, and lively bar area where you can enjoy free breakfast and happy hour events. Don't break the bank on accommodation - book your stay at Generator Hostel Berlin Mitte today!",
+                    "location": "https://www.google.com/maps/place/Generator+Berlin+Mitte/@52.5129407,13.4051998,17z/data=!3m1!4b1!4m5!3m4!1s0x47a850c3e673bd05:0xe15a1576716700!8m2!3d52.5129407!4d13.4073885"
+                },
+                {
+                    "name": "Motel One Berlin-Hauptbahnhof",
+                    "description": "If you're a budget traveller, Motel One Berlin-Hauptbahnhof is the perfect place to stay during your visit to Berlin. This hotel offers affordable accommodations without sacrificing comfort, so you can enjoy your stay without breaking the bank. Choose from a range of room options, whether you're looking to stay in a single room or share a dorm with other travellers. The hotel boasts a central location close to Berlin's main train station, making it easy to get around the city. Enjoy amenities such as free Wi-Fi, a lounge area, and a bar. Whether you're visiting Berlin for business or pleasure, Motel One Berlin-Hauptbahnhof is a great choice for budget-conscious travellers.",
+                    "location": "https://www.google.com/maps/place/Motel+One+Berlin-Hauptbahnhof/@52.5266019,13.3690492,17z/data=!3m1!4b1!4m5!3m4!1s0x47a84e11c3f8a48d:0x98ab06dd7eb23ed2!8m2!3d52.5265987!4d13.3712439"
+                },
+                {
+                    "name": "Grand Hostel Berlin",
+                    "description": "Welcome to Grand Hostel Berlin, your ultimate budget-friendly accommodation choice in the city that offers a unique blend of comfort, style and affordability. Located at a prime location, our lively hostel offers cozy dorms and private rooms to suit all kinds of budget travelers. The hostel boasts a rooftop terrace with stunning views of the city, a communal kitchen equipped with modern appliances, and a bustling bar that serves complimentary breakfast every morning and happy hour events every evening. Whether you are travelling with friends or solo, our hostel promises an exciting and sociable atmosphere with plenty of opportunities to meet fellow travellers from around the world. We welcome you to Grand Hostel Berlin, your home away from home in the heart of the city.",
+                    "location": "https://www.google.com/maps/place/Grand+Hostel+Berlin/@52.4931858,13.4271297,17z/data=!3m1!4b1!4m5!3m4!1s0x47a84fe1d5e5dc5d:0xba7df968ee0649b5!8m2!3d52.4931858!4d13.4293184"
+                },
+                {
+                    "name": "a&o Berlin Mitte",
+                    "description": "Looking for a comfortable and affordable accommodation option in Berlin? Look no further than a&o Berlin Mitte! This budget-friendly hostel offers a variety of options including dorms and private rooms with ensuite bathrooms, making it perfect for solo travelers, families or groups. The property is located close to many of Berlin's top attractions, such as Alexanderplatz and the Museum Island, so you can easily explore the city without breaking the bank. On-site amenities include a 24-hour reception, bar and lounge area, and a communal kitchen where you can prepare your own meals. With its convenient location and affordable rates, a&o Berlin Mitte is the ideal choice for budget-conscious travelers looking to experience everything that Berlin has to offer!",
+                    "location": "https://www.google.com/maps/place/a%26o+Berlin+Mitte/@52.5223488,13.4083202,17z/data=!3m1!4b1!4m5!3m4!1s0x47a84e154fa68b43:0x9a13d8c56fb79409!8m2!3d52.5223488!4d13.4105089"
+                },
                 {
                     "name": "Baxpax Downtown Hostel/Hotel",
-                    "location": "https://www.google.com/maps/place/Baxpax+Downtown+Hostel/Hotel/@52.527605,-13.383981,17z/data=!3m1!4b1!4m5!3m4!1s0x47a8518f09b3e869:0xd659c6ed51b66bf2!8m2!3d52.527605!4d-13.381787",
-                    "description": "Baxpax Downtown Hostel/Hotel is the perfect choice for budget travellers looking for comfortable and affordable accommodation in the heart of Berlin. Located in the vibrant downtown area, this hostel/hotel offers a range of budget-friendly rooms and dorms with simple yet comfortable furnishings. With easy access to public transportation and a short distance to popular tourist destinations, Baxpax Downtown Hostel/Hotel is the ideal base for exploring Berlin on a budget. Book now for a wallet-friendly stay in the city!"
-                },
-                {
-                    "name": "The Circus Hostel",
-                    "location": "https://www.google.com/maps/place/Circus+Hostel/@52.5248667,13.4044152,17z/data=!3m1!4b1!4m5!3m4!1s0x47a84e30e2d7c239:0x92bb7eb9dfe1d729!8m2!3d52.5248667!4d13.4066039",
-                    "description": "The Circus Hostel in Berlin is the perfect budget-friendly accommodation for travellers looking to experience the city's unique culture and attractions without breaking the bank. Located in the heart of the trendy Mitte district, this charming hostel offers comfortable dorms and private rooms at affordable prices, as well as a range of on-site amenities including a cozy bar and caf\u00e9, bike rentals, and free walking tours. Whether you're a solo adventurer or a group of friends, The Circus Hostel is the ultimate choice for an unforgettable Berlin stay."
-                },
-                {
-                    "name": "Meininger Hotel Berlin Mitte",
-                    "location": "https://www.google.com/maps/place/MEININGER+Hotel+Berlin+Mitte/@52.5244876,13.4026311,17z/data=!3m1!4b1!4m5!3m4!1s0x47a84e5e5c5f5e5f:0xba629c6e30d6d35e!8m2!3d52.5244876!4d13.4048198",
-                    "description": "Meininger Hotel Berlin Mitte is the perfect choice for budget travellers looking for a comfortable stay in the heart of Berlin. The hotel offers affordable and convenient accommodations, within walking distance of many popular attractions, including the famous Berlin Wall. With a variety of room options and modern amenities, Meininger Hotel Berlin Mitte is the ideal choice for those looking to explore the city without breaking the bank."
-                },
-                {
-                    "name": "ONE80\u00ba Hostels Berlin.",
-                    "location": "https://www.one80hostels.com/berlin-hostel/",
-                    "description": "ONE80\u00ba Hostels Berlin is the perfect choice for budget travellers visiting the vibrant city of Berlin. With its central location and affordable prices, ONE80\u00ba Hostels Berlin offers comfortable and modern accommodation for backpackers and budget-conscious travelers alike. Whether you're looking to soak up the city's history and culture, explore its vibrant nightlife or simply enjoy a cheap and cheerful getaway, ONE80\u00ba Hostels Berlin has everything you need for a memorable and affordable stay. So why wait? Book your stay today and experience the best of Berlin without breaking the bank!"
+                    "description": "Baxpax Downtown Hostel/Hotel in the heart of Berlin is the perfect choice for budget-conscious travellers seeking affordable and comfortable accommodations. This vibrant hostel offers a range of dorms and private rooms that are stylishly designed, well-maintained and fully-equipped with all the necessary amenities. The hostel boasts a rooftop terrace, a communal kitchen and a bar that serves free breakfast and hosts happy hour events. Its central location means that it\u2019s only a stone\u2019s throw away from some of Berlin\u2019s major attractions, giving you easy access to the city\u2019s vibrant cultural scene. Book your stay at Baxpax Downtown Hostel/Hotel today and experience the vibe of one of Berlin\u2019s best budget-friendly accommodations!",
+                    "location": "https://www.google.com/maps/place/Baxpax+Downtown+Hostel+Berlin/@52.5285656,13.4060837,17z/data=!3m1!4b1!4m5!3m4!1s0x47a85019a254f6eb:0xf5ee12cc41e60078!8m2!3d52.5285656!4d13.4082724"
                 }
             ]
         },
         "eats": {
-            "title": "Cheap Eats",
-            "description": "Budget travellers heading to the bustling metropolis of Berlin need not fret about overspending on food. The city offers a plethora of pocket-friendly gastronomic options to satisfy hungry tummies. For those on the hunt for cheap eats, look no further than Curry 36 for its legendary currywurst, or Mustafa's Gem\u00fcse Kebap for their delicious kebabs. For a taste of the city's famed street food, head to Street Food Thursday at Markthalle Neun or immerse yourself in the vibrant Turkish market at Kreuzberg's Street Food Market. And of course, no trip to Berlin is complete without trying a traditional Bavarian dish at the cozy and casual Hofbr\u00e4uhaus Berlin. With these affordable options, travellers can enjoy delicious meals without putting a dent in their wallets.",
-            "items": [
+            "description": "Searching for tasty yet affordable meals in Berlin? Look no further! From traditional currywurst stands to trendy food markets and delicious kebab spots, the city has a variety of cheap eats for budget travellers. Check out our carefully curated list of the top places to satisfy your cravings without breaking the bank in Berlin.",
+            "options": [
                 {
-                    "name": "D\u00f6ner Kebab",
-                    "location": "https://www.google.com/maps/place/Berlin+D%C3%B6ner+Kebab/@52.5274924,13.3900553,17z/data=!3m1!4b1!4m5!3m4!1s0x47a85f669aae2db7:0xbb94d55464586f27!8m2!3d52.5274924!4d13.3922438",
-                    "description": "Discover the delicious and budget-friendly world of D\u00f6ner Kebab in the vibrant city of Berlin. A mouth-watering combination of succulent meat, fresh vegetables, and creamy sauces, these Turkish-inspired sandwiches have become a staple for budget travellers seeking a tasty and affordable meal. Whether you're on-the-go or looking for a quick bite, D\u00f6ner Kebab is the perfect option for travellers exploring Berlin on a budget."
+                    "name": "Curry 36",
+                    "description": "Looking for a satisfying yet affordable meal while exploring Berlin? Look no further than Curry 36! This beloved eatery is famous for its delicious and wallet-friendly currywurst, a classic German street food staple. Whether you're craving a quick snack or a hearty meal, Curry 36 has got you covered with its tasty sausage, crispy fries and iconic curry sauce. Don't miss out on this must-try foodie spot during your next trip to Berlin!",
+                    "location": "https://www.google.com/maps/place/Curry+36/@52.5006308,13.3806762,17z/data=!3m1!4b1!4m5!3m4!1s0x47a84ebf648eeeab:0x9f6330e53c667ca0!8m2!3d52.5006308!4d13.3828649"
                 },
                 {
-                    "name": "Currywurst",
-                    "location": "https://www.google.com/maps/place/Curry+36/@52.5030344,13.3907572,17z/data=!3m1!4b1!4m5!3m4!1s0x47a850037e13732b:0xbedd128f768301e9!8m2!3d52.5030302!4d13.3929459",
-                    "description": "Currywurst, a popular street food in Berlin, is a must-try for budget travellers looking to indulge in local cuisine. This affordable and delicious snack, made with sliced sausages, curry ketchup, and fries, can be found at various food stalls throughout the city. So, if you're in Berlin on a budget, don't miss out on the chance to satisfy your cravings with a Currywurst."
+                    "name": "Mustafas Gem\u00fcse Kebap",
+                    "description": "Mustafas Gem\u00fcse Kebap in Berlin is the go-to spot for budget travellers looking for tasty and affordable meals. Their famous kebaps are made with fresh and locally-sourced vegetables, succulent chicken or lamb, and crispy bread. The portions are generous and satisfying, making it the perfect choice for a quick lunch on a tight budget. Whether you're a tourist or a local, you can't go wrong with Mustafas Gem\u00fcse Kebap!",
+                    "location": "https://www.google.com/maps/place/Mustafas+Gem%C3%BCse+Kebap/@52.4981346,13.3913245,17z/data=!3m1!4b1!4m5!3m4!1s0x47a84fb3d87c7263:0x3cdb65408245feda!8m2!3d52.4981346!4d13.3935182"
                 },
                 {
-                    "name": "Falafel",
-                    "location": "https://www.google.com/maps/search/falafel+berlin/@52.520008,13.404954,13z/data=!3m1!4b1",
-                    "description": "Looking for a tasty and affordable meal option in Berlin? Look no further than Falafel! This Middle Eastern-inspired dish, made from chickpeas and spices, is a great choice for budget-conscious travellers looking for delicious food that won't break the bank. Whether you prefer it as a wrap, sandwich or on a plate, you'll love the authentic flavours and wallet-friendly prices that Falafel has to offer. So why wait? Visit Berlin's many Falafel spots today and discover this delicious cuisine for yourself!"
+                    "name": "Street Food Thursday at Markthalle Neun",
+                    "description": "Experience the best street food in Berlin without breaking the bank at Markthalle Neun's Street Food Thursday. Indulge in budget-friendly delicacies from around the world, such as juicy burgers, flavorful tamales, and mouth-watering baos. Don't miss out on this weekly event that satisfies both your taste buds and wallet.",
+                    "location": "https://www.google.com/maps/place/Markthalle+Neun/@52.5016679,13.4393204,17z/data=!3m1!4b1!4m5!3m4!1s0x47a84ff582267a19:0x7b8c43beb1a7be4a!8m2!3d52.5016679!4d13.4415141"
                 },
                 {
-                    "name": "Schnitzel",
-                    "location": "https://www.google.com/maps/place/Restaurant+Schneewei%C3%9F/@52.5086167,13.4559825,17z/data=!3m1!4b1!4m6!3m5!1s0x47a84e592390a847:0xc0fad9d0b65b829e!8m2!3d52.5086167!4d13.4581712!16s%2Fg%2F1tfsl_z8",
-                    "description": "Schnitzel is a popular and affordable dish for budget travellers exploring Berlin. This classic German dish features a tender cut of meat, breaded and fried to perfection. Whether you choose to dine in a cozy restaurant or grab a quick bite from a street vendor, Schnitzel is a must-try for those looking to experience traditional German cuisine without breaking the bank."
+                    "name": "Lokal",
+                    "description": "Discover the best of Berlin's local cuisine at Lokal, an affordable eatery where you can indulge in delicious German dishes without breaking the bank. From hearty sausages to crispy schnitzels, Lokal offers an authentic taste of Berlin that won't disappoint your taste buds or your wallet. Perfect for budget travellers looking to experience the local food scene without overspending, Lokal is a must-visit destination in the city's vibrant culinary landscape.",
+                    "location": "https://www.google.com/maps/place/Lokal+International/@52.5051743,13.4307991,17z/data=!3m1!4b1!4m5!3m4!1s0x47a84fdee4e1e663:0x66fcb4de4b0c7732!8m2!3d52.5051743!4d13.4329878"
                 },
                 {
-                    "name": "Bratwurst",
-                    "location": "https://www.google.com/maps/place/Curry+36/@52.499926,13.390035,17z/data=!3m1!4b1!4m5!3m4!1s0x47a84ec00e6b8ee1:0xfb50b94f9b1c6d8a!8m2!3d52.499926!4d13.392229",
-                    "description": "Bratwurst is a savory sausage perfect for budget travellers in Berlin. Made with a mix of pork and veal, this delicious German dish can be found in food stalls and small restaurants throughout the city. With affordable prices and easy accessibility, Bratwurst is a must-try for any traveler looking for an authentic taste of Berlin."
+                    "name": "The Flying Monkey",
+                    "description": "The Flying Monkey in Berlin is a must-visit for budget-conscious travellers looking for delicious and affordable eats. The restaurant is known for its innovative dishes that won't break the bank. From mouthwatering burgers and sandwiches to tasty vegetarian and vegan options, The Flying Monkey has something for everyone. Don't miss out on the chance to indulge in some of the best budget-friendly eats in the city!",
+                    "location": "https://www.google.com/maps/place/The+Flying+Monkey+of+the+Cheap+Eats/@52.4975689,13.4123886,17z/data=!3m1!4b1!4m5!3m4!1s0x47a84e73d4e3eef5:0xc8682d80f0ba8513!8m2!3d52.4975689!4d13.4145773"
                 },
                 {
-                    "name": "B\u00f6rek",
-                    "location": "Sorry, as an AI language model, I don't have the capability to browse the internet. Can I assist you with anything else?",
-                    "description": "Looking for a tasty and budget-friendly meal in Berlin? Try B\u00f6rek, a popular Turkish pastry made with flaky phyllo dough and savory fillings like cheese or spinach. You can find B\u00f6rek at many local bakeries and street food vendors throughout the city, making it the perfect grab-and-go option for budget-conscious travelers on the go."
+                    "name": "Burgermeister",
+                    "description": "Burgermeister is a must-visit destination for budget travellers in Berlin. Known for their mouth-watering burgers at affordable prices, this spot attracts both locals and tourists alike. The burgers are made with high-quality ingredients and cooked to perfection, making them a top choice for satisfying cravings without breaking the bank. With multiple locations in the city, Burgermeister is the go-to spot for a tasty and budget-friendly meal.",
+                    "location": "https://www.google.com/maps/place/Burgermeister/@52.5004708,13.39805,15z/data=!4m5!3m4!1s0x0:0xeda50e7cf4228b08!8m2!3d52.5004708!4d13.39805"
                 },
                 {
-                    "name": "Shawarma",
-                    "location": "https://www.google.com/maps/place/Shawarma+Berlin/@52.5133657,13.3261041,17z/data=!3m1!4b1!4m5!3m4!1s0x47a845a2a0c82abf:0x6a355d8396929ecb!8m2!3d52.5133657!4d13.3282928",
-                    "description": "If you're a budget traveller exploring Berlin, make sure to try Shawarma - a delicious Middle Eastern dish that won't break the bank. Packed with flavor, Shawarma consists of meat (often chicken or lamb) cooked on a rotisserie and served in a wrap or pita with fresh vegetables, hummus, and garlic sauce. You can find great Shawarma spots all over the city, perfect for a quick and affordable meal on-the-go."
+                    "name": "C\u00f6-Feu",
+                    "description": "Looking to stretch your budget while still enjoying delicious food in Berlin? Look no further than Option C\u00f6-Feu! This popular eatery is known for its wallet-friendly prices and mouth-watering dishes. From scrumptious sandwiches to savory soups, there is something for every budget traveler at Option C\u00f6-Feu. So why break the bank when you can satisfy your cravings without breaking a sweat? Make a stop at Option C\u00f6-Feu during your next trip to Berlin and discover the tastiest budget-friendly meals in town!",
+                    "location": "https://www.google.com/maps/place/C\u00f6-Feu+Berlin/@52.4920888,13.4248825,17z/data=!3m1!4b1!4m5!3m4!1s0x47a84e51751e0b99:0x82da9ac3fafb4247!8m2!3d52.492085!4d13.4270762"
                 },
                 {
-                    "name": "Donut",
-                    "location": "https://www.google.com/maps/place/Donut+Berlin/@52.5028805,13.4469716,17z/data=!3m1!4b1!4m5!3m4!1s0x47a85035b4d4b0bb:0x59aa5bcc9b7c315b!8m2!3d52.5028805!4d13.4491603",
-                    "description": "Donut is a budget traveller's dream in Berlin, serving up delicious handmade donuts at affordable prices. With vegan and gluten-free options, Donut is a great choice for all types of travellers. Located in the heart of the city, it's the perfect spot to fuel up for a day of exploring or grab a sweet treat to go."
+                    "name": "Piri's Chicken",
+                    "description": "Looking for tasty and affordable eats in Berlin? Piri's Chicken is a must-visit spot for budget travellers. This popular eatery is known for its mouth-watering chicken dishes and wallet-friendly prices. Whether you're in the mood for a classic grilled chicken sandwich or a spicy chicken burrito, Piri's Chicken has got you covered. And with multiple locations throughout the city, it's easy to grab a quick and satisfying meal on the go. So if you're looking to save some cash without sacrificing flavour, head to Piri's Chicken for your next meal in Berlin!",
+                    "location": "https://www.google.com/maps/place/Piri's+Chicken/@52.5017482,13.4356183,17z/data=!3m1!4b1!4m5!3m4!1s0x47a851859f166c5f:0x296c8969fe62d47a!8m2!3d52.5017482!4d13.437807"
                 },
                 {
-                    "name": "Boulette",
-                    "location": "I'm sorry, but I cannot provide a location link for Boulette in the city of Berlin without further information. Can you provide me with the exact address or coordinates of the location?",
-                    "description": "If you're a budget traveller exploring Berlin, Boulette is a restaurant you can't miss. This cozy eatery offers delicious local cuisine without breaking the bank. From its signature meatballs to vegan options, Boulette has something to satisfy all cravings. Plus, with its prime location in the city center, it's the perfect pit stop during a busy day of sightseeing. Don't miss out on a local favorite that won't empty your wallet!"
+                    "name": "Dada Falafel",
+                    "description": "Dada Falafel has become a go-to spot for budget-conscious travellers in Berlin. Offering delicious falafel wraps and bowls at wallet-friendly prices, this popular eatery is perfect for those looking for a quick and satisfying meal without breaking the bank. With a diverse menu of vegetarian and vegan options, Dada Falafel is sure to please any hungry traveller looking for a cheap and tasty bite in the heart of the German capital.",
+                    "location": "https://www.google.com/maps/place/Dada+Falafel/@52.4985216,13.4404742,17z/data=!3m1!4b1!4m5!3m4!1s0x47a84e9a9c33f67f:0xe6b0dd0adede364b!8m2!3d52.4985216!4d13.4426682"
                 },
                 {
-                    "name": "Gyros",
-                    "location": "https://www.google.com/maps/place/Tzatziki+Original+Gyros/@52.5253676,13.3869338,17z/data=!3m1!4b1!4m5!3m4!1s0x47a84e34dd2c8e19:0x821c94553a85e26e!8m2!3d52.5253676!4d13.389129",
-                    "description": "Looking for a delicious and affordable meal in Berlin? Look no further than Gyros! This classic Greek dish is the perfect option for budget travelers looking for a filling and flavorful meal. With its mix of savory meat, fresh veggies, and tangy tzatziki sauce, Gyros is sure to satisfy your hunger without breaking the bank. So why wait? Head to a local Gyros spot and experience the taste of Greece in Berlin!"
-                },
-                {
-                    "name": "Hummus",
-                    "location": "https://www.google.com/maps/place/Hummus+Berlin/@52.4878932,13.420797,17z/data=!3m1!4b1!4m5!3m4!1s0x47a849b1c9098301:0x9dfa105bfecb36e0!8m2!3d52.4878932!4d13.4239857",
-                    "description": "Looking for a tasty and affordable snack while visiting Berlin? Look no further than hummus! This popular Middle Eastern dip is a great option for budget-conscious travellers, offering a healthy and filling snack that won't break the bank. Whether you're exploring the city's vibrant street food scene or looking for a quick and easy meal on-the-go, hummus is the perfect choice for any budget traveller in Berlin. So why not give it a try and experience the delicious and budget-friendly flavours of the city today?"
-                },
-                {
-                    "name": "Brezel",
-                    "location": "https://www.google.com/maps/place/Brezel+Berlin/@52.5232985,13.4063328,17z/data=!3m1!4b1!4m5!3m4!1s0x47a85d45f8c0e74f:0xa5c1d36cd3360a3f!8m2!3d52.5232985!4d13.4085215",
-                    "description": "Brezel is a perfect spot for budget travellers in Berlin who want to indulge in delicious German cuisine without breaking the bank. This cozy eatery offers scrumptious homemade pretzels, sausages, and other Bavarian treats at reasonable prices, making it an ideal choice for those seeking a tasty yet affordable dining experience in the heart of the city. With its welcoming atmosphere and mouth-watering menu, Brezel is a must-visit for all budget-conscious foodies exploring Berlin."
-                },
-                {
-                    "name": "Frikadelle",
-                    "location": "I apologize, as an AI language model, I do not have access to current location links. Can you please provide me the address or name of the restaurant?",
-                    "description": "Frikadelle, a traditional German meatball, is an affordable and delicious option for budget travellers exploring the vibrant city of Berlin. Made with ground meat and seasoned with herbs, these hearty snacks can be found at local outdoor markets, street food vendors, and family-owned restaurants throughout the city. Don't miss out on this local culinary staple during your visit to Berlin!"
-                },
-                {
-                    "name": "Flammkuchen.",
-                    "location": "https://www.google.com/maps/place/Flammkuchen./@52.5226985,13.3671788,15z/data=!4m5!3m4!1s0x0:0xc69ec3d68d99ce62!8m2!3d52.5226985!4d13.3671788",
-                    "description": "Flammkuchen, also known as \"tarte flamb\u00e9e,\" is a delicious and affordable dish that should be on every budget traveller's list when visiting Berlin. This Alsatian specialty is a thin-crust pizza-like dish topped with sour cream, onions, and bacon, making it the perfect option for a satisfying yet pocket-friendly meal. Give your taste buds a treat without breaking the bank by trying Flammkuchen during your visit to Berlin."
+                    "name": "Konnopke's Imbiss",
+                    "description": "Indulge in authentic German street food without breaking the bank at Konnopke's Imbiss in Berlin. Enjoy their famous currywurst, a classic German sausage dish, and other tasty treats that are perfect for budget-savvy travelers. Stop by this iconic snack stall and experience the taste of Berlin without putting a hole in your pocket.",
+                    "location": "https://www.google.com/maps/place/Konnopke's+Imbiss/@52.52645,13.41962,15z/data=!4m5!3m4!1s0x0:0xf4e4ece535233628!8m2!3d52.52645!4d13.41962"
                 }
             ]
         },
         "attractions": {
-            "title": "Free and Low-Cost Attractions",
-            "description": "Berlin, Germany is a vibrant city with plenty of free and low-cost attractions for budget travellers. The city is best known for its historical landmarks, such as the Berlin Wall and the Brandenburg Gate, both of which offer free entry. Visitors can also explore the city's many museums and galleries, including the Museum Island and the East Side Gallery, which are both affordable and offer incredible glimpses into Berlin\u2019s history and culture. Check out the stunning views from the Victory Column or the Friedrichshain Park, both of which offer great vistas of the city without costing a cent. For shopping and dining, head to the famous Kreuzberg district, famous for its street markets and lively atmosphere. Overall, Berlin is a great destination for budget travellers looking to experience a rich and fascinating cultural scene without breaking the bank.",
-            "items": [
+            "description": "The bustling city of Berlin is a budget-friendly traveller's paradise, with a wealth of free and low-cost attractions to explore. From world-renowned museums and galleries like the Museum Island, to historic landmarks such as the Brandenburg Gate, there's no shortage of exciting and affordable things to do. Don't miss the vibrant street art scene in the alternative neighbourhood of Kreuzberg, or take a stroll through the sprawling Tiergarten park. Whether you're a history buff, an art lover, or simply looking to experience the city's unique culture, Berlin has something for everyone without breaking the bank.",
+            "options": [
                 {
                     "name": "Brandenburg Gate",
-                    "location": "https://www.google.com/maps/place/Brandenburg+Gate/@52.5162759,13.377704,17z/data=!3m1!4b1!4m5!3m4!1s0x47a84eafaa3c3e2f:0x54e19f929d30f96d!8m2!3d52.5162759!4d13.3798927",
-                    "description": "The iconic Brandenburg Gate, located in central Berlin, is a must-see attraction for budget travellers. Open to the public, you can explore this historic monument and take in its stunning architecture, without breaking the bank. Surrounded by numerous cheap eateries and accommodation options, it's an affordable destination for anyone travelling on a budget to the city of Berlin."
+                    "description": "The Brandenburg Gate is a Berlin landmark that should not be missed by budget travellers. This historic gate has seen centuries of events and now stands as a symbol of peace and unity. Visitors can take a stroll through the gate and admire its impressive architecture without spending a penny. Don't forget to snap a photo with this monumental landmark in the background!",
+                    "location": "https://www.google.com/maps/place/Brandenburg+Gate/@52.5162757,13.3777048,17z/data=!3m1!4b1!4m5!3m4!1s0x47a84e2e103a6547:0x9b9c48b7d97b62c6!8m2!3d52.5162757!4d13.3798935"
                 },
                 {
-                    "name": "East Side Gallery",
-                    "location": "https://www.google.com/maps/place/East+Side+Gallery/@52.5051586,13.439032,17z/data=!3m1!4b1!4m5!3m4!1s0x47a84ec779b74581:0x33f9dfebd1d46910!8m2!3d52.5051586!4d13.4412207",
-                    "description": "The East Side Gallery in Berlin is a must-see for budget travellers seeking an unforgettable historical experience. As the world's largest open-air gallery, it features a 1.3 km stretch of the Berlin Wall, decorated by renowned artists reflecting the political and societal changes that occurred during the Cold War. This iconic attraction is free to visit and offers insight into the city's tumultuous past while providing beautiful street art to admire. Don't miss the chance to explore this incredible outdoor museum during your next budget-friendly trip to Berlin."
+                    "name": "Berlin Wall Memorial and Documentation Centre",
+                    "description": "The Berlin Wall Memorial and Documentation Centre is a must-visit for any budget traveller. Explore the remnants of the wall and learn about the history of its construction and division of the city. The centre also offers free guided tours, making it an excellent choice for those looking for an educational and wallet-friendly experience. Don't miss this opportunity to delve into one of Berlin's most iconic and significant monuments without breaking the bank.",
+                    "location": "https://goo.gl/maps/kRiLNdPjKZFiVmDh9 (Google Maps link to Berlin Wall Memorial and Documentation Centre)"
                 },
                 {
-                    "name": "Berlin Wall Memorial",
-                    "location": "https://www.google.com/maps/place/Berliner+Mauer+Gedenkst%C3%A4tte/@52.5334829,13.3917878,16z/data=!4m5!3m4!1s0x0:0x7c3f9dcdeabb7cd8!8m2!3d52.534071!4d13.3887639",
-                    "description": "The Berlin Wall Memorial is a must-see attraction for budget travellers visiting Berlin. This historic site offers free admission and provides an immersive experience that takes visitors back to a time when East and West Germany were divided. Explore the outdoor exhibition with audio guides, see the preserved wall and visit the visitor center to gain a deeper understanding of this important moment in history. Don't miss this budget-friendly opportunity to learn about the city's past at the Berlin Wall Memorial."
-                },
-                {
-                    "name": "Holocaust Memorial",
-                    "location": "https://www.google.com/maps/place/Holocaust+Memorial/@52.5162756,13.3777041,17z/data=!3m1!4b1!4m5!3m4!1s0x47a85162eea299e3:0xede362c425a3295e!8m2!3d52.5162756!4d13.379898",
-                    "description": "Holocaust Memorial in Berlin is a must-visit destination for budget travellers interested in history and culture. Comprising 2,711 concrete slabs of varying heights, this poignant memorial honours the six million Jews who died during the Holocaust. Explore the open-air labyrinth and experience an emotional journey through the horrors of the past. This important historical attraction is accessible and free of charge, making it a great option for budget-conscious travellers visiting Berlin."
-                },
-                {
-                    "name": "Museum Island",
-                    "location": "https://www.google.com/maps/place/Museum+Island/@52.5204046,13.3986264,17z/data=!3m1!4b1!4m5!3m4!1s0x47a84e18a7973f57:0x9a84e5fb5d5a5f5a!8m2!3d52.5204046!4d13.4008151",
-                    "description": "Museum Island in Berlin is a perfect destination for budget travellers who love art and culture. Located in central Berlin, the Island is home to five world-renowned museums that offer a diverse range of exhibits and artworks at affordable prices, including the Altes Museum, Neues Museum, Bode Museum, Pergamon Museum, and Alte Nationalgalerie. With stunning architecture, impressive collections, and budget-friendly admission fees, Museum Island is a must-visit attraction for budget travellers looking for an unforgettable cultural experience in Berlin."
-                },
-                {
-                    "name": "Mauerpark",
-                    "location": "https://www.google.com/maps/place/Mauerpark/@52.5429274,13.3973724,17z/data=!3m1!4b1!4m5!3m4!1s0x47a84fcf20d842f1:0x8de0383d3e71ed2c!8m2!3d52.5429274!4d13.3995611",
-                    "description": "Mauerpark, located in the vibrant city of Berlin, is an ideal destination for budget travellers seeking a laid-back and budget-friendly experience. With its stunning greenery, numerous street performances, bustling flea market, and affordable food stalls, it offers a unique and eclectic atmosphere that won't break the bank. Whether you're looking to relax, shop, or simply soak up the local culture, Mauerpark is the perfect spot for budget-conscious visitors to explore."
-                },
-                {
-                    "name": "Tiergarten Park",
-                    "location": "https://www.google.com/maps/place/Tiergarten/@52.5096489,13.3575624,15z/data=!4m5!3m4!1s0x0:0x7005b3d3b3c3ca8!8m2!3d52.5096489!4d13.3575624",
-                    "description": "Tiergarten Park is a must-visit destination for budget travellers visiting Berlin. With its vast green spaces, free admission, and plentiful attractions such as the Berlin Zoo, this park offers something for everyone. Pack a picnic lunch and enjoy a relaxing day outdoors, or stroll along the walking paths to take in the picturesque surroundings. Whether you're looking to explore nature or soak up some local culture, Tiergarten Park is the perfect budget-friendly getaway."
-                },
-                {
-                    "name": "Charlottenburg Palace Gardens",
-                    "location": "https://www.google.com/maps/place/Charlottenburg+Palace+Gardens/@52.5084362,13.2935015,16z/",
-                    "description": "Charlottenburg Palace Gardens, located in the heart of Berlin, is a must-visit destination for budget travellers looking for free outdoor activities. The gardens offer a peaceful and serene atmosphere with beautifully manicured lawns and a variety of flowers and trees. Visitors can take a stroll through the gardens, have a picnic, and enjoy the stunning views of the palace. With free entry, the Charlottenburg Palace Gardens is the perfect getaway for budget travellers looking for some relaxation and natural beauty in the bustling city of Berlin."
-                },
-                {
-                    "name": "Berlin Cathedral",
-                    "location": "https://www.google.com/maps/place/Berlin+Cathedral/@52.5194615,13.4013496,17z/data=!3m1!4b1!4m5!3m4!1s0x47a84eaf7828e9eb:0x1f76c50629807805!8m2!3d52.5194615!4d13.4035383",
-                    "description": "Looking for an affordable historic attraction in Berlin? Look no further than Berlin Cathedral. This stunning landmark boasts a rich history, intricate architecture, and plenty of photo-worthy views. Plus, with affordable admission prices, it's a great choice for budget-conscious travellers looking to experience the best of Berlin. So why wait? Book your visit to Berlin Cathedral today and enjoy an unforgettable experience without breaking the bank!"
+                    "name": "Topography of Terror",
+                    "description": "The Topography of Terror in Berlin offers a fascinating insight into the city's dark past. Explore the site of the former Gestapo headquarters and learn about the atrocities committed during the Nazi regime. Admission is free, making it an affordable option for budget-conscious travellers. Expect to spend a few hours here, as there is a lot to see and a lot to learn. This historical attraction provides an important reminder of the events that shaped Berlin and the world as we know it today.",
+                    "location": "https://www.google.com/maps/place/Topographie+des+Terrors/@52.5073614,13.3778234,17z/data=!3m1!4b1!4m5!3m4!1s0x47a84e12ee56115d:0xac1531f8c3f794a0!8m2!3d52.5073574!4d13.3800174"
                 },
                 {
                     "name": "Reichstag Building",
-                    "location": "https://www.google.com/maps/place/Reichstag+Building/@52.5186204,13.3761871,17z/data=!3m1!4b1!4m5!3m4!1s0x47a84e1ee9539b9f:0xd815436c15aacb7e!8m2!3d52.5186204!4d13.3783758",
-                    "description": "The Reichstag Building in Berlin is a must-visit attraction that is perfect for budget travellers. It offers free admission to its impressive glass dome, which provides breathtaking panoramic views of the city. The historic building is also home to the Bundestag, the German parliament, and offers free guided tours for visitors. Don't miss the chance to experience the political and architectural significance of this iconic landmark while staying within your budget."
+                    "description": "The Reichstag Building in Berlin is a must-visit for budget-conscious travelers. This iconic building is steeped in history and boasts stunning neo-baroque architecture that is free to marvel at both inside and out. Take a stroll around the surrounding gardens or head to the top of the dome for spectacular city views that won't break the bank. Don't miss the opportunity to explore one of Berlin's most important landmarks without spending a dime.",
+                    "location": "https://www.google.com/maps/place/Reichstag+Building/@52.5186208,13.3761879,17z/data=!3m1!4b1!4m5!3m4!1s0x47a84e10e50d70ef:0x70156a46a45bb17f!8m2!3d52.5186208!4d13.3783766"
                 },
                 {
-                    "name": "Tempelhofer Feld",
-                    "location": "https://www.google.com/maps/place/Tempelhofer+Feld/@52.478399,13.4004631,17z/data=!3m1!4b1!4m5!3m4!1s0x47a84bbd147b1ed9:0xcbf03fcd678aaf66!8m2!3d52.478399!4d13.4026571",
-                    "description": "Tempelhofer Feld is an expansive public park in Berlin that offers budget travellers a unique experience of urban greenery, relaxation and recreation. The former airport runway turned into a blooming field is an ideal spot to unwind after a long day of sightseeing or to indulge in numerous outdoor activities like cycling, skating, kite flying, picnicking, and more, without spending a penny. Plus, it boasts a rich history, stunning views and several events throughout the year, making it a must-visit attraction for budget travellers in Berlin."
+                    "name": "Memorial to the Murdered Jews of Europe",
+                    "description": "The Memorial to the Murdered Jews of Europe in Berlin is a deeply moving and important free attraction for budget travellers. This striking and unforgettable monument is a tribute to the victims of the holocaust and features over 2,700 concrete pillars of varying heights arranged in a maze-like pattern. Visitors are welcome to walk through the memorial and reflect on the tragic history it represents. Plan to spend some time here to fully experience the impact of this powerful memorial.",
+                    "location": "https://www.google.com/maps/place/Memorial+to+the+Murdered+Jews+of+Europe/@52.5138383,13.3789842,17z/data=!3m1!4b1!4m5!3m4!1s0x47a85f5b5d5c5ee1:0x5c44a1e20cf651e5!8m2!3d52.5138383!4d13.3811729"
                 },
                 {
-                    "name": "Berlin Zoo",
-                    "location": "13.3394761!4d52.5070219!5m1!1e4?source=apiv3",
-                    "description": "Berlin Zoo is a must-visit destination for budget travelers in the city of Berlin. It boasts of being one of the oldest and most popular zoos in the world, offering affordable entry fees and a wide variety of animals to see. From budget-friendly feeding sessions to budget tours, this zoo has something for everyone looking for an amazing wildlife experience. Visit the Berlin Zoo and be amazed at the vast array of animals including gorillas, elephants, penguins, and more, all without breaking the bank."
+                    "name": "Berlin Cathedral",
+                    "description": "The Berlin Cathedral is a budget-friendly attraction that should top every budget traveller's itinerary. Admire the impressive Baroque architecture and stunning interiors including incredible mosaics, paintings, and sculptures. While there is a small fee for entrance to some parts of the cathedral, entry to the main hall is free. Plus, visitors can enjoy breathtaking views of the city from the Cathedral's dome for an affordable price. Don't miss out on one of the most iconic and affordable sights in Berlin.",
+                    "location": "https://www.google.com/maps/place/Berliner+Dom/@52.5186527,13.4003641,17z/data=!3m1!4b1!4m5!3m4!1s0x47a8511c2e98150f:0xf3b3e67f3202a128!8m2!3d52.5186527!4d13.4025528"
                 },
                 {
-                    "name": "Potsdamer Platz.",
-                    "location": "https://www.google.com/maps/place/Potsdamer+Platz,+Berlin,+Germany/data=!4m2!3m1!1s0x47a84e70c1cf2217:0x284402c4d970e96e?sa=X&ved=2ahUKEwjzl4H11M71AhUTyDgGHYgYBaMQ8gEwAHoECAQQAQ",
-                    "description": "Potsdamer Platz in Berlin is a must-visit attraction for budget travellers looking to immerse themselves in the city's culture and history. The bustling square is home to a variety of affordable restaurants, shops, and entertainment options, including the famous Sony Center. With its convenient location and range of budget-friendly activities, Potsdamer Platz is a must-see destination for anyone visiting Berlin on a budget."
+                    "name": "Museum Island",
+                    "description": "Museum Island in Berlin is a must-visit for any budget traveller. Discover ancient artefacts, breathtaking art, and historic relics at several world-renowned museums on this island. Explore the Pergamon Museum, the Alte Nationalgalerie, and the Bode Museum, which showcases classical sculptors and Byzantine art. The island is affordable, with reasonably priced admission fees, and free admission on some weekdays. Don't miss this educational and cultural experience while in Berlin.",
+                    "location": "https://www.google.com/maps/place/Museum+Island/@52.5227285,13.3959245,15z/data=!4m5!3m4!1s0x47a84e0250eabd45:0x507685f63bd772fc!8m2!3d52.5227285!4d13.4011469"
+                },
+                {
+                    "name": "Victory Column",
+                    "description": "The Victory Column in Berlin is a must-visit attraction for budget travellers. Located in the heart of the city, it offers panoramic views of the surrounding area. Visitors can climb to the top of the column for an unbeatable view of Berlin's skyline. The experience is completely free, making it an excellent choice for those on a budget. Plus, the monument's rich history and stunning architecture make for a memorable photo opportunity. Don't miss out on this iconic Berlin landmark.",
+                    "location": "https://www.google.com/maps/place/Victoria+Column/@52.5146418,13.3506167,17z/data=!3m1!4b1!4m5!3m4!1s0x47a84e8d1ddc83f3:0x607bde90a8a9dbec!8m2!3d52.5146418!4d13.3528054"
+                },
+                {
+                    "name": "Gendarmenmarkt",
+                    "description": "The Gendarmenmarkt is a picturesque square located in the heart of Berlin, featuring stunning architectural landmarks such as the Konzerthaus and the French and German Cathedrals. It's the perfect spot for a free afternoon stroll, and you can admire the baroque-style buildings and take some memorable snapshots. While you're there, check out the events schedule for free concerts and recitals. Don't forget to bring a picnic basket and enjoy some downtime in this bustling hub of culture and history. Perfect for budget-conscious travelers seeking a free and worthwhile experience in Berlin.",
+                    "location": "https://www.google.com/maps/place/Gendarmenmarkt/@52.5137881,13.3916699,17z/data=!3m1!4b1!4m5!3m4!1s0x47a84e2a9038f9cd:0xcba04f2477cc0075!8m2!3d52.5137881!4d13.3938586"
+                },
+                {
+                    "name": "Flea markets such as Mauerpark and Nowkoelln Flowmarkt",
+                    "description": "Looking for unique souvenirs and vintage finds without breaking the bank? Look no further than Berlin's flea markets! Mauerpark and Nowkoelln Flowmarkt offer a wide variety of items at low prices, including clothing, jewelry, home decor, and more. These markets are perfect for budget travelers who want to experience Berlin's vibrant culture without spending a lot of money. So grab your tote bag and hit the stalls \u2013 you never know what treasures you might find!",
+                    "location": "Mauerpark flea market: https://goo.gl/maps/KJeqYcM7Pec6dPZi8\nNowkoelln Flowmarkt: https://goo.gl/maps/v9jQ2GPiPtypo7Tf6"
+                },
+                {
+                    "name": "East Side Gallery",
+                    "description": "The East Side Gallery is an absolute must for anyone visiting Berlin on a budget. This open-air gallery stretches for over a mile and features stunning murals from some of the world's top street artists. The best part? It's completely free to explore and enjoy the artwork. So grab your camera and take a stroll along this iconic landmark to experience some of the most vibrant and thought-provoking street art in the world.",
+                    "location": "https://www.google.com/maps/place/East+Side+Gallery/@52.5050307,13.4395291,17z/data=!3m1!4b1!4m5!3m4!1s0x47a851a1a30528e7:0xaab72d5693039ac9!8m2!3d52.5050307!4d13.4417231"
                 }
             ]
         },
         "tours": {
-            "title": "Free Walking Tours",
-            "link": "1. Sandemans New Berlin Free Tour: https://www.neweuropetours.eu/berlin-walking-tours/free-tour-berlin/ \n2. Alternative Berlin Tours: https://alternativeberlin.com/ \n3. Berlin Free Walking Tour: https://www.berlinfreewalkingtour.com/ \n4. Brewer's Berlin Tours: https://www.brewersberlintours.com/free-walking-tour-berlin \n5. The Original Berlin Free Walking Tour: https://originalberlintours.com/tours/free-walking-tour-berlin/ \n6. Discover Berlin Tours: https://discoverberlintours.com/tours/free-walking-tour-berlin/ \n7. Berlin Unterwelten e.V.: https://berliner-unterwelten.de/en/tours/detail/free-tunnel-tour.html \n8. Free Walking Tour Berlin Neuk\u00f6lln: https://www.facebook.com/freeneukoellntour/ \n9. Insider Tour Berlin: https://insidertour.com/tours/berlin/grand-city-tour-of-berlin-berlin-intensive/ \n10. Original Berlin Tours: https://www.originalberlintours.com/tours/free-walking-tour-berlin/",
-            "description": "Explore the vibrant city of Berlin on foot with one of the many free walking tours available. Led by knowledgeable local guides, you'll discover the city's fascinating history and culture, and get insider tips on the best budget-friendly attractions, restaurants, and bars. From the iconic Berlin Wall to the trendy neighborhoods of Kreuzberg and Neuk\u00f6lln, there's plenty to see and learn without breaking the bank. Join a free walking tour in Berlin to make the most of your budget trip while immersing yourself in the city's unique atmosphere."
+            "description": "Discover the vibrant city of Berlin on a budget with a free walking tour. Our knowledgeable guides will take you to the most iconic landmarks and hidden gems, while sharing their insights about the city's history and culture. Get insider tips on the best budget-friendly eateries and attractions so you can have a great time without breaking the bank. Join us today and explore Berlin by foot like a true local!",
+            "links": [
+                "https://www.neweuropetours.eu/berlin-walking-tours/free-tour-berlin/",
+                "https://www.berlinwalks.de/free-tours.html",
+                "https://www.tripadvisor.com/Attraction_Review-g187323-d2094210-Reviews-Free_Tours_by_Foot-Berlin.html",
+                "https://www.freeberlinwalks.com/",
+                "https://bitemojo.com/destinations/Berlin/",
+                "https://www.likealocalguide.com/berlin/tours/free-walking-tour-of-berlin",
+                "https://www.goodfreewalkingtours.com/berlin",
+                "https://freetoursbyfoot.com/berlin-tours/walking-tours/",
+                "https://www.getyourguide.com/berlin-l17/berlin-free-tour-alle-beruumlhmten-sehenswuumlrdigkeiten-t353509/"
+            ]
         },
-        "transportation": {
-            "title": "Public Transportation",
-            "link": "1. https://www.berlin.de/en/public-transportation/\n2. https://www.visitberlin.de/en/travel-transport\n3. https://www.lonelyplanet.com/germany/berlin/transport/getting-around/local-transport\n4. https://www.getyourguide.com/magazine/2020/02/how-to-use-berlin-public-transport/\n5. http://berlin-enjoy.com/berlin-transportation/\n6. https://www.berlin.de/en/public-transportation/2327031-2913840-ticket-fares.en.html\n7. https://www.interrail.eu/en/get-inspired/trains-europe/city-guides/berlin/top-tips-travelling-berlin-metro\n8. https://www.european-traveler.com/germany/berlin/public-transportation-in-berlin/\n9. https://www.tripadvisor.com/Travel-g187323-s303/Berlin:Germany:Getting.Around.html\n10. https://www.cyclingweekly.com/news/latest-news/berlin-bike-share-overhauled-22008",
-            "description": "When traveling to Berlin on a budget, relying on public transportation is a smart choice. The city has an excellent network of buses, trams, and subways known as the U-Bahn and S-Bahn, which will take you just about anywhere you need to go. Berlin's public transport system offers various ticket options that you can choose from, depending on how often and far you'll use the services. Additionally, Berlin has a well-connected bike-sharing system, making it easy and affordable to explore the city on two wheels. For more information on Berlin's public transportation, check out this link."
+        "transportations": {
+            "description": "Exploring Berlin on a budget? Skip the expensive taxi and Uber rides and rely on the affordable public transportation options available in the city. With reliable subways, buses and trams at your disposal, you can easily get around and discover all that Berlin has to offer without breaking the bank. For helpful tips and info on mastering Berlin's public transportation system, check out our recommended links below!",
+            "links": [
+                "https://www.berlin.de/en/public-transportation/",
+                "https://www.visitberlin.de/en/plan/public-transport",
+                "https://www.lonelyplanet.com/germany/berlin/transport",
+                "https://www.berlin.de/en/transportation/",
+                "https://www.tripadvisor.com/Travel-g187323-s303/Berlin:Germany:Public.Transportation.html"
+            ]
+        },
+        "routes": {
+            "title": "Most popular routes from Berlin to:",
+            "description": "Looking to explore Europe on a budget? Start your adventure by travelling from Berlin to some of the most captivating cities on the continent! Check out our list of the most popular routes from Berlin to other attractive destinations, perfect for every budget traveller. Marvel at the stunning architecture of Prague, delve into the historic streets of Warsaw, and soak up the vibrant atmosphere of Budapest. From the glittering canals of Amsterdam to the sparkling beaches of Barcelona, discover the best European destinations without breaking the bank. Let your journey begin!",
+            "pathes": [
+                {
+                    "route": "Amsterdam",
+                    "description": "Amsterdam is the perfect destination for budget travelers looking to experience culture, history and a vibrant nightlife. With affordable flights available throughout the year, exploring the city's famous museums, parks and canals won't break the bank. Take advantage of the many free walking tours and budget-friendly eateries to make the most of your Amsterdam adventure.",
+                    "link": "https://cheaptrip.guru/en-US/#/search/myPath?from=Berlin&fromID=124&to=Amsterdam&toID=111"
+                },
+                {
+                    "route": "Prague",
+                    "description": "Prague is a top pick for budget-conscious travelers with its affordable prices for accommodation, food and drink. This charming city boasts a rich history, stunning Gothic architecture and a vibrant nightlife scene. Flights to Prague can be found at great prices throughout the year, with even more savings available during the off-season.",
+                    "link": "https://cheaptrip.guru/en-US/#/search/myPath?from=Berlin&fromID=124&to=Prague&toID=297"
+                },
+                {
+                    "route": "Budapest",
+                    "description": "Budapest is a must-visit city for budget travelers looking to explore Europe on a budget. With its great selection of affordable accommodations, delicious street food, and low-cost attractions, Budapest offers a budget-friendly escape filled with rich culture, stunning architecture and picturesque landscapes. Travellers on a tight budget can find cheap flights and enjoy the city's vibrant nightlife, relaxing thermal baths and so much more.",
+                    "link": "https://cheaptrip.guru/en-US/#/search/myPath?from=Berlin&fromID=124&to=Budapest&toID=123"
+                },
+                {
+                    "route": "Vienna",
+                    "description": "Vienna, the capital city of Austria, is a great destination for budget travelers who want to experience the rich culture, historical landmarks, and delicious cuisine. You can find affordable accommodation options, public transportation, and plenty of free things to see and do. Visit some of Vienna's iconic attractions such as St. Stephen's Cathedral, the Hofburg Palace, and the Prater amusement park, all while keeping your budget in check!",
+                    "link": "https://cheaptrip.guru/en-US/#/search/myPath?from=Berlin&fromID=124&to=Vienna&toID=348"
+                },
+                {
+                    "route": "Krakow",
+                    "description": "Krakow is a top destination for budget travelers with its affordable accommodations and delicious street food. Explore the city's rich history by visiting its stunning landmarks and museums, and enjoy the vibrant nightlife scene without breaking the bank. With plenty of low-cost flights available, Krakow is an excellent choice for an affordable European getaway.",
+                    "link": "https://cheaptrip.guru/en-US/#/search/myPath?from=Berlin&fromID=124&to=Krakow&toID=214"
+                },
+                {
+                    "route": "Copenhagen",
+                    "description": "Copenhagen is a bustling city filled with stunning architecture, art galleries, and a vibrant nightlife scene. It's an ideal destination for budget-conscious travellers, with many affordable accommodations and delicious street food options. Plus, during the off-season, flights can be found at reasonable prices, making it easy to explore this beautiful city on a budget.",
+                    "link": "https://cheaptrip.guru/en-US/#/search/myPath?from=Berlin&fromID=124&to=Copenhagen&toID=147"
+                },
+                {
+                    "route": "Stockholm",
+                    "description": "Stockholm, with its vibrant culture, stunning attractions and delicious cuisine, is an excellent choice for budget travellers. Explore the charming old town, Gamla Stan, for free, visit the many museums and parks, and indulge in the delicious street food options. In addition, off-season flights to this wonderful city can be found at reasonable prices \u2013 perfect for the budget-conscious explorer.",
+                    "link": "https://cheaptrip.guru/en-US/#/search/myPath?from=Berlin&fromID=124&to=Stockholm&toID=329"
+                },
+                {
+                    "route": "Paris",
+                    "description": "Paris, renowned as the city of love, is a must-visit destination for budget travelers seeking splendid art, culture, and iconic landmarks. From strolling around the vibrant Montmartre district to picnicking on the banks of the Seine, there are endless budget-friendly ways to soak up the French atmosphere. Accommodation and dining options are varied, and with careful planning, a trip to the city of lights can fit any budget.",
+                    "link": "https://cheaptrip.guru/en-US/#/search/myPath?from=Berlin&fromID=124&to=Paris&toID=293"
+                },
+                {
+                    "route": "Barcelona",
+                    "description": "Barcelona is a vibrant city with beautiful architecture, delicious food, and a rich cultural heritage, making it an ideal travel destination for budget-friendly explorers. With plenty of affordable accommodation options available and low-cost flights during the off-season, Barcelona offers budget travellers the chance to experience all the city has to offer without breaking the bank. From exploring Gaud\u00ed's masterpieces to sampling local tapas and soaking up the sun on the beach, there's something for everyone in this captivating city.",
+                    "link": "https://cheaptrip.guru/en-US/#/search/myPath?from=Berlin&fromID=124&to=Barcelona&toID=128"
+                },
+                {
+                    "route": "Rome",
+                    "description": "Rome is a popular destination for budget-conscious travelers who want to experience the city's rich history, art, and delicious cuisine. Flights, accommodations, and meals can all be found at reasonable prices, making it an accessible and affordable option for those on a budget. While the city is typically busy with tourists year-round, savvy travelers can find deals during the shoulder seasons.",
+                    "link": "https://cheaptrip.guru/en-US/#/search/myPath?from=Berlin&fromID=124&to=Rome&toID=303"
+                }
+            ]
         }
-    },
-    "routes": {
-        "title": "Most popular routes from Berlin to:",
-        "description": "Here are 10 popular routes from Berlin to other attractive cities in Europe that are both affordable and offer a great travel experience:",
-        "items": [
-            {
-                "route": "Amsterdam",
-                "link": "https://cheaptrip.guru/en-US/#/search/myPath?from=Berlin&fromID=124&to=Amsterdam&toID=111",
-                "description": "Discover Europe on a budget with a scenic trip from Berlin to Amsterdam. Experience the vibrant culture, rich history and stunning landscapes across Germany and the Netherlands. Take advantage of affordable transport options from trains to coaches, and stay in budget-friendly accommodations along the way. Enjoy the stunning architecture of Berlin, indulge in the delicious cuisine, explore the world-class museums and immerse yourself in the local nightlife. Then, travel to Amsterdam, walk along the canals, visit iconic landmarks like the Van Gogh Museum and Anne Frank House, and enjoy the lively atmosphere of the city's cafes and bars. Book your budget-friendly trip today and witness the best of Berlin and Amsterdam!"
-            },
-            {
-                "route": "Barcelona",
-                "link": "https://cheaptrip.guru/en-US/#/search/myPath?from=Berlin&fromID=124&to=Barcelona&toID=128",
-                "description": "Planning a budget-friendly trip from Berlin to Barcelona? Look no further! Take the train from Berlin to Paris and catch an overnight bus from Paris to Barcelona. This cost-effective option allows you to soak in the beautiful countryside views and save some money on accommodation. With breathtaking landscapes and affordable transportation, you'll have a once-in-a-lifetime experience without breaking the bank."
-            },
-            {
-                "route": "Budapest",
-                "link": "https://cheaptrip.guru/en-US/#/search/myPath?from=Berlin&fromID=124&to=Budapest&toID=123",
-                "description": "If you're a budget traveller looking to make the most of central Europe, the journey from Berlin to Budapest is one you won't want to miss! Take your time exploring Berlin's art and culture scene before heading south towards Dresden and Prague, both famous for their stunning architecture and affordable food and drink options. From there, you'll cross into Slovakia and make your way to Bratislava, with its charming old town and excellent bars and restaurants. Finally, you'll reach Budapest, one of Europe's cheapest capital cities, where you can soak in the famous thermal baths and sample delicious Hungarian cuisine without breaking the bank."
-            },
-            {
-                "route": "Copenhagen",
-                "link": "https://cheaptrip.guru/en-US/#/search/myPath?from=Berlin&fromID=124&to=Copenhagen&toID=147",
-                "description": "Looking for a budget-friendly way to travel from Berlin to Copenhagen? You're in luck! The route between these two vibrant cities offers plenty of affordable options, from budget airlines and trains to bus and ferry services. Whether you're interested in exploring historic Berlin, outdoor adventures in Denmark, or simply taking in the stunning scenery along the way, this budget-friendly route is the perfect choice for budget-conscious travelers. So why wait? Start planning your trip today and discover all that this dynamic region has to offer."
-            },
-            {
-                "route": "Dublin",
-                "link": "https://cheaptrip.guru/en-US/#/search/myPath?from=Berlin&fromID=124&to=Dublin&toID=162",
-                "description": "Looking for a budget-friendly way to travel from Berlin to Dublin? Look no further! With cheap flights from Berlin's Sch\u00f6nefeld Airport to Dublin, as well as affordable train and bus options, you can easily travel between these two vibrant cities without breaking the bank. Once in Dublin, explore the city's rich culture and history by visiting top attractions like the Guinness Storehouse, St. Patrick's Cathedral, and the infamous Temple Bar district. Book your trip today and experience two of Europe's most exciting cities on a budget!"
-            },
-            {
-                "route": "Lisbon",
-                "link": "https://cheaptrip.guru/en-US/#/search/myPath?from=Berlin&fromID=124&to=Lisbon&toID=235",
-                "description": "If you're a budget traveller looking to take a trip from Berlin to Lisbon, there are a variety of options available to you. From flying with budget airlines like Ryanair or Wizz Air, to taking a train or bus, you can easily find affordable transportation that fits your budget. Additionally, there are plenty of budget-friendly accommodations, such as hostels and budget hotels, along the way. Whether you're looking to explore the bustling cities or relax on the beaches of Portugal, a budget trip from Berlin to Lisbon is entirely possible."
-            },
-            {
-                "route": "Prague",
-                "link": "https://cheaptrip.guru/en-US/#/search/myPath?from=Berlin&fromID=124&to=Prague&toID=297",
-                "description": "Discover the picturesque route from Berlin to Prague, ideal for budget travellers seeking an affordable adventure. Experience the best of these two historic cities on a budget-friendly journey that includes scenic train journeys and affordable accommodations. Explore the stunning architecture, rich culture, and delicious cuisine of Berlin and Prague without breaking the bank. Plan your budget-friendly trip today and discover the hidden gems of these two incredible destinations."
-            },
-            {
-                "route": "Rome",
-                "link": "https://cheaptrip.guru/en-US/#/search/myPath?from=Berlin&fromID=124&to=Rome&toID=303",
-                "description": "Planning a budget-friendly trip from Berlin to Rome? Look no further than this scenic route! Take a comfortable bus or train from Berlin to Munich, and then hop on a budget airline to Rome. Along the way, enjoy the stunning landscapes of Germany and Austria, and indulge in local cuisine without breaking the bank. With affordable transportation options and plenty of budget accommodations along the way, this route is a great choice for budget-conscious travelers seeking an unforgettable European adventure. So pack your bags and get ready for a budget-friendly journey from Berlin to Rome!"
-            },
-            {
-                "route": "Vienna",
-                "link": "https://cheaptrip.guru/en-US/#/search/myPath?from=Berlin&fromID=124&to=Vienna&toID=348",
-                "description": "Looking to travel between Berlin and Vienna on a budget? Look no further! This popular route is easily accessible by train or bus, with plenty of affordable options available. Enjoy picturesque views of the stunning countryside as you make your way between these two iconic cities. Whether you're exploring the vibrant cultural scene of Berlin or soaking up the history and beauty of Vienna, you won't be disappointed on this budget-friendly journey."
-            },
-            {
-                "route": "Warsaw",
-                "link": "https://cheaptrip.guru/en-US/#/search/myPath?from=Berlin&fromID=124&to=Warsaw&toID=364",
-                "description": "Looking for an affordable way to travel from Berlin to Warsaw? Consider taking a bus, train or even hitchhiking! These budget-friendly options offer stunning views of the Polish countryside and allow you to save money on transportation costs. Whether you're a solo backpacker or traveling with a group, there are plenty of ways to make this journey both memorable and affordable. Plan your trip today and you'll be on your way to exploring the unique cultures and history of two of Europe's most vibrant cities."
-            }
-        ]
     }
 }

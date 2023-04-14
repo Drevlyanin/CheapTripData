@@ -210,52 +210,52 @@
                 "description": "Here are 10 popular routes from Milan to other attractive cities in Europe that are both affordable and offer a great travel experience:",
                 "pathes": [
                             {
-                                "route": "Milan to Barcelona",
+                                "route": "Barcelona",
                                 "link": "https://cheaptrip.guru/en-US/#/search/myPath?from=Milan&fromID=252&to=Barcelona&toID=128",
                                 "description": "This is a popular route for budget travelers, with flights available from several low-cost airlines. It's a great way to combine two vibrant cities known for their culture, architecture, and cuisine."    
                             },
                             {
-                                "route": "Milan to Berlin",
+                                "route": "Berlin",
                                 "link": "https://cheaptrip.guru/en-US/#/search/myPath?from=Milan&fromID=252&to=Berlin&toID=124",
                                 "description": "Berlin is known for its lively nightlife, art scene, and history, making it a great destination for budget travelers. Flights can be found at reasonable prices, especially during the off-season."
                             },
                             {
-                                "route": "Milan to Budapest",
+                                "route": "Budapest",
                                 "link": "https://cheaptrip.guru/en-US/#/search/myPath?from=Milan&fromID=252&to=Budapest&toID=123",
                                 "description": "Budapest is one of Europe's most beautiful cities, with a rich history and stunning architecture. It's also an affordable destination for budget travelers, with cheap flights and reasonable prices on accommodation and food."
                             },
                             {
-                                "route": "Milan to Lisbon",
+                                "route": "Lisbon",
                                 "link": "https://cheaptrip.guru/en-US/#/search/myPath?from=Milan&fromID=252&to=Lisbon&toID=235",
                                 "description": "Lisbon is a vibrant city known for its culture, architecture, and beaches. It's also one of Europe's most affordable destinations, with plenty of budget-friendly options for accommodation and dining."   
                             },
                             {
-                                "route": "Milan to Prague",
+                                "route": "Prague",
                                 "link": "https://cheaptrip.guru/en-US/#/search/myPath?from=Milan&fromID=252&to=Prague&toID=297",
                                 "description": "Prague is a popular destination for budget travelers, known for its historic architecture, charming streets, and affordable prices. Flights from Milan to Prague can be found at reasonable prices, especially during the off-season."   
                             },
                             {
-                                "route": "Milan to Krakow",
+                                "route": "Krakow",
                                 "link": "https://cheaptrip.guru/en-US/#/search/myPath?from=Milan&fromID=252&to=Krakow&toID=214",
                                 "description": "Krakow is a beautiful city with a rich history, charming streets, and affordable prices. It's a popular destination for budget travelers, with flights from Milan available at reasonable prices."   
                             },
                             {
-                                "route": "Milan to Copenhagen",
+                                "route": "Copenhagen",
                                 "link": "https://cheaptrip.guru/en-US/#/search/myPath?from=Milan&fromID=252&to=Copenhagen&toID=147",
                                 "description": "Copenhagen is a vibrant city with a rich history, beautiful architecture, and a lively culture. It's also an affordable destination for budget travelers, with cheap flights and reasonable prices on accommodation and food."   
                             },
                             {
-                                "route": "Milan to Warsaw",
+                                "route": "Warsaw",
                                 "link": "https://cheaptrip.guru/en-US/#/search/myPath?from=Milan&fromID=252&to=Warsaw&toID=364",
                                 "description": "Warsaw is an affordable and historic city, with plenty of attractions for budget travelers. Flights from Milan to Warsaw can be found at reasonable prices, especially during the off-season."   
                             },
                             {
-                                "route": "Milan to Athens",
+                                "route": "Athens",
                                 "link": "https://cheaptrip.guru/en-US/#/search/myPath?from=Milan&fromID=252&to=Athens&toID=104",
                                 "description": "Athens is a historic city with a rich culture and beautiful architecture. It's also an affordable destination for budget travelers, with cheap flights and reasonable prices on accommodation and food."   
                             },
                             {
-                                "route": "Milan to Dublin",
+                                "route": "Dublin",
                                 "link": "https://cheaptrip.guru/en-US/#/search/myPath?from=Milan&fromID=252&to=Dublin&toID=162",
                                 "description": "Dublin is a lively and friendly city known for its culture, history, and nightlife. It's also an affordable destination for budget travelers, with plenty of budget-friendly options for accommodation and dining."   
                             }

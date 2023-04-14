@@ -95,4 +95,4 @@ LOG_CRITICAL = Path(LOGS_DIR/'critical_errors.log')
 LOG_CRITICAL_FORMAT = '%(asctime)s - %(levelname)s - %(message)s'
 
 #prompts set up
-PROMPTS_TXT = Path('../files/seo/prompts.txt')
+PROMPTS_JSON = Path('../files/seo/prompts.json')
