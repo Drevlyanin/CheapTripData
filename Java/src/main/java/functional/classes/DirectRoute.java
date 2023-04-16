@@ -1,6 +1,6 @@
 package functional.classes;
 
-public class DirectRoute {
+public class DirectRoute{
     private int bestTravelOptionID;
     private int currentFromID;
     private int currentToID;
