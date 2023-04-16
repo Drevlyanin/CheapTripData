@@ -290,7 +290,7 @@ def get_response_GPT(prompt):
                                                         #{"role": "system", "content": f"Act as an {role}"},
                                                         {"role": "user", "content": prompt}
                                                     ],
-                                            temperature=1
+                                            temperature=0
                                             )   
     
     return response['choices'][0]['message']['content']
