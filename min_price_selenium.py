@@ -32,6 +32,9 @@ if __name__ == "__main__":
     parser.add_argument("cityTo", help="string representing a destination city")
 
     args = parser.parse_args()
+    if args.cityFrom == args.cityTo:
+        print('[ERROR] Specify two different cities')
+        exit(1)
 
     driver = webdriver.Chrome(options=set_chrome_options())
     url = "https://cheaptrip.guru/"
@@ -47,20 +50,17 @@ if __name__ == "__main__":
     time.sleep(1)  # ensure the site has time to make all necessary API calls
     city_to_input.send_keys(args.cityTo)
 
-    button = driver.find_element(By.CSS_SELECTOR, 'button[type="submit"]')
-    if not button.is_enabled():
-        print("[ERROR] Can not recognize city name")
-        driver.close()
-        exit(1)
-
-    button.click()
-
+    driver.find_element(By.CSS_SELECTOR, 'button[type="submit"]').click()
     time.sleep(1)  # ensure the site processed the request
 
     soup = BeautifulSoup(driver.page_source, "html.parser")
     divs = soup.find_all("div", {"class": "mat-chip-ripple"})
 
     prices = [float(div.next_sibling.strip().replace(EURO_SYMBOL, "")) for div in divs]
-    print(f"The minimal price is: {EURO_SYMBOL}{min(prices, default=-1)}")
+    if not prices:
+        print("[ERROR] Can not recognize city name")
+        driver.close()
+        exit(1)
 
+    print(f"The minimal price is: {EURO_SYMBOL}{min(prices)}")
     driver.close()
