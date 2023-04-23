@@ -1,0 +1,14 @@
+{  
+    "city_descr":"Write, please, an attractive and juicy text with hash tags for attention-grabbing facebook post relevant to budget travellers about the city [city]. Please, do not use any emojis and title.",
+    "city_title":"Propose, please, 1 creative title for this post: '[description]'. Return, please, only the title as a string without the inverted commas.",
+    "city_routes":"Provide me, please, with the 3 most popular, attractive and exciting cities in Europe that are furthest from [city]. Separate each city name with a new line and do not put in city list any commas, numbers, backslashes, bullet points etc. Please provide your response without any accompanying phrases.",
+    "aea_descr":"Write a seo-frendly description of [title] options in the city of [city] relevant for budget travellers like in this example: '[description]'",
+    "aea_opts":"In the city of [city] find most popular [title] options relevant for budget travellers. Put in your answer the options' names only. Separate each option with a new line. Do not include in your reply any commas, numbers, dishes or bullet points",
+    "aea_opt_descr":"For option [name] of the [title] in the city of [city] provide, please, a SEO-friendly description relevant for budget travellers. For example: '[description]'",
+    "aea_opt_loc":"For option [name] of the [title] in the city of [city] provide, please, the google-maps location link in full URL format. Please do not use any URL shorteners or abbreviated links, as they may not work correctly. Link example: '[location]'",
+    "tt_descr":"Write a seo-frendly description of [title] options in the city of [city] relevant for budget travellers like in this example: '[description]'",
+    "tt_links":"Provide a list of relevant links for this description: '[description]' of the [title] options in the city of [city]. Put in your answer the links in full URL format. Please do not use any URL shorteners or abbreviated links, as they may not work correctly. Separate each link with a new line and do not include any commas, numbers, dishes or bullet points",
+    "ro_descr":"Write a seo-frendly description of [title] another attractive cities in Europe where budget travellers must have to go to",
+    "ro_ro":"Provide with most popular routes from [city] to another attractive cities in Europe relevant for budget travellers. Please return the city names only, separate each name with a new line and do not include any commas, numbers or bullet points",
+    "ro_ro_descr":"Write a short seo-frendly description of [route] relevant for budget travellers like in this example: '[description]'"
+}                                      

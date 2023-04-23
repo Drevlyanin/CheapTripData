@@ -4,7 +4,7 @@ import compress_json
 import string
 import polars as pl
 
-from config import OUTPUT_JSON_DIR, CITIES_COUNTRIES_CSV, PROMPTS_TXT
+from config import OUTPUT_JSON_DIR, CITIES_COUNTRIES_CSV
 
 
 def gen_city_country_pairs(input_csv=CITIES_COUNTRIES_CSV) -> tuple:

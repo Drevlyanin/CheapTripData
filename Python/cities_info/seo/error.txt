@@ -1,0 +1,5 @@
+raise self.handle_error_response(
+openai.error.RateLimitError: Rate limit reached for default-gpt-3.5-turbo in organization org-2enZa8BZcwVTWlVOMiFLwb6r on requests per min. Limit: 3 / min. Please try again in 20s. Contact support@openai.com if you continue to have issues. Please add a payment method to your account to increase your rate limit. Visit https://platform.openai.com/account/billing to add a payment method.
+
+ raise self.handle_error_response(
+openai.error.RateLimitError: That model is currently overloaded with other requests. You can retry your request, or contact us through our help center at help.openai.com if the error persists. (Please include the request ID a7123aa68e085bd2100ab2825b776bd7 in your message.)

@@ -51,7 +51,6 @@ def treat_data():
     
     
 def treat():
-
     if csv_ok(RAW_CSV):
         treat_data()
     

@@ -9,10 +9,7 @@ src/try.py
 src/airports.py
 files/airports/iata_codes.json
 pexels.py
-output/csv
-output/json
-output/routes_info
-output/cities_info/images
-output/cities_info/smm
-output/cities_info/smm_1
-output/cities_info/seo
+output/
+cities_info/images
+cities_info/pexel_images
+cities_info/smm/
