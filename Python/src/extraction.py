@@ -128,12 +128,18 @@ def extract_routine(input_data: tuple, euro_rates: dict) -> list():
                               'distance_km': distance_km,
                               'frequency': {'tpw': frequency_tpw,
                                             'info': q['frequency']
-                                            },
-                              'transfers': {'num': q['num_transfers'],
-                                            'info': q['transfers_info']                                                        
                                             }
-                              
                               }
+                
+                if q['num_transfers'] > 0:
+                    inner_json['transfers'] = dict()
+                    inner_json['transfers']['num'] = q['num_transfers']
+                    inner_json['transfers']['info'] = list()
+                    for item in q['transfers_info']:
+                        inner_json['transfers']['info'].append({'airport_code':item[0],
+                                                                'city':item[1],
+                                                                'county':item[5],
+                                                                'country':item[6]})
                                
                 INNER_JSON_DIR.mkdir(parents=True, exist_ok=True)
                 with open(f'{INNER_JSON_DIR}/{path_id}.json', mode='w') as file:
@@ -153,7 +159,6 @@ def extract_routine(input_data: tuple, euro_rates: dict) -> list():
                                  'distance_km': distance_km,
                                  'frequency_tpw': frequency_tpw,
                                  'num_transfers': num_transfers
-                                 
                                })
                                     
             # for other used types of vehicles            

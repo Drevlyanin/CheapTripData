@@ -25,10 +25,6 @@ def get_seo_text(city='Themes'):
     # inserting city name into the prompts
     prompts = {k: v.replace('[city]', city) for k, v in get_prompts_GPT(SMM_PROMPTS_JSON).items()}
     
-    # # load examples
-    # with open('../output/cities_info/seo/seo_example.json', 'r') as json_file:
-    #     example = json.load(json_file)
-    
     # forms main dict structure
     city_data = dict()
     
