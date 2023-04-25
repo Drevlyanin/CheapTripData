@@ -6,7 +6,7 @@ from pexels import get_pexel_image
 from contextlib import contextmanager
 
 from functions import get_city_id, get_modify_url, get_response_GPT, get_prompts_GPT
-from config import NOT_FOUND, CITIES_COUNTRIES_CSV, EURO_ZONE
+from config import NOT_FOUND, CITIES_COUNTRIES_CSV, EURO_ZONE, SEO_PROMPTS_JSON
 
 
 @contextmanager
@@ -23,7 +23,7 @@ def get_seo_text(*, city='Kuressaare'):
     city_id = get_city_id(city)
     ct_link = 'https://cheaptrip.guru/en-US/#/search/myPath?from=Milan&fromID=252&to=Barcelona&toID=128'
     
-    prompts = {k: v.replace('[city]', city) for k, v in get_prompts_GPT().items()}
+    prompts = {k: v.replace('[city]', city) for k, v in get_prompts_GPT(SEO_PROMPTS_JSON).items()}
     
     with open('../output/cities_info/seo_example.json', 'r') as json_file:
         example_info = json.load(json_file)
@@ -121,7 +121,7 @@ def get_seo_text(*, city='Kuressaare'):
             c['pathes'].append({'route':route, 'description':description, 'link':ct_link})
     
     # write result in json  
-    with open(f'../output/cities_info/{city}.json', 'w') as file:
+    with open(f'../output/seo/{city}.json', 'w') as file:
         json.dump(city_info, file, indent=4)   
           
 

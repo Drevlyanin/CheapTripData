@@ -1,6 +1,6 @@
 from config import NOT_FOUND, BBOXES_CSV, AIRPORT_CODES_CSV, CITIES_COUNTRIES_CSV
 from config import EURO_ZONE, EURO_ZONE_LOWEST_PRICE, EURO_ZONE_DURATION_LIMIT, TRANSPORT_TYPES_ID
-from config import OUTPUT_CSV_DIR, PROMPTS_JSON
+from config import OUTPUT_CSV_DIR, INNER_JSON_DIR
 
 import polars as pl
 import re
@@ -129,7 +129,6 @@ def get_id_from_acode(code: str) -> int:
 
 
 # compare actual price to predict one
-
 def price_to_predict(from_id: int, to_id: int, price: int, duration: int, ttype: str, path_id: int) -> int:
     if (from_id in EURO_ZONE and to_id in EURO_ZONE):
         #K_1, K_2, Q = 0.5385133730326261, 0.10985332568233755, 0.3
@@ -244,8 +243,33 @@ def get_inner_json(pth, rt, route_dic):
         return "Error:", err 
     
     
-def get_prompts_GPT():
-    with open(PROMPTS_JSON, 'r') as file:
+def delete_inner_jsons(ids: list[int]):
+    deleted, not_exist = 0, 0
+    for id in ids:
+        id = f'{INNER_JSON_DIR}/{id}.json'
+        try:
+            os.remove(id)
+            print(f"File '{id}' deleted successfully.")
+            deleted += 1
+        except FileNotFoundError:
+            print(f"File '{id}' not found.")
+            not_exist += 1
+            continue
+    print(f'Total processed: {len(ids)} files. Deleted: {deleted} files, not found: {not_exist} files')
+    
+    
+def fixing_price_inner_json(id: int, price: int) -> None:
+    with open(f'{INNER_JSON_DIR}/{id}.json', 'r') as file:
+        inner_json = json.load(file)
+        
+    inner_json['prices_EUR']['min'] = price
+    
+    with open(f'{INNER_JSON_DIR}/{id}.json', 'w') as file:
+        json.dump(inner_json, file, indent=4)
+        
+    
+def get_prompts_GPT(prompt_json):
+    with open(prompt_json, 'r') as file:
         return json.load(file)
     
 

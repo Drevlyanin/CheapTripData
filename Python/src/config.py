@@ -22,7 +22,7 @@ CITIES_CSV = Path(INPUT_CSV_DIR/'cities.csv')
 
 
 # set up outputs folders
-OUTPUT_JSON_DIR = Path('../output/jsons')
+OUTPUT_JSON_DIR = Path('../output_5run/jsons')
 OUTPUT_CSV_DIR = Path('../output/csv')
 INNER_JSON_DIR = Path('../output/routes_info')
 HOTELS_DIR = Path('../files/hotels')
@@ -95,7 +95,8 @@ LOG_CRITICAL = Path(LOGS_DIR/'critical_errors.log')
 LOG_CRITICAL_FORMAT = '%(asctime)s - %(levelname)s - %(message)s'
 
 # prompts set up
-PROMPTS_JSON = Path('../files/seo/prompts.json')
+SMM_PROMPTS_JSON = Path('../files/smm/prompts.json')
+SEO_PROMPTS_JSON = Path('../files/seo/prompts.json')
 
 # directory for images from pexel
 PEXEL_IMG_DIR = Path('../output/cities_info/images')
