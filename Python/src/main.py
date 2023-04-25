@@ -6,7 +6,7 @@ from fixing import fixing_price
 
 def main():
     
-    scrap()
+    # scrap()
     
     extract()
     

@@ -5,6 +5,8 @@ files/csv/arch/
 notebooks/
 output_4run/
 output_5run/
+output_5_3run/
+output_5_4run/
 src/try.py
 src/airports.py
 files/airports/iata_codes.json
