@@ -40,11 +40,11 @@ if __name__ == "__main__":
     url = "https://cheaptrip.guru/"
     driver.get(url)
 
+    # city_from_input.clear()
+    # city_to_input.clear()
+
     city_from_input = driver.find_element(By.ID, "mat-input-0")
     city_to_input = driver.find_element(By.ID, "mat-input-1")
-
-    city_from_input.clear()
-    city_to_input.clear()
 
     city_from_input.send_keys(args.cityFrom)
     time.sleep(1)  # ensure the site has time to make all necessary API calls
