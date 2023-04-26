@@ -33,6 +33,11 @@ python -m venv venv
 .\venv\Scripts\activate
 ```
 
+### Install requirements
+```bash
+pip install -r requirements.txt
+```
+
 ## Usage
 Run the first scrapper using `python` or `python3` command, provide 2 city names as an arguments: the starting point and the destination:
 ```bash
