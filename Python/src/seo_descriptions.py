@@ -37,7 +37,9 @@ def get_seo_text(city: str):
     prompts['description'] = get_response_GPT(prompts['description']).strip('\"').replace('\n\n', '\n')
     
     
-    # getting attractions list
+    # getting free attractions list
+    # prompt = prompts['attractions']['free']
+    # free_attractions = str(get_response_GPT(prompt)).strip('').split(',')
     prompts['lists']['attractions'] = get_response_GPT(prompts['lists']['attractions']).strip(' .').split(', ')
            
     # title processing

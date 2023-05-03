@@ -42,7 +42,7 @@ def scrap_routine(cities_countries_pairs, injection=''):
     # extract all avaliable pathes for each pair
     try:      
         
-        r = session.get(tmp_url) # get responce
+        r = session.get(tmp_url) # get response
         
         soup = BeautifulSoup(r.text, 'html.parser')
         
