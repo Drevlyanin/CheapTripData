@@ -1,6 +1,5 @@
 import requests
 import json
-from pathlib import Path
 import logging
 from datetime import datetime, date
 

@@ -1,13 +1,9 @@
 import pandas as pd
 import json
 from time import perf_counter
-from pathlib import Path
-from contextlib import contextmanager
-import requests
-from bs4 import BeautifulSoup
 
-from functions import get_city_id, get_modify_url, get_response_GPT, get_prompts_GPT
-from config import CITIES_COUNTRIES_CSV, EURO_ZONE, SMM_PROMPTS_JSON, SEO_PROMPTS_JSON, SEO_TEXTS_JSON
+from functions import get_response_GPT, get_prompts_GPT
+from config import CITIES_COUNTRIES_CSV, SEO_PROMPTS_JSON, SEO_CITY_DESCRIPTIONS_DIR
 
 
 def recursive_replace(d, old_str, new_str):
@@ -21,41 +17,16 @@ def recursive_replace(d, old_str, new_str):
 
 def get_seo_text(city: str):
     
-    # city_id = get_city_id(city)
-    # ct_link = 'https://cheaptrip.guru/en-US/#/search/myPath?from=Milan&fromID=252&to=Barcelona&toID=128'
-    
-    # inserting city name into the prompts
-    # prompts = {k: v.replace('[city]', city) for k, v in get_prompts_GPT(SEO_PROMPTS_JSON).items()}
+    # replace city in prompt
     prompts = recursive_replace(get_prompts_GPT(SEO_PROMPTS_JSON), '[city]', city)
     
-    # forms main dict structure
-    #city_data = dict()
-    
-    # getting city description
-    # prompt = prompts['description']
-    # description = str(get_response_GPT(prompt)).strip('\"').replace('\n\n', '\n')
+    # getting city description and attractions list
     prompts['description'] = get_response_GPT(prompts['description']).strip('\"').replace('\n\n', '\n')
-    
-    
-    # getting free attractions list
-    # prompt = prompts['attractions']['free']
-    # free_attractions = str(get_response_GPT(prompt)).strip('').split(',')
     prompts['lists']['attractions'] = get_response_GPT(prompts['lists']['attractions']).strip(' .').split(', ')
-           
-    # title processing
-    # prompt = prompts['city_title'].replace('[description]', description)
-    # title = get_response_GPT(prompt)
-    # title = title.strip(' \"')
-              
-    # work with the content item 'routes':
-    # prompt = prompts['city_routes']
-    # routes = get_response_GPT(prompt)
-    # routes = [route.strip() for route in routes.split('\n')]
-    # city_data['routes'] = routes
 
     # write result in json
-    SEO_TEXTS_JSON.mkdir(parents=True, exist_ok=True)  
-    with open(f'{SEO_TEXTS_JSON}/{city}.json', 'w') as file:
+    SEO_CITY_DESCRIPTIONS_DIR.mkdir(parents=True, exist_ok=True)  
+    with open(f'{SEO_CITY_DESCRIPTIONS_DIR}/{city}.json', 'w') as file:
         json.dump(prompts, file, indent=4)
     
     

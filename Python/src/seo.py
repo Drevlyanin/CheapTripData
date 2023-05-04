@@ -1,7 +1,6 @@
 import pandas as pd
 import json
 from time import perf_counter
-from pathlib import Path
 from pexels import get_pexel_image
 from contextlib import contextmanager
 

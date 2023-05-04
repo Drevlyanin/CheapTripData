@@ -1,7 +1,3 @@
-from config import NOT_FOUND, BBOXES_CSV, AIRPORT_CODES_CSV, CITIES_COUNTRIES_CSV
-from config import EURO_ZONE, EURO_ZONE_LOWEST_PRICE, EURO_ZONE_DURATION_LIMIT, TRANSPORT_TYPES_ID
-from config import OUTPUT_CSV_DIR, INNER_JSON_DIR
-
 import polars as pl
 import re
 from geopy.geocoders import Nominatim
@@ -13,6 +9,11 @@ import time
 
 from logger import logger_setup
 import openai, os
+
+from config import NOT_FOUND, BBOXES_CSV, AIRPORT_CODES_CSV, CITIES_COUNTRIES_CSV
+from config import EURO_ZONE, EURO_ZONE_LOWEST_PRICE, EURO_ZONE_DURATION_LIMIT
+from config import OUTPUT_CSV_DIR, INNER_JSON_DIR
+
 
 logger = logger_setup()
 
@@ -306,7 +307,7 @@ def limit_calls_per_minute(max_calls):
   
 @limit_calls_per_minute(3)    
 def get_response_GPT(prompt):
-    openai.organization = 'org-2enZa8BZcwVTWlVOMiFLwb6r'
+    openai.organization = os.getenv('OPEN_AI_ID_CT')
     openai.api_key = os.getenv('OPENAI_API_KEY_CT')
     
     response = openai.ChatCompletion.create(model="gpt-3.5-turbo",

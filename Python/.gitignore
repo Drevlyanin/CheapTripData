@@ -1,5 +1,6 @@
 .ctenv/
 .vscode/
+.venv
 files/output/
 files/csv/arch/
 notebooks/

@@ -1,4 +1,3 @@
-import math
 from config import NOT_FOUND, BAD_VALUES
 from config import EURO_ZONE, EURO_ZONE_DURATION_LIMIT, EURO_ZONE_LOWEST_PRICE
 from config import ROMANIAN_CITIES, TRANS_NICOLAESCU

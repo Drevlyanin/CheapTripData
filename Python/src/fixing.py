@@ -1,7 +1,5 @@
 import pandas as pd
 import logging
-from datetime import datetime
-import sys
 from pathlib import Path
 
 from functions import delete_inner_jsons, fixing_price_inner_json

@@ -1,7 +1,7 @@
 import json
 from urllib.parse import urlparse
 
-from config import EXCLUDED_CITIES, HOTELS_DIR, NUMBER_OF_CITIES
+from config import EXCLUDED_CITIES, HOTELS_DIR
 from generators import gen_jsons
         
         
@@ -20,7 +20,7 @@ def get_hotels():
         
         print(to_id, booking[to_id])
         
-        if len(booking.keys()) == NUMBER_OF_CITIES: break
+        if len(booking.keys()) == 329: break
     
     HOTELS_DIR.mkdir(parents=True, exist_ok=True)
     with open(HOTELS_DIR/'booking.json', mode='w') as file:

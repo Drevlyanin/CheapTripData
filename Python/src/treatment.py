@@ -1,8 +1,6 @@
 import pandas as pd
-from config import RAW_CSV, VALIDATION_CSV, TRIPLES_CSV, OUTPUT_COLUMNS, INNER_JSON_DIR
+from config import RAW_CSV, VALIDATION_CSV, TRIPLES_CSV, INNER_JSON_DIR
 from csv_checker import csv_ok
-import os
-from pathlib import Path
 import json
 
 from functions import delete_inner_jsons
