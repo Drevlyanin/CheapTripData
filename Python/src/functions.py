@@ -307,7 +307,7 @@ def limit_calls_per_minute(max_calls):
   
 @limit_calls_per_minute(3)    
 def get_response_GPT(prompt):
-    openai.organization = os.getenv('OPEN_AI_ID_CT')
+    openai.organization = os.getenv('OPENAI_ID_CT')
     openai.api_key = os.getenv('OPENAI_API_KEY_CT')
     
     response = openai.ChatCompletion.create(model="gpt-3.5-turbo",
