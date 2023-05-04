@@ -1,5 +1,4 @@
 import json
-from time import perf_counter
 from pathlib import Path
 
 from functions import get_response_GPT, get_prompts_GPT
