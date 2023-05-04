@@ -1,0 +1,4 @@
+[tool.black]
+line_length = 100
+exclude = '(\.git|\.mypy_cache|venv|tests)'
+target-version = ['py310']
