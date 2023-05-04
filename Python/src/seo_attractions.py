@@ -16,17 +16,20 @@ def recursive_replace(d, old_str, new_str):
 
 def get_seo_text(city: str, attractions: list[str]) -> None:
     
-    prompt = recursive_replace(get_prompts_GPT(PROMPTS_DIR/'city_attractions_pmt.json'), '[city]', city)
+    prompts = recursive_replace(get_prompts_GPT(PROMPTS_DIR/'city_attractions_pmt.json'), '[city]', city)
     
     data = dict()
     for attraction in attractions:
-        prompt_i = prompt['attraction']
+        prompt_i = prompts['attraction']
         prompt_i = prompt_i.replace('[attraction]', attraction)
         response = get_response_GPT(prompt_i)
         response = response.strip(' ').strip('\"')
         response = response.replace('Title: ', '').replace('\n\n', '\n')
-        data[attraction] = response
-
+        data[attraction] = dict()
+        data[attraction]['text'] = response
+        data[attraction]['summary'] = get_response_GPT(prompts['summary'].replace('[text]', response))
+        data[attraction]['keywords'] = get_response_GPT(prompts['keywords'].replace('[text]', response)).strip(' ').split(', ')
+    
     # write result in json
     SEO_CITY_ATTRACTIONS_DIR.mkdir(parents=True, exist_ok=True)  
     with open(f'{SEO_CITY_ATTRACTIONS_DIR}/{city}.json', 'w') as file:
@@ -34,7 +37,8 @@ def get_seo_text(city: str, attractions: list[str]) -> None:
     
     
 def get_seo():
-    files = Path(SEO_CITY_DESCRIPTIONS_DIR).glob('*.json')
+    # files = Path(SEO_CITY_DESCRIPTIONS_DIR).glob('*.json')
+    files = sorted(list(Path(SEO_CITY_DESCRIPTIONS_DIR).glob('*.json')))
     for i, file in enumerate(files, start=1):
         city = file.name.partition('.')[0]
         with open(file, 'r') as json_file:
