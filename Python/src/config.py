@@ -86,6 +86,7 @@ PROMPTS_DIR = Path('../cities_data/seo/prompts')
 SEO_TEXTS_DIR = Path('../cities_data/seo/texts')
 SEO_CITY_DESCRIPTIONS_DIR = Path('../cities_data/seo/texts/city_descriptions')
 SEO_CITY_ATTRACTIONS_DIR = Path('../cities_data/seo/texts/city_attractions/en')
+SEO_CITY_ATTRACTIONS_FP_DIR = Path('../cities_data/seo/texts/city_attractions_first_person/en')
 SEO_HTMLS_DIR = Path('../cities_data/seo/htmls')
 
 # directory for images from pexel
