@@ -84,10 +84,12 @@ SMM_PROMPTS_JSON = Path('../cities_data/smm/prompts.json')
 SEO_PROMPTS_JSON = Path('../cities_data/seo/prompts/city_description_pmt.json')
 PROMPTS_DIR = Path('../cities_data/seo/prompts')
 SEO_TEXTS_DIR = Path('../cities_data/seo/texts')
-SEO_CITY_DESCRIPTIONS_DIR = Path('../cities_data/seo/texts/city_descriptions')
+SEO_CITY_DESCRIPTIONS_DIR = Path('../cities_data/seo/texts/city_descriptions/en')
 SEO_CITY_ATTRACTIONS_DIR = Path('../cities_data/seo/texts/city_attractions/en')
+SEO_CITY_ATTRACTIONS_CHILDREN_DIR = Path('../cities_data/seo/texts/city_attractions_children/en')
 SEO_CITY_ATTRACTIONS_FP_DIR = Path('../cities_data/seo/texts/city_attractions_first_person/en')
 SEO_HTMLS_DIR = Path('../cities_data/seo/htmls')
+OPTION_LISTS_DIR = Path('../cities_data/option_lists')
 
 # directory for images from pexel
 PEXEL_IMG_DIR = Path('../output/cities_info/images')

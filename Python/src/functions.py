@@ -21,7 +21,11 @@ logger = logger_setup()
 df_bb = pl.read_csv(BBOXES_CSV)
 df_airports = pl.read_csv(AIRPORT_CODES_CSV)
 df_cities_countries = pl.read_csv(CITIES_COUNTRIES_CSV)
+
    
+def get_cities():
+    return sorted(df_cities_countries['city'])
+
    
 def get_city_name(id):
     return df_cities_countries.filter(pl.col('id_city') == id)['city'][0]
@@ -339,4 +343,5 @@ if __name__ == '__main__':
     # #print(ct_link)
     # print(get_modify_url(ct_link, params))
     
+    print(get_cities())
     pass
