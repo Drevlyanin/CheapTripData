@@ -1,6 +1,7 @@
 import json
 from pathlib import Path
 
+
 from functions import get_response_GPT, get_prompts_GPT
 from config import PROMPTS_DIR, SEO_CITY_DESCRIPTIONS_DIR, SEO_CITY_ATTRACTIONS_DIR
 
@@ -20,9 +21,7 @@ def get_seo_text(city: str, attractions: list[str]) -> None:
     
     data = dict()
     for attraction in attractions:
-        prompt_i = prompts['attraction']
-        prompt_i = prompt_i.replace('[attraction]', attraction)
-        response = get_response_GPT(prompt_i)
+        response = get_response_GPT(prompts['attraction'].replace('[attraction]', attraction))
         response = response.strip(' ').strip('\"')
         response = response.replace('Title: ', '').replace('\n\n', '\n')
         data[attraction] = dict()
@@ -37,7 +36,6 @@ def get_seo_text(city: str, attractions: list[str]) -> None:
     
     
 def get_seo():
-    # files = Path(SEO_CITY_DESCRIPTIONS_DIR).glob('*.json')
     files = sorted(list(Path(SEO_CITY_DESCRIPTIONS_DIR).glob('*.json')))
     for i, file in enumerate(files, start=1):
         city = file.name.partition('.')[0]
