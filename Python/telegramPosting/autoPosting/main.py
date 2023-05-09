@@ -3,6 +3,8 @@ import asyncio
 import logging
 from utils.loader import dp, bot
 
+from handlers.menu import get_post
+
 
 async def main():
     await bot.delete_webhook(drop_pending_updates=True)
@@ -11,4 +13,5 @@ async def main():
 
 
 if __name__ == '__main__':
-    asyncio.run(main())
+    get_post('Aalborg')
+    # asyncio.run(main())
