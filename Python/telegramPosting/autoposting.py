@@ -3,31 +3,33 @@ import asyncio
 import aiogram
 
 
-
 async def main():
+    bot_token = ""
+    channel_id = ""
 
-    bot = aiogram.Bot(token="")
-
-    # Create a Dispatcher object for the bot
+    bot = aiogram.Bot(token=bot_token)
     dp = aiogram.Dispatcher(bot)
 
-    # Load the data from the JSON file
     with open('posts.json', 'r') as f:
         data = json.load(f)
+        posts = data["posts"]
 
-    # Extract the text and photo URL from the data
-    text = data["text"]
-    photo_path = data["photo_url"]
+    i = 0
 
-    try:
-        # Send the photo with the text as the caption to the specified chat ID
-        await bot.send_photo(chat_id="", photo=open(photo_path, 'rb'), caption=text)
+    while True:
+        text = posts[i]["text"]
+        photo_path = posts[i]["photo_url"]
 
-    except Exception as e:
-        # If there's an error, print it out to the console
-        print(f"Error sending message: {e}")
+        try:
+            await bot.send_photo(chat_id=channel_id, photo=open(photo_path, 'rb'))
+            await bot.send_message(chat_id=channel_id, text=text)
 
-    # Close the storage of the dispatcher. Get the session of the bot and close it
+        except Exception as e:
+            print(f"Error sending message: {e}")
+
+        i = (i + 1) % len(posts)
+        await asyncio.sleep(60 * 60 * 24)
+
     await dp.storage.close()
     await dp.storage.wait_closed()
     await bot.get_session()
